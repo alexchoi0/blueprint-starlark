@@ -17,7 +17,7 @@
 
 use std::fmt;
 use std::fmt::Debug;
-use std::intrinsics::copy_nonoverlapping;
+use std::ptr::copy_nonoverlapping;
 use std::mem;
 use std::slice;
 use std::str;

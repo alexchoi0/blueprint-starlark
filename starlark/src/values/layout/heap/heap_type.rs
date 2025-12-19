@@ -25,7 +25,7 @@ use std::fmt::Debug;
 use std::fmt::Formatter;
 use std::hash::Hash;
 use std::hash::Hasher;
-use std::intrinsics::copy_nonoverlapping;
+use std::ptr::copy_nonoverlapping;
 use std::marker::PhantomData;
 use std::mem;
 use std::mem::MaybeUninit;
