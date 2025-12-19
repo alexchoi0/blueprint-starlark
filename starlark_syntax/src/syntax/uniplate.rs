@@ -37,6 +37,7 @@ use crate::syntax::ast::ForP;
 use crate::syntax::ast::LambdaP;
 use crate::syntax::ast::ParameterP;
 use crate::syntax::ast::StmtP;
+use crate::syntax::ast::StructP;
 use crate::syntax::ast::TypeExprP;
 
 pub enum Visit<'a, P: AstPayload> {
@@ -141,6 +142,14 @@ impl<P: AstPayload> StmtP<P> {
                 f(Visit::Expr(rhs));
             }
             StmtP::Load(..) => {}
+            StmtP::Struct(StructP { name: _, fields }) => {
+                for field in fields {
+                    field.node.typ.visit_expr(|x| f(Visit::Expr(x)));
+                    if let Some(default) = &field.node.default {
+                        f(Visit::Expr(default));
+                    }
+                }
+            }
         }
     }
 
@@ -199,6 +208,14 @@ impl<P: AstPayload> StmtP<P> {
                 f(VisitMut::Expr(rhs));
             }
             StmtP::Load(..) => {}
+            StmtP::Struct(StructP { name: _, fields }) => {
+                for field in fields {
+                    field.node.typ.visit_expr_mut(|x| f(VisitMut::Expr(x)));
+                    if let Some(default) = &mut field.node.default {
+                        f(VisitMut::Expr(default));
+                    }
+                }
+            }
         }
     }
 
@@ -312,6 +329,11 @@ impl<P: AstPayload> StmtP<P> {
             StmtP::Assign(assign) => {
                 if let Some(ty) = &mut assign.ty {
                     f(ty)?;
+                }
+            }
+            StmtP::Struct(s) => {
+                for field in &mut s.fields {
+                    f(&mut field.node.typ)?;
                 }
             }
             _ => {}

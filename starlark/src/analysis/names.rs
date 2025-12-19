@@ -535,6 +535,7 @@ impl<'a> State<'a> {
                 self.set_abort(Abort::Loop);
             }
             Stmt::Pass => {}
+            Stmt::Struct(_) => {}
         }
     }
 

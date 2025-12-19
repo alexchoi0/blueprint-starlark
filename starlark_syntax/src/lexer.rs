@@ -747,6 +747,8 @@ pub enum Token {
     Pass,
     #[token("return")]
     Return,
+    #[token("struct")]
+    Struct,
     #[token("yield")]
     Yield,
     // Symbols
@@ -897,6 +899,7 @@ impl Display for Token {
             Token::Pass => write!(f, "keyword 'pass'"),
             Token::Elif => write!(f, "keyword 'elif'"),
             Token::Return => write!(f, "keyword 'return'"),
+            Token::Struct => write!(f, "keyword 'struct'"),
             Token::Yield => write!(f, "keyword 'yield'"),
             Token::Lambda => write!(f, "keyword 'lambda'"),
             Token::Comma => write!(f, "symbol ','"),

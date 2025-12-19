@@ -124,7 +124,7 @@ Suite: AstStmt = {
         => grammar_util::statements(v, l, r)
 };
 
-Stmt: AstStmt = { DefStmt, IfStmt, ForStmt, SimpleStmt<SmallStmt> };
+Stmt: AstStmt = { DefStmt, IfStmt, ForStmt, StructStmt, SimpleStmt<SmallStmt> };
 
 IfBody: AstStmt = ASTS<IfBody_>;
 IfBody_: Stmt = <c:Test> ":" <s:Suite> <el:ElseStmt?> => {
@@ -149,6 +149,26 @@ ForStmt_: Stmt = "for" <var:ExprList> "in" <over:Test> ":" <body:Suite>
         over,
         body: Box::new(body),
     }));
+
+StructStmt: AstStmt = ASTS<StructStmt_>;
+StructStmt_: Stmt = "struct" <name:AssignIdent> ":" <fields:StructBody>
+    => Stmt::Struct(StructP { name, fields });
+
+StructBody: Vec<AstStructField> = {
+    "\n"+ "INDENT" "\n"* <v:(<StructField> "\n"*)+> "DEDENT" => v,
+};
+
+#[inline]
+ASTF<E>: AstStructField = <l:@L> <e:E> <r:@R>
+    => e.ast(l, r);
+
+StructField: AstStructField = ASTF<StructField_>;
+StructField_: StructField = {
+    <name:AssignIdent> ":" <typ:TypeExpr> "=" <default:Test>
+        => StructField { name, typ, default: Some(default) },
+    <name:AssignIdent> ":" <typ:TypeExpr>
+        => StructField { name, typ, default: None },
+};
 
 SimpleStmt<S>: AstStmt =
     <l:@L> <e:S> <v:(";" <S>)*> ";"? <r:@R> "\n" => {
@@ -454,6 +474,7 @@ extern {
       "pass" => lexer::Token::Pass,
       "elif" => lexer::Token::Elif,
       "return" => lexer::Token::Return,
+      "struct" => lexer::Token::Struct,
       "yield" => lexer::Token::Yield,
       "lambda" => lexer::Token::Lambda,
       // Symbols

@@ -812,6 +812,7 @@ impl Compiler<'_, '_, '_, '_> {
                 self.assign_modify(span.span.span(), lhs, rhs, *op)
             }
             StmtP::Load(..) => unreachable!(),
+            StmtP::Struct(..) => unreachable!(),
             StmtP::Pass => Ok(StmtsCompiled::empty()),
             StmtP::Break => Ok(StmtsCompiled::one(IrSpanned {
                 span,

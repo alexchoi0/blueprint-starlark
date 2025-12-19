@@ -380,6 +380,30 @@ pub struct FStringP<P: AstPayload> {
     pub expressions: Vec<AstExprP<P>>,
 }
 
+/// A field in a struct definition.
+#[derive(Debug, Clone)]
+pub struct StructFieldP<P: AstPayload> {
+    /// Field name.
+    pub name: AstAssignIdentP<P>,
+    /// Field type annotation.
+    pub typ: AstTypeExprP<P>,
+    /// Default value (optional).
+    pub default: Option<AstExprP<P>>,
+}
+
+pub type AstStructFieldP<P> = Spanned<StructFieldP<P>>;
+pub type AstStructField = AstStructFieldP<AstNoPayload>;
+pub type StructField = StructFieldP<AstNoPayload>;
+
+/// A struct definition.
+#[derive(Debug, Clone)]
+pub struct StructP<P: AstPayload> {
+    /// Struct name.
+    pub name: AstAssignIdentP<P>,
+    /// Struct fields.
+    pub fields: Vec<AstStructFieldP<P>>,
+}
+
 #[derive(Debug, Clone)]
 pub enum StmtP<P: AstPayload> {
     Break,
@@ -396,6 +420,7 @@ pub enum StmtP<P: AstPayload> {
     For(ForP<P>),
     Def(DefP<P>),
     Load(LoadP<P>),
+    Struct(StructP<P>),
 }
 
 impl<P: AstPayload> ArgumentP<P> {
@@ -771,6 +796,17 @@ impl Stmt {
                     false,
                 )?;
                 f.write_str(")\n")
+            }
+            Stmt::Struct(StructP { name, fields }) => {
+                writeln!(f, "{}struct {}:", tab, name.node)?;
+                for field in fields {
+                    write!(f, "{}  {}: {}", tab, field.node.name.node, field.node.typ.expr.node)?;
+                    if let Some(default) = &field.node.default {
+                        write!(f, " = {}", default.node)?;
+                    }
+                    writeln!(f)?;
+                }
+                Ok(())
             }
         }
     }

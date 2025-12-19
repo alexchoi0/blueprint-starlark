@@ -37,6 +37,8 @@ use crate::syntax::ast::LoadArgP;
 use crate::syntax::ast::LoadP;
 use crate::syntax::ast::ParameterP;
 use crate::syntax::ast::StmtP;
+use crate::syntax::ast::StructFieldP;
+use crate::syntax::ast::StructP;
 use crate::syntax::ast::TypeExprP;
 
 pub trait AstPayloadFunction<A: AstPayload, B: AstPayload> {
@@ -161,6 +163,34 @@ impl<A: AstPayload> StmtP<A> {
                 payload: f.map_def(payload),
             }),
             StmtP::Load(load) => StmtP::Load(load.into_map_payload(f)),
+            StmtP::Struct(s) => StmtP::Struct(s.into_map_payload(f)),
+        }
+    }
+}
+
+impl<A: AstPayload> StructP<A> {
+    pub fn into_map_payload<B: AstPayload>(
+        self,
+        f: &mut impl AstPayloadFunction<A, B>,
+    ) -> StructP<B> {
+        let StructP { name, fields } = self;
+        StructP {
+            name: name.into_map_payload(f),
+            fields: fields.into_map(|field| field.into_map_payload(f)),
+        }
+    }
+}
+
+impl<A: AstPayload> StructFieldP<A> {
+    pub fn into_map_payload<B: AstPayload>(
+        self,
+        f: &mut impl AstPayloadFunction<A, B>,
+    ) -> StructFieldP<B> {
+        let StructFieldP { name, typ, default } = self;
+        StructFieldP {
+            name: name.into_map_payload(f),
+            typ: typ.into_map_payload(f),
+            default: default.map(|e| e.into_map_payload(f)),
         }
     }
 }
@@ -433,4 +463,5 @@ ast_payload_map_stub!(IdentP, IdentPExt);
 ast_payload_map_stub!(ParameterP, ParameterPExt);
 ast_payload_map_stub!(ArgumentP, ArgumentPExt);
 ast_payload_map_stub!(StmtP, StmtPExt);
+ast_payload_map_stub!(StructFieldP, StructFieldPExt);
 ast_payload_map_stub!(FStringP, FStringPExt);
