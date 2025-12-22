@@ -23,12 +23,12 @@ use std::cmp::Ordering;
 use std::hash::Hash;
 use std::str::FromStr;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use num_bigint::BigInt;
 use num_bigint::Sign;
 use num_traits::cast::ToPrimitive;
 use serde::Serialize;
-use starlark_derive::starlark_value;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

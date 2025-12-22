@@ -22,7 +22,7 @@ use std::mem::MaybeUninit;
 use std::ptr;
 use std::slice;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::eval::Evaluator;
 use crate::eval::bc::for_loop::LoopDepth;

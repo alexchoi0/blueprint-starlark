@@ -18,7 +18,7 @@
 use std::fmt;
 use std::ops::Deref;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::typing::Ty;
 use crate::values::AllocValue;

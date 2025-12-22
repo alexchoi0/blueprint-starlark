@@ -17,7 +17,7 @@
 
 use std::alloc::Layout;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 
 use crate::values::layout::aligned_size::AlignedSize;
 use crate::values::layout::heap::arena::MIN_ALLOC;

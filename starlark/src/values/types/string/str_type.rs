@@ -28,16 +28,16 @@ use std::slice;
 use std::str;
 use std::sync::atomic;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use serde::Serialize;
-use starlark_derive::ProvidesStaticType;
-use starlark_derive::starlark_value;
-use starlark_map::Hashed;
-use starlark_map::StarlarkHashValue;
-use starlark_map::StarlarkHasher;
-use starlark_syntax::fast_string;
-use starlark_syntax::fast_string::CharIndex;
-use starlark_syntax::fast_string::StrIndices;
+use blueprint_starlark_derive::ProvidesStaticType;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_map::Hashed;
+use blueprint_starlark_map::StarlarkHashValue;
+use blueprint_starlark_map::StarlarkHasher;
+use blueprint_starlark_syntax::fast_string;
+use blueprint_starlark_syntax::fast_string::CharIndex;
+use blueprint_starlark_syntax::fast_string::StrIndices;
 
 use crate as starlark;
 use crate::collections::aligned_padded_str::AlignedPaddedStr;

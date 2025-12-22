@@ -17,7 +17,7 @@
 
 //! Error types used by Starlark.
 
-pub use starlark_syntax::frame::Frame;
+pub use blueprint_starlark_syntax::frame::Frame;
 
 pub use crate::analysis::EvalMessage;
 pub use crate::analysis::EvalSeverity;

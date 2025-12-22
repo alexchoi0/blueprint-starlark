@@ -19,7 +19,7 @@
 
 use std::fmt::Write;
 
-use starlark_syntax::eval_exception::EvalException;
+use blueprint_starlark_syntax::eval_exception::EvalException;
 
 use crate::eval::Evaluator;
 use crate::eval::bc::addr::BcPtrAddr;

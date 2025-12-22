@@ -20,7 +20,7 @@
 
 use std::fmt::Write;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use num_traits::Signed;
 use thiserror::Error;
 

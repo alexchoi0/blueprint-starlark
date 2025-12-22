@@ -20,7 +20,7 @@
 use std::mem;
 
 use either::Either;
-use starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_module;
 
 use crate as starlark;
 use crate::environment::MethodsBuilder;
@@ -267,8 +267,8 @@ pub(crate) fn dict_methods(registry: &mut MethodsBuilder) {
         let mut this = DictMut::from_value(this)?;
         let key = key.get_hashed()?;
         match this.aref.content.entry_hashed(key) {
-            starlark_map::small_map::Entry::Occupied(e) => Ok(*e.get()),
-            starlark_map::small_map::Entry::Vacant(e) => {
+            blueprint_starlark_map::small_map::Entry::Occupied(e) => Ok(*e.get()),
+            blueprint_starlark_map::small_map::Entry::Vacant(e) => {
                 let default = default.unwrap_or_else(Value::new_none);
                 e.insert(default);
                 Ok(default)

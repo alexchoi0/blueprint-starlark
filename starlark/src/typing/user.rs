@@ -19,10 +19,10 @@ use std::cmp::Ordering;
 use std::hash::Hash;
 use std::hash::Hasher;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_map::sorted_map::SortedMap;
-use starlark_syntax::codemap::Span;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::sorted_map::SortedMap;
+use blueprint_starlark_syntax::codemap::Span;
 
 use crate::typing::Ty;
 use crate::typing::TyBasic;
@@ -296,12 +296,12 @@ impl TyCustomImpl for TyUser {
 
 #[cfg(test)]
 mod tests {
-    use allocative::Allocative;
-    use dupe::Dupe;
-    use starlark_derive::NoSerialize;
-    use starlark_derive::ProvidesStaticType;
-    use starlark_derive::starlark_module;
-    use starlark_derive::starlark_value;
+    use blueprint_allocative::Allocative;
+    use blueprint_dupe::Dupe;
+    use blueprint_starlark_derive::NoSerialize;
+    use blueprint_starlark_derive::ProvidesStaticType;
+    use blueprint_starlark_derive::starlark_module;
+    use blueprint_starlark_derive::starlark_value;
 
     use crate as starlark;
     use crate::assert::Assert;

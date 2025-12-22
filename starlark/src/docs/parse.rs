@@ -17,15 +17,15 @@
 
 use std::collections::HashMap;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use once_cell::sync::Lazy;
 use regex::Regex;
 use regex::RegexBuilder;
-use starlark_syntax::syntax::ast::AstLiteral;
-use starlark_syntax::syntax::ast::AstPayload;
-use starlark_syntax::syntax::ast::AstStmtP;
-use starlark_syntax::syntax::ast::ExprP;
-use starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_syntax::syntax::ast::AstLiteral;
+use blueprint_starlark_syntax::syntax::ast::AstPayload;
+use blueprint_starlark_syntax::syntax::ast::AstStmtP;
+use blueprint_starlark_syntax::syntax::ast::ExprP;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
 
 use crate::codemap::Spanned;
 use crate::docs::DocFunction;
@@ -67,9 +67,9 @@ pub enum DocStringKind {
     /// functions via starlark. An example might be something like:
     ///
     /// ```
-    /// # use starlark::starlark_module;
-    /// # use starlark::environment::MethodsBuilder;
-    /// # use starlark::values::Value;
+    /// # use blueprint_starlark::starlark_module;
+    /// # use blueprint_starlark::environment::MethodsBuilder;
+    /// # use blueprint_starlark::values::Value;
     ///
     /// /// These are where the module / object level docs go
     /// #[starlark_module]

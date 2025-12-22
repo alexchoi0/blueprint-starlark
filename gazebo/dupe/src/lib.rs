@@ -20,10 +20,10 @@ use std::num::*;
 use std::rc::Rc;
 use std::sync::Arc;
 
-pub use dupe_derive::Clone_;
-pub use dupe_derive::Copy_;
-pub use dupe_derive::Dupe;
-pub use dupe_derive::Dupe_;
+pub use blueprint_dupe_derive::Clone_;
+pub use blueprint_dupe_derive::Copy_;
+pub use blueprint_dupe_derive::Dupe;
+pub use blueprint_dupe_derive::Dupe_;
 
 pub use crate::iter::IterDupedExt;
 pub use crate::option::OptionDupedExt;

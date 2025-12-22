@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-use starlark_syntax::codemap::CodeMap;
-use starlark_syntax::codemap::Pos;
-use starlark_syntax::codemap::Span;
+use blueprint_starlark_syntax::codemap::CodeMap;
+use blueprint_starlark_syntax::codemap::Pos;
+use blueprint_starlark_syntax::codemap::Span;
 
 use crate::analysis::unused_loads::find::find_unused_loads;
 

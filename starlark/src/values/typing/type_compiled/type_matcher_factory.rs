@@ -18,8 +18,8 @@
 use std::fmt::Debug;
 use std::sync::Arc;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::values::Value;
 use crate::values::typing::type_compiled::alloc::TypeMatcherAlloc;

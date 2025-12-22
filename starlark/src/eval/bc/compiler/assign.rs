@@ -17,7 +17,7 @@
 
 //! Compile assignment lhs.
 
-use starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
 use crate::collections::symbol::symbol::Symbol;
 use crate::eval::bc::compiler::expr::write_n_exprs;

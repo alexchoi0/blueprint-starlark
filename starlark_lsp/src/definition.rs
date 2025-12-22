@@ -17,27 +17,27 @@
 
 use std::iter;
 
-use starlark::codemap::CodeMap;
-use starlark::codemap::Pos;
-use starlark::codemap::ResolvedSpan;
-use starlark::codemap::Span;
-use starlark::codemap::Spanned;
-use starlark::syntax::AstModule;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::syntax::ast::ArgumentP;
-use starlark_syntax::syntax::ast::AssignTargetP;
-use starlark_syntax::syntax::ast::AstIdent;
-use starlark_syntax::syntax::ast::AstLiteral;
-use starlark_syntax::syntax::ast::AstNoPayload;
-use starlark_syntax::syntax::ast::AstString;
-use starlark_syntax::syntax::ast::Expr;
-use starlark_syntax::syntax::ast::ExprP;
-use starlark_syntax::syntax::ast::LoadArgP;
-use starlark_syntax::syntax::ast::Stmt;
-use starlark_syntax::syntax::ast::StmtP;
-use starlark_syntax::syntax::module::AstModuleFields;
-use starlark_syntax::syntax::top_level_stmts::top_level_stmts;
-use starlark_syntax::syntax::uniplate::Visit;
+use blueprint_starlark::codemap::CodeMap;
+use blueprint_starlark::codemap::Pos;
+use blueprint_starlark::codemap::ResolvedSpan;
+use blueprint_starlark::codemap::Span;
+use blueprint_starlark::codemap::Spanned;
+use blueprint_starlark::syntax::AstModule;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::syntax::ast::ArgumentP;
+use blueprint_starlark_syntax::syntax::ast::AssignTargetP;
+use blueprint_starlark_syntax::syntax::ast::AstIdent;
+use blueprint_starlark_syntax::syntax::ast::AstLiteral;
+use blueprint_starlark_syntax::syntax::ast::AstNoPayload;
+use blueprint_starlark_syntax::syntax::ast::AstString;
+use blueprint_starlark_syntax::syntax::ast::Expr;
+use blueprint_starlark_syntax::syntax::ast::ExprP;
+use blueprint_starlark_syntax::syntax::ast::LoadArgP;
+use blueprint_starlark_syntax::syntax::ast::Stmt;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_syntax::syntax::module::AstModuleFields;
+use blueprint_starlark_syntax::syntax::top_level_stmts::top_level_stmts;
+use blueprint_starlark_syntax::syntax::uniplate::Visit;
 
 use crate::bind::Assigner;
 use crate::bind::Bind;
@@ -608,8 +608,8 @@ pub(crate) mod helpers {
     use std::collections::HashMap;
     use std::collections::hash_map::Entry;
 
-    use starlark::syntax::Dialect;
-    use starlark_syntax::codemap::ResolvedPos;
+    use blueprint_starlark::syntax::Dialect;
+    use blueprint_starlark_syntax::codemap::ResolvedPos;
     use textwrap::dedent;
 
     use super::*;

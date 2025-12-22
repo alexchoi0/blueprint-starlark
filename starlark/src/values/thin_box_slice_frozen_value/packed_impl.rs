@@ -89,16 +89,16 @@ impl Drop for PackedImpl {
     }
 }
 
-impl allocative::Allocative for PackedImpl {
-    fn visit<'a, 'b: 'a>(&self, visitor: &'a mut allocative::Visitor<'b>) {
+impl blueprint_allocative::Allocative for PackedImpl {
+    fn visit<'a, 'b: 'a>(&self, visitor: &'a mut blueprint_allocative::Visitor<'b>) {
         // Intentionally don't `enter_self_sized()`, and instead just report the
         // `ThinBoxSliceFrozenValue` itself
         match self.unpack() {
             Either::Left(value) => {
-                visitor.visit_simple(allocative::Key::new("inline"), std::mem::size_of_val(value));
+                visitor.visit_simple(blueprint_allocative::Key::new("inline"), std::mem::size_of_val(value));
             }
             Either::Right(allocated) => {
-                allocative::Allocative::visit(&allocated, visitor);
+                blueprint_allocative::Allocative::visit(&allocated, visitor);
             }
         }
     }
@@ -139,10 +139,10 @@ impl<'v> FromIterator<FrozenValue> for ThinBoxSliceFrozenValue<'v> {
     }
 }
 
-impl<'v> allocative::Allocative for ThinBoxSliceFrozenValue<'v> {
-    fn visit<'a, 'b: 'a>(&self, visitor: &'a mut allocative::Visitor<'b>) {
+impl<'v> blueprint_allocative::Allocative for ThinBoxSliceFrozenValue<'v> {
+    fn visit<'a, 'b: 'a>(&self, visitor: &'a mut blueprint_allocative::Visitor<'b>) {
         let mut visitor = visitor.enter_self_sized::<Self>();
-        allocative::Allocative::visit(&self.0, &mut visitor);
+        blueprint_allocative::Allocative::visit(&self.0, &mut visitor);
         visitor.exit();
     }
 }

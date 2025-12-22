@@ -19,10 +19,10 @@ use std::collections::HashSet;
 use std::mem;
 use std::mem::MaybeUninit;
 
-use dupe::Dupe;
-use starlark_syntax::eval_exception::EvalException;
-use starlark_syntax::frame::Frame;
-use starlark_syntax::internal_error;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_syntax::eval_exception::EvalException;
+use blueprint_starlark_syntax::frame::Frame;
+use blueprint_starlark_syntax::internal_error;
 use thiserror::Error;
 
 use crate::any::AnyLifetime;

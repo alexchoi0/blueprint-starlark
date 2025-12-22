@@ -21,8 +21,8 @@ use std::ops::Deref;
 use std::slice;
 use std::sync::Arc;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 #[derive(Clone, Dupe, Eq, PartialEq, Allocative)]
 enum SmallArcVec1Impl<T> {

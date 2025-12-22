@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_map::small_set::SmallSet;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::small_set::SmallSet;
 
 use crate::util::arc_str::ArcStr;
 

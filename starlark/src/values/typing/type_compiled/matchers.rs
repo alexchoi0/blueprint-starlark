@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::typing::starlark_value::TyStarlarkValue;
 use crate::values::UnpackValue;

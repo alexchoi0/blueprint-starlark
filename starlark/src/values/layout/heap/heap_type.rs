@@ -34,10 +34,10 @@ use std::ptr;
 use std::slice;
 use std::sync::Arc;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use bumpalo::Bump;
-use dupe::Dupe;
-use starlark_map::small_set::SmallSet;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::small_set::SmallSet;
 
 use crate::cast;
 use crate::cast::transmute;
@@ -998,7 +998,7 @@ impl<'v> Tracer<'v> {
 
 #[cfg(test)]
 mod tests {
-    use starlark_derive::starlark_module;
+    use blueprint_starlark_derive::starlark_module;
 
     use super::FrozenHeapRef;
     use super::Heap;

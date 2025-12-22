@@ -21,9 +21,9 @@ use std::fmt;
 use std::fmt::Display;
 use std::fmt::Formatter;
 
-use allocative::Allocative;
-use starlark_derive::starlark_module;
-use starlark_syntax::codemap::FileSpan;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_syntax::codemap::FileSpan;
 
 use crate as starlark;
 use crate::environment::GlobalsBuilder;

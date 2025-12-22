@@ -19,12 +19,12 @@ use std::convert::Infallible;
 use std::fmt;
 use std::marker::PhantomData;
 
-use allocative::Allocative;
-use dupe::Clone_;
-use dupe::Copy_;
-use dupe::Dupe_;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Clone_;
+use blueprint_dupe::Copy_;
+use blueprint_dupe::Dupe_;
 use either::Either;
-use starlark_syntax::value_error;
+use blueprint_starlark_syntax::value_error;
 
 use crate::typing::Ty;
 use crate::values::AllocValue;
@@ -196,7 +196,7 @@ where
 mod tests {
     use anyhow::Context;
     use either::Either;
-    use starlark_derive::starlark_module;
+    use blueprint_starlark_derive::starlark_module;
 
     use crate as starlark;
     use crate::assert::Assert;

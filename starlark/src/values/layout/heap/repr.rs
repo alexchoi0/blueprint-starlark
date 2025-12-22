@@ -20,7 +20,7 @@ use std::mem;
 use std::mem::ManuallyDrop;
 use std::ptr;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::any::AnyLifetime;
 use crate::cast;

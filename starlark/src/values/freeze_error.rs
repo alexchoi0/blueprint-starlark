@@ -45,10 +45,10 @@ impl From<FreezeError> for anyhow::Error {
     }
 }
 
-impl From<FreezeError> for starlark_syntax::Error {
+impl From<FreezeError> for blueprint_starlark_syntax::Error {
     #[cold]
     fn from(e: FreezeError) -> Self {
-        starlark_syntax::Error::new_kind(starlark_syntax::ErrorKind::Freeze(e.into()))
+        blueprint_starlark_syntax::Error::new_kind(blueprint_starlark_syntax::ErrorKind::Freeze(e.into()))
     }
 }
 

@@ -62,8 +62,8 @@ mod size_of;
 mod test_derive;
 mod visitor;
 
-pub use allocative_derive::Allocative;
-pub use allocative_derive::root;
+pub use blueprint_allocative_derive::Allocative;
+pub use blueprint_allocative_derive::root;
 
 pub use crate::allocative_trait::Allocative;
 pub use crate::flamegraph::FlameGraph;
@@ -87,9 +87,9 @@ pub mod __macro_refs {
 /// The main use case is manual implementations of [`Allocative`], like so:
 ///
 /// ```
-/// use allocative::Allocative;
-/// use allocative::Visitor;
-/// use allocative::ident_key;
+/// use blueprint_allocative::Allocative;
+/// use blueprint_allocative::Visitor;
+/// use blueprint_allocative::ident_key;
 ///
 /// struct MyStruct {
 ///     foo: usize,

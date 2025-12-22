@@ -17,12 +17,12 @@
 
 //! Function types, including native functions and `object.member` functions.
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use derivative::Derivative;
 use derive_more::Display;
-use dupe::Dupe;
-use starlark_derive::NoSerialize;
-use starlark_derive::starlark_value;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

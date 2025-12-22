@@ -1,12 +1,12 @@
 [package]
-authors = ["Facebook"]
+authors = ["Facebook", "Alex Choi"]
 categories = ["rust-patterns"]
-description = "Derive Dupe"
-documentation = "https://docs.rs/dupe"
-edition = "2024"
+description = "Derive Dupe for blueprint-dupe crate"
+documentation = "https://docs.rs/blueprint-dupe-derive"
+edition = "2021"
 license = { workspace = true }
-name = "dupe_derive"
-repository = "https://github.com/facebookincubator/gazebo"
+name = "blueprint-dupe-derive"
+repository = { workspace = true }
 version = "0.9.1"
 
 [lib]

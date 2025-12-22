@@ -1,18 +1,14 @@
 [package]
-authors = [
-    "Damien Martin-Guillerez <dmarting@google.com>",
-    "Stepan Koltsov <stepan.koltsov@gmail.com>",
-    "Facebook",
-]
+authors = ["Damien Martin-Guillerez <dmarting@google.com>", "Stepan Koltsov <stepan.koltsov@gmail.com>", "Facebook", "Alex Choi"]
 build = "build.rs"
 categories = ["parser-implementations", "development-tools"]
-description = "An implementation of the Starlark language in Rust."
-documentation = "https://docs.rs/starlark"
-edition = "2024"
+description = "An implementation of the Starlark language in Rust with extended syntax (match/case, structs, generators)."
+documentation = "https://docs.rs/blueprint-starlark"
+edition = "2021"
 keywords = ["starlark", "skylark", "bazel", "language", "interpreter"]
-license = "Apache-2.0"
-name = "starlark"
-repository = "https://github.com/facebook/starlark-rust"
+license = { workspace = true }
+name = "blueprint-starlark"
+repository = { workspace = true }
 version = "0.13.0"
 
 [dependencies]
@@ -21,8 +17,8 @@ bumpalo = "3.8"
 debugserver-types = "0.5.0"
 derivative = "2.2"
 derive_more.workspace = true
-display_container = { workspace = true }
-dupe = { workspace = true }
+blueprint-display-container = { workspace = true }
+blueprint-dupe = { workspace = true }
 either = "1.8"
 erased-serde = "0.3.12"
 hashbrown = { version = "0.14.3", features = ["raw"] }
@@ -38,16 +34,16 @@ ref-cast = "1.0.18"
 regex = "1.5.4"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = { version = "1.0", features = ["arbitrary_precision"] }
-starlark_derive = { version = "0.13.0", path = "../starlark_derive" }
-starlark_map = { version = "0.13.0", path = "../starlark_map" }
-starlark_syntax = { version = "0.13.0", path = "../starlark_syntax" }
+blueprint-starlark-derive = { version = "0.13.0", path = "../starlark_derive" }
+blueprint-starlark-map = { version = "0.13.0", path = "../starlark_map" }
+blueprint-starlark-syntax = { version = "0.13.0", path = "../starlark_syntax" }
 static_assertions = "1.1.0"
 strsim = "0.10.0"
 textwrap = "0.11"
 thiserror = "1.0.36"
 
-allocative = { workspace = true, features = ["bumpalo", "num-bigint"] }
-cmp_any = { workspace = true }
+blueprint-allocative = { workspace = true, features = ["bumpalo", "num-bigint"] }
+blueprint-cmp-any = { workspace = true }
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 rustyline = "14.0"

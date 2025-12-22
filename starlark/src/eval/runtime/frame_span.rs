@@ -18,7 +18,7 @@
 use std::fmt;
 use std::fmt::Display;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::eval::runtime::frozen_file_span::FrozenFileSpan;
 use crate::eval::runtime::inlined_frame::InlinedFrames;

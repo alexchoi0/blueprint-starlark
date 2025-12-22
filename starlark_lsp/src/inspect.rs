@@ -15,24 +15,24 @@
  * limitations under the License.
  */
 
-use starlark::codemap::CodeMap;
-use starlark::codemap::Pos;
-use starlark::codemap::ResolvedSpan;
-use starlark::codemap::Span;
-use starlark::syntax::AstModule;
-use starlark_syntax::syntax::ast::ArgumentP;
-use starlark_syntax::syntax::ast::AssignP;
-use starlark_syntax::syntax::ast::AstArgumentP;
-use starlark_syntax::syntax::ast::AstExprP;
-use starlark_syntax::syntax::ast::AstLiteral;
-use starlark_syntax::syntax::ast::AstNoPayload;
-use starlark_syntax::syntax::ast::AstStmtP;
-use starlark_syntax::syntax::ast::ExprP;
-use starlark_syntax::syntax::ast::LoadArgP;
-use starlark_syntax::syntax::ast::ParameterP;
-use starlark_syntax::syntax::ast::StmtP;
-use starlark_syntax::syntax::module::AstModuleFields;
-use starlark_syntax::syntax::uniplate::Visit;
+use blueprint_starlark::codemap::CodeMap;
+use blueprint_starlark::codemap::Pos;
+use blueprint_starlark::codemap::ResolvedSpan;
+use blueprint_starlark::codemap::Span;
+use blueprint_starlark::syntax::AstModule;
+use blueprint_starlark_syntax::syntax::ast::ArgumentP;
+use blueprint_starlark_syntax::syntax::ast::AssignP;
+use blueprint_starlark_syntax::syntax::ast::AstArgumentP;
+use blueprint_starlark_syntax::syntax::ast::AstExprP;
+use blueprint_starlark_syntax::syntax::ast::AstLiteral;
+use blueprint_starlark_syntax::syntax::ast::AstNoPayload;
+use blueprint_starlark_syntax::syntax::ast::AstStmtP;
+use blueprint_starlark_syntax::syntax::ast::ExprP;
+use blueprint_starlark_syntax::syntax::ast::LoadArgP;
+use blueprint_starlark_syntax::syntax::ast::ParameterP;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_syntax::syntax::module::AstModuleFields;
+use blueprint_starlark_syntax::syntax::uniplate::Visit;
 
 #[derive(Debug, PartialEq, Eq, Clone, Hash)]
 pub enum AutocompleteType {

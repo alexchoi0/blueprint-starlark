@@ -29,8 +29,8 @@ use std::marker::PhantomData;
 use std::mem;
 use std::num::NonZeroUsize;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 use either::Either;
 use static_assertions::assert_eq_size;
 

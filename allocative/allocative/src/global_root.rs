@@ -37,7 +37,7 @@ mod tests {
         x: u32,
     }
 
-    #[allocative::root]
+    #[blueprint_allocative::root]
     static TEST_GLOBAL_ROOT: TestGlobalRoot = TestGlobalRoot { x: 17 };
 
     #[test]

@@ -18,7 +18,7 @@
 // This makes for a better API.
 #![allow(clippy::result_unit_err)]
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 /// Unary operator for typechecker.
 #[derive(Copy, Clone, Dupe, Eq, PartialEq, derive_more::Display, Debug)]

@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-use allocative::Allocative;
-use starlark_derive::NoSerialize;
-use starlark_derive::ProvidesStaticType;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::ProvidesStaticType;
 
 use crate as starlark;
 use crate::typing::Ty;

@@ -17,10 +17,10 @@
 
 //! Compile and evaluate module top-level statements.
 
-use starlark_syntax::eval_exception::EvalException;
-use starlark_syntax::syntax::ast::LoadP;
-use starlark_syntax::syntax::ast::StmtP;
-use starlark_syntax::syntax::top_level_stmts::top_level_stmts_mut;
+use blueprint_starlark_syntax::eval_exception::EvalException;
+use blueprint_starlark_syntax::syntax::ast::LoadP;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_syntax::syntax::top_level_stmts::top_level_stmts_mut;
 
 use crate::codemap::Spanned;
 use crate::const_frozen_string;

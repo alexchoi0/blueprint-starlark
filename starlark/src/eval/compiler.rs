@@ -33,7 +33,7 @@ pub(crate) mod span;
 pub(crate) mod stmt;
 pub(crate) mod types;
 
-use starlark_syntax::eval_exception::EvalException;
+use blueprint_starlark_syntax::eval_exception::EvalException;
 
 use crate::codemap::CodeMap;
 use crate::environment::Globals;

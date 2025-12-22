@@ -16,7 +16,7 @@
  */
 
 use debugserver_types::*;
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use serde::Serialize;
 use serde_json::Value;
 

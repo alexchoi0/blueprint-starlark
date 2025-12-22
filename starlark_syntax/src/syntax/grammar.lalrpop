@@ -71,6 +71,10 @@ COMMA<E>: Vec<E> =
     <v0:(<E> ",")*> <e1:E?>
         => v0.into_iter().chain(e1).collect();
 
+COMMA1<E>: Vec<E> =
+    <e0:E> <v:("," <E>)*> ","?
+        => std::iter::once(e0).chain(v).collect();
+
 pub(crate) Starlark: AstStmt = "\n"* <l:@L> <s:(<Stmt> "\n"*)*> <r:@R>
     => grammar_util::statements(s, l, r);
 
@@ -319,9 +323,14 @@ Operand: AstExpr = {
     <l:@L> "[" <e:COMMA<Test>> "]" <r:@R>
         => Expr::List(e).ast(l, r),
     ListComp,
-    <l:@L> "{" <e:COMMA<DictEntry>> "}" <r:@R>
+    <l:@L> "{" "}" <r:@R>
+        => Expr::Dict(vec![]).ast(l, r),
+    <l:@L> "{" <e:COMMA1<DictEntry>> "}" <r:@R>
         => Expr::Dict(e).ast(l, r),
+    <l:@L> "{" <e:COMMA1<Test>> "}" <r:@R>
+        => Expr::Set(e).ast(l, r),
     DictComp,
+    SetComp,
     <l:@L> "(" <e:TestList?> ")" <r:@R>
         => match e {
             Some(t) => t,
@@ -340,6 +349,10 @@ ListComp_: Expr = "[" <t:Test> <c:CompClause> "]"
 DictComp: AstExpr = ASTE<DictComp_>;
 DictComp_: Expr = "{" <k:DictEntry> <c:CompClause>"}"
     => Expr::DictComprehension(Box::new(k), Box::new(c.0), c.1);
+
+SetComp: AstExpr = ASTE<SetComp_>;
+SetComp_: Expr = "{" <t:Test> <c:CompClause> "}"
+    => Expr::SetComprehension(Box::new(t), Box::new(c.0), c.1);
 
 // A comprehension must start with a for, otherwise its an error
 CompClause: (ForClause, Vec<Clause>) = <x:ForClause> <xs:Clause*>

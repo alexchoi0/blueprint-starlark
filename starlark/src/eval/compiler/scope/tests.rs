@@ -20,13 +20,13 @@
 use std::collections::HashMap;
 use std::fmt::Write;
 
-use dupe::Dupe;
-use starlark_syntax::syntax::ast::DefP;
-use starlark_syntax::syntax::ast::ExprP;
-use starlark_syntax::syntax::ast::ForP;
-use starlark_syntax::syntax::ast::StmtP;
-use starlark_syntax::syntax::module::AstModuleFields;
-use starlark_syntax::syntax::uniplate::Visit;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_syntax::syntax::ast::DefP;
+use blueprint_starlark_syntax::syntax::ast::ExprP;
+use blueprint_starlark_syntax::syntax::ast::ForP;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_syntax::syntax::module::AstModuleFields;
+use blueprint_starlark_syntax::syntax::uniplate::Visit;
 
 use crate::environment::Globals;
 use crate::environment::names::MutableNames;

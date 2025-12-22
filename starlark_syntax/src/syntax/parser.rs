@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use starlark_map::small_map::SmallMap;
+use blueprint_starlark_map::small_map::SmallMap;
 
 use crate::codemap::FileSpan;
 

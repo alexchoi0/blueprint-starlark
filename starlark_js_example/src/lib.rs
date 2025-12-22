@@ -19,12 +19,12 @@ use std::mem;
 use std::slice;
 use std::str;
 
-use starlark::environment::Globals;
-use starlark::environment::Module;
-use starlark::eval::Evaluator;
-use starlark::syntax::AstModule;
-use starlark::syntax::Dialect;
-use starlark::values::Value;
+use blueprint_starlark::environment::Globals;
+use blueprint_starlark::environment::Module;
+use blueprint_starlark::eval::Evaluator;
+use blueprint_starlark::syntax::AstModule;
+use blueprint_starlark::syntax::Dialect;
+use blueprint_starlark::values::Value;
 
 #[unsafe(no_mangle)]
 pub extern "C" fn allocation(n: usize) -> *mut u8 {

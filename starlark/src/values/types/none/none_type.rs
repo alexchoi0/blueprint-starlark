@@ -18,12 +18,12 @@
 use std::convert::Infallible;
 use std::hash::Hasher;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use derive_more::Display;
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use serde::Serialize;
 use serde::Serializer;
-use starlark_derive::starlark_value;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

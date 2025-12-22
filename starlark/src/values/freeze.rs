@@ -21,10 +21,10 @@ use std::cell::UnsafeCell;
 use std::marker;
 use std::marker::PhantomData;
 
-use starlark_map::Hashed;
-use starlark_map::small_map::SmallMap;
-use starlark_map::small_set::SmallSet;
-use starlark_syntax::slice_vec_ext::VecExt;
+use blueprint_starlark_map::Hashed;
+use blueprint_starlark_map::small_map::SmallMap;
+use blueprint_starlark_map::small_set::SmallSet;
+use blueprint_starlark_syntax::slice_vec_ext::VecExt;
 
 use crate::values::FreezeResult;
 use crate::values::Freezer;
@@ -41,8 +41,8 @@ use crate::values::Value;
 /// ```
 /// # struct AdditionalData;
 ///
-/// use starlark::values::Freeze;
-/// use starlark::values::FreezeResult;
+/// use blueprint_starlark::values::Freeze;
+/// use blueprint_starlark::values::FreezeResult;
 ///
 /// #[derive(Freeze)]
 /// struct MyType<V> {

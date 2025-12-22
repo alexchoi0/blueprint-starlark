@@ -22,11 +22,11 @@ use std::fmt::Display;
 use std::fmt::Write;
 use std::hash::Hasher;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 use serde::Serialize;
-use starlark_derive::starlark_value;
-use starlark_map::StarlarkHashValue;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_map::StarlarkHashValue;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

@@ -18,8 +18,8 @@
 use std::cell::RefCell;
 use std::cell::RefMut;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::values::Freeze;
 use crate::values::FreezeResult;

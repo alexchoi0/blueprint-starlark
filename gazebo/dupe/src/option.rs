@@ -19,7 +19,7 @@ pub trait OptionDupedExt {
     /// ```
     /// use std::rc::Rc;
     ///
-    /// use dupe::OptionDupedExt;
+    /// use blueprint_dupe::OptionDupedExt;
     /// let rc = Rc::new("test");
     /// assert_eq!(Some(&rc).duped(), Some(rc));
     /// assert_eq!(None::<&Rc<String>>.duped(), None);

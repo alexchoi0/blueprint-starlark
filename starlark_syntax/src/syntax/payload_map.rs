@@ -292,7 +292,13 @@ impl<A: AstPayload> ExprP<A> {
             ExprP::Dict(kvs) => {
                 ExprP::Dict(kvs.into_map(|(k, v)| (k.into_map_payload(f), v.into_map_payload(f))))
             }
+            ExprP::Set(es) => ExprP::Set(es.into_map(|e| e.into_map_payload(f))),
             ExprP::ListComprehension(e, c0, cs) => ExprP::ListComprehension(
+                Box::new(e.into_map_payload(f)),
+                Box::new(c0.into_map_payload(f)),
+                cs.into_map(|c| c.into_map_payload(f)),
+            ),
+            ExprP::SetComprehension(e, c0, cs) => ExprP::SetComprehension(
                 Box::new(e.into_map_payload(f)),
                 Box::new(c0.into_map_payload(f)),
                 cs.into_map(|c| c.into_map_payload(f)),

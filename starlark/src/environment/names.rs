@@ -17,8 +17,8 @@
 
 use std::cell::RefCell;
 
-use allocative::Allocative;
-use starlark_syntax::syntax::ast::Visibility;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_syntax::syntax::ast::Visibility;
 
 use crate::collections::Hashed;
 use crate::collections::SmallMap;

@@ -29,7 +29,7 @@ use std::mem;
 #[cfg(not(target_arch = "wasm32"))]
 use std::time::Instant;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 pub use runtime::arguments::Arguments;
 pub use runtime::before_stmt::BeforeStmtFuncDyn;
 pub use runtime::evaluator::Evaluator;
@@ -41,10 +41,10 @@ pub use runtime::params::spec::ParametersSpecParam;
 pub use runtime::profile::data::ProfileData;
 pub use runtime::profile::mode::ProfileMode;
 pub use soft_error::SoftErrorHandler;
-pub use starlark_syntax::call_stack::CallStack;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::syntax::module::AstModule;
-use starlark_syntax::syntax::module::AstModuleFields;
+pub use blueprint_starlark_syntax::call_stack::CallStack;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::syntax::module::AstModule;
+use blueprint_starlark_syntax::syntax::module::AstModuleFields;
 
 use crate::collections::symbol::symbol::Symbol;
 use crate::docs::DocString;

@@ -20,7 +20,7 @@
 //! There are two general approaches. You can either use the functions in this module directly, e.g.:
 //!
 //! ```
-//! use starlark::assert;
+//! use blueprint_starlark::assert;
 //! assert::eq("1+2", "3");
 //! ```
 //!
@@ -28,8 +28,8 @@
 //! environment in which the tests are run, e.g.:
 //!
 //! ```
-//! use starlark::assert::Assert;
-//! use starlark::syntax::Dialect;
+//! use blueprint_starlark::assert::Assert;
+//! use blueprint_starlark::syntax::Dialect;
 //!
 //! let mut a = Assert::new();
 //! a.dialect(&Dialect::Standard); // Use standard Starlark

@@ -17,7 +17,7 @@
 
 use std::iter;
 
-use starlark_map::small_map::SmallMap;
+use blueprint_starlark_map::small_map::SmallMap;
 
 use crate::typing::Ty;
 use crate::values::AllocFrozenValue;
@@ -44,9 +44,9 @@ use crate::values::types::dict::dict_type::DictType;
 /// # Example
 ///
 /// ```
-/// use starlark::values::dict::AllocDict;
+/// use blueprint_starlark::values::dict::AllocDict;
 ///
-/// # use starlark::values::{FrozenHeap, Heap};
+/// # use blueprint_starlark::values::{FrozenHeap, Heap};
 /// # fn alloc(heap: &Heap, frozen_heap: &FrozenHeap) {
 /// let l = heap.alloc(AllocDict([("a", 1), ("b", 2), ("c", 3)]));
 /// let ls = frozen_heap.alloc(AllocDict([("a", 1), ("b", 2), ("c", 3)]));

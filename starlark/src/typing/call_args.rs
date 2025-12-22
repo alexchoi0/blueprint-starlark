@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use starlark_syntax::codemap::Spanned;
+use blueprint_starlark_syntax::codemap::Spanned;
 
 use crate::typing::Ty;
 

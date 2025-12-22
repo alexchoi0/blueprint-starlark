@@ -36,8 +36,8 @@ use std::sync::atomic::AtomicUsize;
 
 use either::Either;
 use hashbrown::HashTable;
-use starlark_map::Hashed;
-use starlark_map::small_set::SmallSet;
+use blueprint_starlark_map::Hashed;
+use blueprint_starlark_map::small_set::SmallSet;
 
 use crate::collections::SmallMap;
 use crate::values::FrozenValue;
@@ -50,8 +50,8 @@ use crate::values::Value;
 /// For the most cases `#[derive(Trace)]` is enough to implement this trait:
 ///
 /// ```
-/// # use starlark::values::Value;
-/// # use starlark::values::Trace;
+/// # use blueprint_starlark::values::Value;
+/// # use blueprint_starlark::values::Trace;
 ///
 /// #[derive(Trace)]
 /// struct MySet<'v> {

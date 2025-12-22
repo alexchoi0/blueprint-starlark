@@ -17,7 +17,7 @@
 
 use std::collections::HashMap;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::docs::DocItem;
 use crate::docs::DocModule;

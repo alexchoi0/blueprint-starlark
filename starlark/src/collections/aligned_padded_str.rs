@@ -18,7 +18,7 @@
 use std::marker::PhantomData;
 use std::mem;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 /// String which is `usize` aligned with zeros padding in the end.
 #[derive(Copy, Clone, Dupe)]

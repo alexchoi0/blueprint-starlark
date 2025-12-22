@@ -19,7 +19,7 @@
 
 use std::hash::Hash;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 
 use crate::Equivalent;
 use crate::ordered_set::OrderedSet;

@@ -24,11 +24,11 @@ use std::fmt::Formatter;
 use std::marker::PhantomData;
 use std::sync::atomic::AtomicPtr;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_derive::NoSerialize;
-use starlark_derive::ProvidesStaticType;
-use starlark_derive::starlark_value;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::ProvidesStaticType;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::private::Private;
@@ -406,7 +406,7 @@ impl<'v, P: StarlarkCallableParamSpec, R: StarlarkTypeRepr> UnpackValue<'v>
 
 #[cfg(test)]
 mod tests {
-    use starlark_derive::starlark_module;
+    use blueprint_starlark_derive::starlark_module;
 
     use crate as starlark;
     use crate::assert;

@@ -26,7 +26,7 @@ use std::ops::Deref;
 use std::slice;
 use std::vec;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use either::Either;
 
 /// A small vector.

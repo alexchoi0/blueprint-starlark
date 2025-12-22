@@ -20,11 +20,11 @@ use std::fmt;
 use std::fmt::Display;
 use std::hash::Hasher;
 
-use allocative::Allocative;
-use starlark_derive::ProvidesStaticType;
-use starlark_derive::starlark_value;
-use starlark_map::StarlarkHashValue;
-use starlark_map::StarlarkHasher;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_derive::ProvidesStaticType;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_map::StarlarkHashValue;
+use blueprint_starlark_map::StarlarkHasher;
 
 use crate as starlark;
 use crate::__derive_refs::serde::Serialize;

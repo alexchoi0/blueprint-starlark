@@ -23,7 +23,7 @@ use std::hash::Hash;
 use std::hash::Hasher;
 use std::mem;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use equivalent::Equivalent;
 
 use crate::hash_value::StarlarkHashValue;

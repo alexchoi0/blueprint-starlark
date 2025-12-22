@@ -1,11 +1,11 @@
 [package]
-authors = ["Meta"]
-description = "Implementation of derive(Allocative) for allocative crate"
-documentation = "https://docs.rs/allocative"
-edition = "2024"
+authors = ["Meta", "Alex Choi"]
+description = "Implementation of derive(Allocative) for blueprint-allocative crate"
+documentation = "https://docs.rs/blueprint-allocative-derive"
+edition = "2021"
 license = { workspace = true }
-name = "allocative_derive"
-repository = "https://github.com/facebookexperimental/allocative"
+name = "blueprint-allocative-derive"
+repository = { workspace = true }
 version = "0.3.3"
 
 [lib]

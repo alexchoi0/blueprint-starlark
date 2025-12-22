@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use once_cell::sync::Lazy;
 
 use crate::environment::Globals;

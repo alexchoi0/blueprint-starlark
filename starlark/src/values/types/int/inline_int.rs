@@ -24,7 +24,7 @@ use std::ops::BitXor;
 use std::ops::Not;
 use std::ops::Rem;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use num_bigint::BigInt;
 use num_traits::Signed;
 use serde::Serialize;

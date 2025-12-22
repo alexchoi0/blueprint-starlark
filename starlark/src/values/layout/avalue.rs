@@ -22,9 +22,9 @@ use std::fmt::Debug;
 use std::marker::PhantomData;
 use std::mem;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use derive_more::Display;
-use starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

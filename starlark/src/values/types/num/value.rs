@@ -20,7 +20,7 @@ use std::ops::Add;
 use std::ops::Mul;
 use std::ops::Sub;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate as starlark;
 use crate::collections::StarlarkHashValue;

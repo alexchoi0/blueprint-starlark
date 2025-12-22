@@ -22,22 +22,22 @@ use std::sync::Mutex;
 use std::thread;
 
 use debugserver_types::*;
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 pub(crate) use library::*;
 use serde_json::Map;
 use serde_json::Value;
-use starlark::StarlarkResultExt;
-use starlark::debug::DapAdapter;
-use starlark::debug::DapAdapterClient;
-use starlark::debug::DapAdapterEvalHook;
-use starlark::debug::dap_capabilities;
-use starlark::debug::prepare_dap_adapter;
-use starlark::debug::resolve_breakpoints;
-use starlark::environment::Globals;
-use starlark::environment::Module;
-use starlark::eval::Evaluator;
-use starlark::syntax::AstModule;
-use starlark::syntax::Dialect;
+use blueprint_starlark::StarlarkResultExt;
+use blueprint_starlark::debug::DapAdapter;
+use blueprint_starlark::debug::DapAdapterClient;
+use blueprint_starlark::debug::DapAdapterEvalHook;
+use blueprint_starlark::debug::dap_capabilities;
+use blueprint_starlark::debug::prepare_dap_adapter;
+use blueprint_starlark::debug::resolve_breakpoints;
+use blueprint_starlark::environment::Globals;
+use blueprint_starlark::environment::Module;
+use blueprint_starlark::eval::Evaluator;
+use blueprint_starlark::syntax::AstModule;
+use blueprint_starlark::syntax::Dialect;
 
 mod library;
 

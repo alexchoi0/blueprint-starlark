@@ -18,7 +18,7 @@
 use std::collections::HashMap;
 use std::sync::Arc;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::typing::Ty;
 

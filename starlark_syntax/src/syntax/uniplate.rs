@@ -483,7 +483,13 @@ impl<P: AstPayload> ExprP<P> {
                 f(x);
                 f(y);
             }),
+            ExprP::Set(x) => x.iter().for_each(|x| f(x)),
             ExprP::ListComprehension(x, for_, y) => {
+                for_.visit_expr(|x| f(x));
+                y.iter().for_each(|x| x.visit_expr(|x| f(x)));
+                f(x);
+            }
+            ExprP::SetComprehension(x, for_, y) => {
                 for_.visit_expr(|x| f(x));
                 y.iter().for_each(|x| x.visit_expr(|x| f(x)));
                 f(x);
@@ -583,7 +589,13 @@ impl<P: AstPayload> ExprP<P> {
                 f(x);
                 f(y);
             }),
+            ExprP::Set(x) => x.iter_mut().for_each(|x| f(x)),
             ExprP::ListComprehension(x, for_, y) => {
+                for_.visit_expr_mut(|x| f(x));
+                y.iter_mut().for_each(|x| x.visit_expr_mut(|x| f(x)));
+                f(x);
+            }
+            ExprP::SetComprehension(x, for_, y) => {
                 for_.visit_expr_mut(|x| f(x));
                 y.iter_mut().for_each(|x| x.visit_expr_mut(|x| f(x)));
                 f(x);

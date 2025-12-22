@@ -24,10 +24,10 @@
 
 use std::collections::HashMap;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use maplit::hashmap;
 use once_cell::sync::Lazy;
-use starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_module;
 
 use crate as starlark;
 use crate::codemap::FileSpanRef;
@@ -393,7 +393,7 @@ impl<'a> Assert<'a> {
     /// Add a module to the environment that future tests can access.
     ///
     /// ```
-    /// # use starlark::assert::Assert;
+    /// # use blueprint_starlark::assert::Assert;
     /// let mut a = Assert::new();
     /// a.module("hello.star", "hello = 'world'");
     /// a.is_true("load('hello.star', 'hello'); hello == 'world'");
@@ -454,7 +454,7 @@ impl<'a> Assert<'a> {
     /// two words will be sufficient to ensure that.
     ///
     /// ```
-    /// # use starlark::assert::Assert;
+    /// # use blueprint_starlark::assert::Assert;
     /// Assert::new().fail("fail('hello')", "ello");
     /// ```
     pub fn fail(&self, program: &str, msg: &str) -> crate::Error {
@@ -468,7 +468,7 @@ impl<'a> Assert<'a> {
     /// in order.
     ///
     /// ```
-    /// # use starlark::assert::Assert;
+    /// # use blueprint_starlark::assert::Assert;
     /// Assert::new().fails("fail('hello')", &["fail", "ello"]);
     /// ```
     pub fn fails(&self, program: &str, msgs: &[&str]) -> crate::Error {
@@ -479,7 +479,7 @@ impl<'a> Assert<'a> {
     /// assert_eq. Returns the resulting value.
     ///
     /// ```
-    /// # use starlark::assert::Assert;
+    /// # use blueprint_starlark::assert::Assert;
     /// Assert::new().pass("assert_eq(1, 1)");
     /// ```
     pub fn pass(&self, program: &str) -> OwnedFrozenValue {
@@ -507,7 +507,7 @@ impl<'a> Assert<'a> {
     /// A program that must evaluate to `True`.
     ///
     /// ```
-    /// # use starlark::assert::Assert;
+    /// # use blueprint_starlark::assert::Assert;
     /// Assert::new().is_true(
     ///     r#"
     /// x = 1 + 1
@@ -533,7 +533,7 @@ impl<'a> Assert<'a> {
     /// Many lines, each of which must individually evaluate to `True` (or be blank lines).
     ///
     /// ```
-    /// # use starlark::assert::Assert;
+    /// # use blueprint_starlark::assert::Assert;
     /// Assert::new().all_true(
     ///     r#"
     /// 1 == 1
@@ -557,7 +557,7 @@ impl<'a> Assert<'a> {
     /// Two programs that must evaluate to the same (non-error) result.
     ///
     /// ```
-    /// # use starlark::assert::Assert;
+    /// # use blueprint_starlark::assert::Assert;
     /// Assert::new().eq("1 + 1", "2");
     /// ```
     pub fn eq(&self, lhs: &str, rhs: &str) {
@@ -590,7 +590,7 @@ pub(crate) fn fail_golden(path: &str, program: &str) -> crate::Error {
     let program = program.trim();
     let e = fails(program, &[]);
     let output = format!("Program:\n\n{program}\n\nError:\n\n{e:?}\n");
-    starlark_syntax::golden_test_template::golden_test_template(path, &output);
+    blueprint_starlark_syntax::golden_test_template::golden_test_template(path, &output);
     e
 }
 

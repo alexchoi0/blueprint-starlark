@@ -22,9 +22,9 @@ use std::fmt;
 use std::fmt::Debug;
 use std::fmt::Display;
 
-use allocative::Allocative;
-use starlark_derive::NoSerialize;
-use starlark_derive::starlark_value;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;
@@ -104,9 +104,9 @@ where
 
 #[cfg(test)]
 mod tests {
-    use allocative::Allocative;
-    use starlark_derive::ProvidesStaticType;
-    use starlark_derive::Trace;
+    use blueprint_allocative::Allocative;
+    use blueprint_starlark_derive::ProvidesStaticType;
+    use blueprint_starlark_derive::Trace;
 
     use crate as starlark;
     use crate::const_frozen_string;

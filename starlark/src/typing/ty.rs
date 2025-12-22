@@ -20,14 +20,14 @@ use std::fmt::Debug;
 use std::fmt::Display;
 use std::sync::Arc;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use dupe::IterDupedExt;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_dupe::IterDupedExt;
 use either::Either;
-use starlark_derive::Trace;
-use starlark_syntax::codemap::CodeMap;
-use starlark_syntax::codemap::Span;
-use starlark_syntax::codemap::Spanned;
+use blueprint_starlark_derive::Trace;
+use blueprint_starlark_syntax::codemap::CodeMap;
+use blueprint_starlark_syntax::codemap::Span;
+use blueprint_starlark_syntax::codemap::Spanned;
 
 use crate as starlark;
 use crate::__derive_refs::components::NativeCallableComponents;

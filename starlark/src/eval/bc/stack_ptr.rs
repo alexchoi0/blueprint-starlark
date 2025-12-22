@@ -19,7 +19,7 @@
 
 use std::ops::Add;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 /// Index of the slot in the function frame.
 /// This can be both a local variable or a temporary.

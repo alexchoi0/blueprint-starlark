@@ -18,7 +18,7 @@
 //! In these tests, parameters are declared as unused,
 //! attributes should be preserved and no warnings should be emitted.
 
-use starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_module;
 
 use crate as starlark;
 use crate::environment::GlobalsBuilder;

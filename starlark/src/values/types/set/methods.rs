@@ -20,10 +20,10 @@
 use std::mem;
 
 use either::Either;
-use starlark_derive::starlark_module;
-use starlark_map::Hashed;
-use starlark_map::small_set::SmallSet;
-use starlark_syntax::value_error;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_map::Hashed;
+use blueprint_starlark_map::small_set::SmallSet;
+use blueprint_starlark_syntax::value_error;
 
 use crate as starlark;
 use crate::environment::MethodsBuilder;

@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use derive_more::Display;
 use itertools::Itertools;
 use serde::Serialize;
-use starlark::starlark_simple_value;
-use starlark_derive::NoSerialize;
-use starlark_derive::starlark_module;
-use starlark_derive::starlark_value;
-use starlark_map::small_map::SmallMap;
-use starlark_syntax::golden_test_template::golden_test_template;
+use blueprint_starlark::starlark_simple_value;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_map::small_map::SmallMap;
+use blueprint_starlark_syntax::golden_test_template::golden_test_template;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

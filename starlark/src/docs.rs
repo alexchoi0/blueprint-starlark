@@ -29,9 +29,9 @@ mod tests;
 
 use std::iter;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 pub use parse::DocStringKind;
-use starlark_map::small_map::SmallMap;
+use blueprint_starlark_map::small_map::SmallMap;
 
 use crate as starlark;
 pub use crate::eval::runtime::params::display::FmtParam;

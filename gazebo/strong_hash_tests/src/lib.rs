@@ -12,7 +12,7 @@
 
 use std::hash::Hasher;
 
-use strong_hash::StrongHash;
+use blueprint_strong_hash::StrongHash;
 
 #[test]
 fn test_strong_hash_derive() {

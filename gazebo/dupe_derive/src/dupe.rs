@@ -38,7 +38,7 @@ fn derive_dupe_explicit(
 
     // Add a bound `T: Dupe` to every type parameter T.
     let generics = if with_traits {
-        let bound: TypeParamBound = parse_quote!(dupe::Dupe);
+        let bound: TypeParamBound = parse_quote!(blueprint_dupe::Dupe);
         add_trait_bounds(input.generics, &bound)
     } else {
         input.generics
@@ -59,7 +59,7 @@ fn derive_dupe_explicit(
     );
 
     let generated = quote! {
-        impl #impl_generics dupe::Dupe for #name #ty_generics #where_clause {
+        impl #impl_generics blueprint_dupe::Dupe for #name #ty_generics #where_clause {
         }
 
         #[doc(hidden)]
@@ -76,7 +76,7 @@ fn check_each_field_dupe<'a>(tys: impl IntoIterator<Item = &'a Type>) -> TokenSt
     let tys = tys.into_iter();
     quote! {
         #(
-            dupe::__macro_refs::assert_dupe::<#tys>();
+            blueprint_dupe::__macro_refs::assert_dupe::<#tys>();
         )*
     }
 }

@@ -17,11 +17,11 @@
 
 #![cfg(test)]
 
-use allocative::Allocative;
-use starlark_derive::Freeze;
-use starlark_derive::NoSerialize;
-use starlark_derive::Trace;
-use starlark_derive::starlark_value;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_derive::Freeze;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::Trace;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

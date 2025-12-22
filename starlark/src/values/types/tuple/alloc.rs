@@ -34,8 +34,8 @@ use crate::values::type_repr::StarlarkTypeRepr;
 /// # Example
 ///
 /// ```
-/// # use starlark::values::{FrozenHeap, Heap};
-/// # use starlark::values::tuple::AllocTuple;
+/// # use blueprint_starlark::values::{FrozenHeap, Heap};
+/// # use blueprint_starlark::values::tuple::AllocTuple;
 /// # fn alloc(heap: &Heap, frozen_heap: &FrozenHeap) {
 /// let l = heap.alloc(AllocTuple([1, 2, 3]));
 /// let ls = frozen_heap.alloc(AllocTuple([1, 2, 3]));

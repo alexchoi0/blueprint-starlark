@@ -24,9 +24,9 @@ use std::hash::Hash;
 use std::hash::Hasher;
 use std::marker::PhantomData;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_syntax::codemap::Span;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_syntax::codemap::Span;
 
 use crate::typing::Ty;
 use crate::typing::TyBasic;

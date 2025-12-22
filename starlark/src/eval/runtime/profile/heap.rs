@@ -17,8 +17,8 @@
 
 use std::fmt::Debug;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::eval::ProfileMode;
 use crate::eval::runtime::profile::data::ProfileData;
@@ -50,7 +50,7 @@ impl ProfilerType for HeapAllocatedProfilerType {
         ProfileDataImpl::HeapAllocated(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         Ok(Box::new(AggregateHeapProfileInfo::merge(
             profiles.iter().map(|x| &***x),
         )))
@@ -72,7 +72,7 @@ impl ProfilerType for HeapSummaryAllocatedProfilerType {
         ProfileDataImpl::HeapSummaryAllocated(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         Ok(Box::new(AggregateHeapProfileInfo::merge(
             profiles.iter().map(|x| &***x),
         )))
@@ -94,7 +94,7 @@ impl ProfilerType for HeapFlameAllocatedProfilerType {
         ProfileDataImpl::HeapFlameAllocated(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         Ok(Box::new(AggregateHeapProfileInfo::merge(
             profiles.iter().map(|x| &***x),
         )))
@@ -116,7 +116,7 @@ impl ProfilerType for HeapRetainedProfilerType {
         ProfileDataImpl::HeapRetained(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         Ok(Box::new(AggregateHeapProfileInfo::merge(
             profiles.iter().map(|x| &***x),
         )))
@@ -138,7 +138,7 @@ impl ProfilerType for HeapSummaryRetainedProfilerType {
         ProfileDataImpl::HeapSummaryRetained(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         Ok(Box::new(AggregateHeapProfileInfo::merge(
             profiles.iter().map(|x| &***x),
         )))
@@ -160,7 +160,7 @@ impl ProfilerType for HeapFlameRetainedProfilerType {
         ProfileDataImpl::HeapFlameRetained(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         Ok(Box::new(AggregateHeapProfileInfo::merge(
             profiles.iter().map(|x| &***x),
         )))

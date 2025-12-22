@@ -18,7 +18,7 @@
 use std::fmt;
 use std::fmt::Display;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::codemap::CodeMap;
 use crate::codemap::FileSpan;

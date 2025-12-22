@@ -27,14 +27,14 @@ use std::ops::Not;
 use std::ops::Sub;
 use std::str::FromStr;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use num_bigint::BigInt;
 use num_bigint::Sign;
 use num_traits::FromPrimitive;
 use num_traits::Signed;
 use num_traits::ToPrimitive;
 use num_traits::Zero;
-use starlark_syntax::lexer::TokenInt;
+use blueprint_starlark_syntax::lexer::TokenInt;
 
 use crate as starlark;
 use crate::typing::Ty;

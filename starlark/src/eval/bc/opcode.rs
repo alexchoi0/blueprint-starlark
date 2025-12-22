@@ -21,8 +21,8 @@ use std::any;
 use std::any::TypeId;
 use std::marker;
 
-use dupe::Dupe;
-use starlark_derive::starlark_internal_bc;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_derive::starlark_internal_bc;
 
 use crate::eval::bc::instr::BcInstr;
 use crate::eval::bc::instr_impl::*;

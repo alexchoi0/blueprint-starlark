@@ -17,7 +17,7 @@
 
 //! Compile def.
 
-use starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
 use crate::eval::bc::instr_impl::InstrDef;
 use crate::eval::bc::instr_impl::InstrDefData;

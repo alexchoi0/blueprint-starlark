@@ -23,11 +23,11 @@ use std::fmt::Display;
 use std::mem;
 use std::ops::Deref;
 
-use allocative::Allocative;
-use display_container::fmt_container;
+use blueprint_allocative::Allocative;
+use blueprint_display_container::fmt_container;
 use serde::Serialize;
-use starlark_map::Hashed;
-use starlark_map::small_set::SmallSet;
+use blueprint_starlark_map::Hashed;
+use blueprint_starlark_map::small_set::SmallSet;
 
 use super::refs::SetRef;
 use crate as starlark;

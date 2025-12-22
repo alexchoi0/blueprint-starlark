@@ -17,8 +17,8 @@
 
 use std::collections::HashMap;
 
-use allocative::Allocative;
-use starlark_map::small_map::SmallMap;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_map::small_map::SmallMap;
 
 use crate::values::layout::heap::profile::alloc_counts::AllocCounts;
 

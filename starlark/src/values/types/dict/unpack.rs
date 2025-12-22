@@ -25,7 +25,7 @@ use crate::values::types::dict::dict_type::DictType;
 
 /// Unpack `dict`.
 ///
-/// There's `impl` [`UnpackValue`] for [`SmallMap`](starlark_map::small_map::SmallMap)
+/// There's `impl` [`UnpackValue`] for [`SmallMap`](blueprint_starlark_map::small_map::SmallMap)
 /// but this can be used when hashing of unpacked keys is not needed.
 pub struct UnpackDictEntries<K, V> {
     /// Entries of the dictionary.

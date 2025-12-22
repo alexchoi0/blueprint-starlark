@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use once_cell::sync::OnceCell;
-use starlark_map::Hashed;
+use blueprint_starlark_map::Hashed;
 
 use crate::__derive_refs::components::NativeCallableComponents;
 use crate::collections::symbol::map::SymbolMap;
@@ -284,11 +284,11 @@ impl MethodsStatic {
 
 #[cfg(test)]
 mod tests {
-    use allocative::Allocative;
+    use blueprint_allocative::Allocative;
     use derive_more::Display;
-    use starlark_derive::NoSerialize;
-    use starlark_derive::ProvidesStaticType;
-    use starlark_derive::starlark_value;
+    use blueprint_starlark_derive::NoSerialize;
+    use blueprint_starlark_derive::ProvidesStaticType;
+    use blueprint_starlark_derive::starlark_value;
 
     use crate as starlark;
     use crate::assert::Assert;

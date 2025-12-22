@@ -17,22 +17,22 @@
 
 use std::collections::HashMap;
 
-use dupe::Dupe;
-use starlark_map::small_map::SmallMap;
-use starlark_syntax::syntax::ast::AssignOp;
-use starlark_syntax::syntax::ast::AssignP;
-use starlark_syntax::syntax::ast::AssignTargetP;
-use starlark_syntax::syntax::ast::ClauseP;
-use starlark_syntax::syntax::ast::DefP;
-use starlark_syntax::syntax::ast::ExprP;
-use starlark_syntax::syntax::ast::ForClauseP;
-use starlark_syntax::syntax::ast::ForP;
-use starlark_syntax::syntax::ast::IdentP;
-use starlark_syntax::syntax::ast::StmtP;
-use starlark_syntax::syntax::def::DefParamKind;
-use starlark_syntax::syntax::def::DefParams;
-use starlark_syntax::syntax::def::DefRegularParamMode;
-use starlark_syntax::syntax::uniplate::Visit;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::small_map::SmallMap;
+use blueprint_starlark_syntax::syntax::ast::AssignOp;
+use blueprint_starlark_syntax::syntax::ast::AssignP;
+use blueprint_starlark_syntax::syntax::ast::AssignTargetP;
+use blueprint_starlark_syntax::syntax::ast::ClauseP;
+use blueprint_starlark_syntax::syntax::ast::DefP;
+use blueprint_starlark_syntax::syntax::ast::ExprP;
+use blueprint_starlark_syntax::syntax::ast::ForClauseP;
+use blueprint_starlark_syntax::syntax::ast::ForP;
+use blueprint_starlark_syntax::syntax::ast::IdentP;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_syntax::syntax::def::DefParamKind;
+use blueprint_starlark_syntax::syntax::def::DefParams;
+use blueprint_starlark_syntax::syntax::def::DefRegularParamMode;
+use blueprint_starlark_syntax::syntax::uniplate::Visit;
 
 use crate::codemap::CodeMap;
 use crate::codemap::Span;

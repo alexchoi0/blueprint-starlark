@@ -32,8 +32,8 @@ use std::ptr;
 use std::ptr::NonNull;
 use std::slice;
 
-use allocative::Allocative;
-use allocative::Visitor;
+use blueprint_allocative::Allocative;
+use blueprint_allocative::Visitor;
 
 use crate::sorting::insertion::insertion_sort;
 use crate::sorting::insertion::slice_swap_shift;
@@ -605,10 +605,10 @@ impl<A: Allocative, B: Allocative> Allocative for Vec2<A, B> {
         let mut visitor = visitor.enter_self_sized::<Self>();
         if self.cap != 0 {
             let mut visitor =
-                visitor.enter_unique(allocative::Key::new("ptr"), mem::size_of::<*const ()>());
+                visitor.enter_unique(blueprint_allocative::Key::new("ptr"), mem::size_of::<*const ()>());
             {
                 let mut visitor = visitor.enter(
-                    allocative::Key::new("data"),
+                    blueprint_allocative::Key::new("data"),
                     Vec2Layout::<A, B>::new(self.cap).layout.size(),
                 );
                 for (a, b) in self {
@@ -629,7 +629,7 @@ mod tests {
     use std::marker::PhantomData;
     use std::rc::Rc;
 
-    use dupe::Dupe;
+    use blueprint_dupe::Dupe;
 
     use crate::vec2::Vec2;
     use crate::vec2::Vec2Layout;

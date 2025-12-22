@@ -27,11 +27,11 @@ use std::hash::Hasher;
 use std::mem;
 use std::ops::Deref;
 
-use allocative::Allocative;
-use display_container::fmt_keyed_container;
+use blueprint_allocative::Allocative;
+use blueprint_display_container::fmt_keyed_container;
 use serde::Serialize;
-use starlark_derive::starlark_value;
-use starlark_map::Equivalent;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_map::Equivalent;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

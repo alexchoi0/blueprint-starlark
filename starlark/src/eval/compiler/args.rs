@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-use starlark_derive::VisitSpanMut;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::syntax::ast::ArgumentP;
-use starlark_syntax::syntax::ast::CallArgsP;
+use blueprint_starlark_derive::VisitSpanMut;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::syntax::ast::ArgumentP;
+use blueprint_starlark_syntax::syntax::ast::CallArgsP;
 
 use crate::coerce::coerce;
 use crate::collections::symbol::symbol::Symbol;

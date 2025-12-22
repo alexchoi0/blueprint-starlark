@@ -50,7 +50,7 @@ impl<'v> UnpackValue<'v> for TypeType {
 
 #[cfg(test)]
 mod tests {
-    use starlark_derive::starlark_module;
+    use blueprint_starlark_derive::starlark_module;
 
     use crate as starlark;
     use crate::assert::Assert;

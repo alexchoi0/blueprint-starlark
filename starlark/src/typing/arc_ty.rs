@@ -21,8 +21,8 @@ use std::fmt::Formatter;
 use std::ops::Deref;
 use std::sync::Arc;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::typing::Ty;
 use crate::typing::ty::TypeRenderConfig;

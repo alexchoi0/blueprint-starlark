@@ -19,7 +19,7 @@
 
 use std::fmt::Write;
 
-use starlark_syntax::golden_test_template::golden_test_template;
+use blueprint_starlark_syntax::golden_test_template::golden_test_template;
 
 use crate::analysis::unused_loads::remove::remove_unused_loads;
 

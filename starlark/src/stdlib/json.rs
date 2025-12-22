@@ -22,7 +22,7 @@ use std::str::FromStr;
 
 use either::Either;
 use num_bigint::BigInt;
-use starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_module;
 
 use crate as starlark;
 use crate::collections::SmallMap;

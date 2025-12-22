@@ -18,14 +18,14 @@
 use std::fmt;
 use std::fmt::Display;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use hashbrown::HashTable;
-use starlark_derive::NoSerialize;
-use starlark_derive::starlark_module;
-use starlark_derive::starlark_value;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::slice_vec_ext::VecExt;
-use starlark_syntax::value_error;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::slice_vec_ext::VecExt;
+use blueprint_starlark_syntax::value_error;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

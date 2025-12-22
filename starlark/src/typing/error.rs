@@ -17,8 +17,8 @@
 
 use std::fmt::Display;
 
-use starlark_syntax::diagnostic::WithDiagnostic;
-use starlark_syntax::eval_exception::EvalException;
+use blueprint_starlark_syntax::diagnostic::WithDiagnostic;
+use blueprint_starlark_syntax::eval_exception::EvalException;
 
 use crate::codemap::CodeMap;
 use crate::codemap::Span;

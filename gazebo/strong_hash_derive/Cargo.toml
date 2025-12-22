@@ -1,8 +1,9 @@
 [package]
-description = "Proc macro for strong_hash crate"
-edition = "2024"
+authors = ["Facebook", "Alex Choi"]
+description = "Proc macro for blueprint-strong-hash crate"
+edition = "2021"
 license = { workspace = true }
-name = "strong_hash_derive"
+name = "blueprint-strong-hash-derive"
 repository = { workspace = true }
 version = "0.1.0"
 

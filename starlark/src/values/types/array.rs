@@ -27,9 +27,9 @@ use std::fmt::Formatter;
 use std::ptr;
 use std::slice;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use serde::Serialize;
-use starlark_derive::starlark_value;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

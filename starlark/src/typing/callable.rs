@@ -18,9 +18,9 @@
 use std::fmt::Display;
 use std::sync::OnceLock;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_syntax::codemap::Span;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_syntax::codemap::Span;
 
 use crate::typing::ParamSpec;
 use crate::typing::Ty;

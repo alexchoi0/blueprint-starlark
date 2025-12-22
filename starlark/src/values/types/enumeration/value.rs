@@ -18,16 +18,16 @@
 use std::fmt;
 use std::fmt::Display;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use derivative::Derivative;
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use either::Either;
-use starlark_derive::Coerce;
-use starlark_derive::Freeze;
-use starlark_derive::Trace;
-use starlark_derive::starlark_module;
-use starlark_derive::starlark_value;
-use starlark_map::StarlarkHasher;
+use blueprint_starlark_derive::Coerce;
+use blueprint_starlark_derive::Freeze;
+use blueprint_starlark_derive::Trace;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_map::StarlarkHasher;
 
 use crate as starlark;
 use crate::__derive_refs::serde;

@@ -32,11 +32,11 @@ use std::mem::MaybeUninit;
 use std::ptr;
 use std::slice;
 
-use allocative::Allocative;
-use allocative::Visitor;
+use blueprint_allocative::Allocative;
+use blueprint_allocative::Visitor;
 use bumpalo::Bump;
-use dupe::Dupe;
-use starlark_map::small_map::SmallMap;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::small_map::SmallMap;
 
 use crate::collections::StarlarkHashValue;
 use crate::eval::runtime::profile::instant::ProfilerInstant;
@@ -487,14 +487,14 @@ impl<A: ArenaAllocator> Drop for Arena<A> {
 }
 
 impl<A: ArenaAllocator> Allocative for Arena<A> {
-    fn visit<'a, 'b: 'a>(&self, visitor: &'a mut allocative::Visitor<'b>) {
+    fn visit<'a, 'b: 'a>(&self, visitor: &'a mut blueprint_allocative::Visitor<'b>) {
         let Arena { drop, non_drop } = self;
 
         fn visit_bump<'a, 'b: 'a, A: ArenaAllocator>(bump: &A, visitor: &'a mut Visitor<'b>) {
             let mut visitor =
-                visitor.enter_unique(allocative::Key::new("data"), mem::size_of::<*const ()>());
+                visitor.enter_unique(blueprint_allocative::Key::new("data"), mem::size_of::<*const ()>());
             let mut allocated_visitor =
-                visitor.enter(allocative::Key::new("allocated"), bump.allocated_bytes());
+                visitor.enter(blueprint_allocative::Key::new("allocated"), bump.allocated_bytes());
             Arena::for_each_unordered_in_bump(bump, |x| {
                 let key = x.0.type_as_allocative_key.clone();
                 let size = x.alloc_size();
@@ -507,7 +507,7 @@ impl<A: ArenaAllocator> Allocative for Arena<A> {
             });
             allocated_visitor.exit();
             visitor.visit_simple(
-                allocative::Key::new("allocation_overhead"),
+                blueprint_allocative::Key::new("allocation_overhead"),
                 bump.allocation_overhead(),
             );
             visitor.exit();
@@ -515,13 +515,13 @@ impl<A: ArenaAllocator> Allocative for Arena<A> {
 
         let mut visitor = visitor.enter_self_sized::<Self>();
         {
-            let mut visitor = visitor.enter(allocative::Key::new("drop"), mem::size_of::<Bump>());
+            let mut visitor = visitor.enter(blueprint_allocative::Key::new("drop"), mem::size_of::<Bump>());
             visit_bump(drop, &mut visitor);
             visitor.exit();
         }
         {
             let mut visitor =
-                visitor.enter(allocative::Key::new("non_drop"), mem::size_of::<Bump>());
+                visitor.enter(blueprint_allocative::Key::new("non_drop"), mem::size_of::<Bump>());
             visit_bump(non_drop, &mut visitor);
             visitor.exit();
         }

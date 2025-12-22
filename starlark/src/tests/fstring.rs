@@ -109,7 +109,7 @@ f"{x}" == '("x",)'
 }
 
 mod fail {
-    use starlark_syntax::golden_test_template::golden_test_template;
+    use blueprint_starlark_syntax::golden_test_template::golden_test_template;
 
     use crate::assert::Assert;
     use crate::syntax::Dialect;

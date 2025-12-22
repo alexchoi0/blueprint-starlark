@@ -19,7 +19,7 @@
 
 use std::borrow::Cow;
 
-use starlark_syntax::syntax::ast::ExprP;
+use blueprint_starlark_syntax::syntax::ast::ExprP;
 
 use crate::codemap::Spanned;
 use crate::eval::compiler::scope::payload::CstExpr;

@@ -17,27 +17,27 @@
 
 use std::collections::HashMap;
 
-use starlark::codemap::Pos;
-use starlark::codemap::Span;
-use starlark::syntax::AstModule;
-use starlark_syntax::syntax::ast::AssignIdentP;
-use starlark_syntax::syntax::ast::AssignP;
-use starlark_syntax::syntax::ast::AstAssignIdent;
-use starlark_syntax::syntax::ast::AstAssignTarget;
-use starlark_syntax::syntax::ast::AstExpr;
-use starlark_syntax::syntax::ast::AstIdent;
-use starlark_syntax::syntax::ast::AstParameter;
-use starlark_syntax::syntax::ast::AstStmt;
-use starlark_syntax::syntax::ast::AstString;
-use starlark_syntax::syntax::ast::AstTypeExpr;
-use starlark_syntax::syntax::ast::Clause;
-use starlark_syntax::syntax::ast::DefP;
-use starlark_syntax::syntax::ast::Expr;
-use starlark_syntax::syntax::ast::ForClause;
-use starlark_syntax::syntax::ast::ForP;
-use starlark_syntax::syntax::ast::IdentP;
-use starlark_syntax::syntax::ast::LambdaP;
-use starlark_syntax::syntax::ast::Stmt;
+use blueprint_starlark::codemap::Pos;
+use blueprint_starlark::codemap::Span;
+use blueprint_starlark::syntax::AstModule;
+use blueprint_starlark_syntax::syntax::ast::AssignIdentP;
+use blueprint_starlark_syntax::syntax::ast::AssignP;
+use blueprint_starlark_syntax::syntax::ast::AstAssignIdent;
+use blueprint_starlark_syntax::syntax::ast::AstAssignTarget;
+use blueprint_starlark_syntax::syntax::ast::AstExpr;
+use blueprint_starlark_syntax::syntax::ast::AstIdent;
+use blueprint_starlark_syntax::syntax::ast::AstParameter;
+use blueprint_starlark_syntax::syntax::ast::AstStmt;
+use blueprint_starlark_syntax::syntax::ast::AstString;
+use blueprint_starlark_syntax::syntax::ast::AstTypeExpr;
+use blueprint_starlark_syntax::syntax::ast::Clause;
+use blueprint_starlark_syntax::syntax::ast::DefP;
+use blueprint_starlark_syntax::syntax::ast::Expr;
+use blueprint_starlark_syntax::syntax::ast::ForClause;
+use blueprint_starlark_syntax::syntax::ast::ForP;
+use blueprint_starlark_syntax::syntax::ast::IdentP;
+use blueprint_starlark_syntax::syntax::ast::LambdaP;
+use blueprint_starlark_syntax::syntax::ast::Stmt;
 
 #[derive(Debug, Clone, Eq, PartialEq)]
 pub(crate) enum Assigner {
@@ -364,9 +364,9 @@ pub(crate) fn scope(module: &AstModule) -> Scope {
 mod tests {
     use std::iter;
 
-    use starlark::syntax::Dialect;
-    use starlark_syntax::slice_vec_ext::SliceExt;
-    use starlark_syntax::slice_vec_ext::VecExt;
+    use blueprint_starlark::syntax::Dialect;
+    use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+    use blueprint_starlark_syntax::slice_vec_ext::VecExt;
 
     use super::*;
 

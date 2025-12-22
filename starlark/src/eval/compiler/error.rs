@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use starlark_syntax::eval_exception::EvalException;
+use blueprint_starlark_syntax::eval_exception::EvalException;
 
 pub(crate) struct CompilerInternalError(EvalException);
 

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use dupe::Clone_;
+use blueprint_dupe::Clone_;
 
 use crate::Hashed;
 use crate::iter::def_double_ended_iter;

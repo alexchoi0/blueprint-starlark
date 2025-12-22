@@ -22,9 +22,9 @@ use std::fmt::Debug;
 use std::mem;
 use std::ptr;
 
-use allocative::Allocative;
-use starlark_derive::NoSerialize;
-use starlark_derive::starlark_value;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;
@@ -90,7 +90,7 @@ mod tests {
     use std::sync::atomic::AtomicU32;
     use std::sync::atomic::Ordering;
 
-    use dupe::Dupe;
+    use blueprint_dupe::Dupe;
 
     use crate::values::FrozenHeap;
 

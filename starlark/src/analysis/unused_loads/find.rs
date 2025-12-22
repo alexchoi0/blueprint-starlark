@@ -17,16 +17,16 @@
 
 use std::collections::HashMap;
 
-use dupe::Dupe;
-use starlark_syntax::codemap::CodeMap;
-use starlark_syntax::codemap::FileSpanRef;
-use starlark_syntax::codemap::Spanned;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::syntax::ast::LoadArgP;
-use starlark_syntax::syntax::ast::LoadP;
-use starlark_syntax::syntax::ast::StmtP;
-use starlark_syntax::syntax::module::AstModuleFields;
-use starlark_syntax::syntax::top_level_stmts::top_level_stmts;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_syntax::codemap::CodeMap;
+use blueprint_starlark_syntax::codemap::FileSpanRef;
+use blueprint_starlark_syntax::codemap::Spanned;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::syntax::ast::LoadArgP;
+use blueprint_starlark_syntax::syntax::ast::LoadP;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_syntax::syntax::module::AstModuleFields;
+use blueprint_starlark_syntax::syntax::top_level_stmts::top_level_stmts;
 
 use crate::environment::names::MutableNames;
 use crate::eval::compiler::scope::BindingId;

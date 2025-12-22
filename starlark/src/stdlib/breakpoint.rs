@@ -19,7 +19,7 @@ use std::sync::Mutex;
 
 use itertools::Itertools;
 use once_cell::sync::Lazy;
-use starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_module;
 use thiserror::Error;
 
 use crate as starlark;
@@ -230,7 +230,7 @@ mod tests {
     use std::env;
     use std::rc::Rc;
 
-    use dupe::Dupe;
+    use blueprint_dupe::Dupe;
 
     use super::*;
     use crate::assert::Assert;

@@ -19,10 +19,10 @@ use std::fmt;
 use std::fmt::Display;
 use std::num::NonZeroI32;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_derive::NoSerialize;
-use starlark_derive::starlark_value;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

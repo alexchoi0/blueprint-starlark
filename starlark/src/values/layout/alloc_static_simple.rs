@@ -47,10 +47,10 @@ impl<T: StarlarkValue<'static>> AllocStaticSimple<T> {
 
 #[cfg(test)]
 mod tests {
-    use allocative::Allocative;
-    use starlark_derive::NoSerialize;
-    use starlark_derive::ProvidesStaticType;
-    use starlark_derive::starlark_value;
+    use blueprint_allocative::Allocative;
+    use blueprint_starlark_derive::NoSerialize;
+    use blueprint_starlark_derive::ProvidesStaticType;
+    use blueprint_starlark_derive::starlark_value;
 
     use crate as starlark;
     use crate::values::AllocStaticSimple;

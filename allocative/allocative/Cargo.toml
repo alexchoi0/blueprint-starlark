@@ -1,15 +1,15 @@
 [package]
-authors = ["Meta"]
+authors = ["Meta", "Alex Choi"]
 description = "Inspect rust object tree and output it as flamegraph"
-documentation = "https://docs.rs/allocative"
-edition = "2024"
+documentation = "https://docs.rs/blueprint-allocative"
+edition = "2021"
 license = { workspace = true }
-name = "allocative"
-repository = "https://github.com/facebookexperimental/allocative"
+name = "blueprint-allocative"
+repository = { workspace = true }
 version = "0.3.4"
 
 [dependencies]
-allocative_derive = { path = "../allocative_derive", version = "=0.3.3" }
+blueprint-allocative-derive = { path = "../allocative_derive", version = "=0.3.3" }
 
 ctor = { workspace = true }
 

@@ -22,11 +22,11 @@ use std::fmt::Display;
 use std::fmt::Formatter;
 use std::slice;
 
-use allocative::Allocative;
-use display_container::fmt_container;
+use blueprint_allocative::Allocative;
+use blueprint_display_container::fmt_container;
 use serde::Serialize;
 use serde::ser::SerializeTuple;
-use starlark_derive::starlark_value;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

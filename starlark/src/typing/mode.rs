@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 #[derive(Copy, Clone, Dupe, Debug, Eq, PartialEq)]
 pub(crate) enum TypecheckMode {

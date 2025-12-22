@@ -17,8 +17,8 @@
 
 //! Public API for parser.
 
-pub use starlark_syntax::dialect::Dialect;
-pub use starlark_syntax::dialect::DialectTypes;
-pub use starlark_syntax::syntax::AstLoad;
-pub use starlark_syntax::syntax::AstModule;
-pub use starlark_syntax::syntax::ast;
+pub use blueprint_starlark_syntax::dialect::Dialect;
+pub use blueprint_starlark_syntax::dialect::DialectTypes;
+pub use blueprint_starlark_syntax::syntax::AstLoad;
+pub use blueprint_starlark_syntax::syntax::AstModule;
+pub use blueprint_starlark_syntax::syntax::ast;

@@ -281,8 +281,8 @@ unsafe impl Send for VisitedSharedPointer {}
 /// # Example
 ///
 /// ```
-/// use allocative::Allocative;
-/// use allocative::FlameGraphBuilder;
+/// use blueprint_allocative::Allocative;
+/// use blueprint_allocative::FlameGraphBuilder;
 ///
 /// #[derive(Allocative)]
 /// struct Foo {

@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-use dupe::Dupe;
-use starlark_map::small_map::SmallMap;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::small_map::SmallMap;
 
 use crate::eval::runtime::profile::csv::CsvWriter;
 use crate::eval::runtime::small_duration::SmallDuration;

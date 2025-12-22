@@ -17,7 +17,7 @@
 
 //! Write operators like `+=`.
 
-use starlark_syntax::syntax::ast::AssignOp;
+use blueprint_starlark_syntax::syntax::ast::AssignOp;
 
 use crate::collections::symbol::symbol::Symbol;
 use crate::eval::bc::compiler::expr::write_n_exprs;

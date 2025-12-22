@@ -21,7 +21,7 @@ use std::cmp::Ordering;
 use std::marker;
 use std::ptr;
 
-use starlark_syntax::eval_exception::EvalException;
+use blueprint_starlark_syntax::eval_exception::EvalException;
 
 use crate::coerce::coerce;
 use crate::collections::Hashed;

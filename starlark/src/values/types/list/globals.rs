@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 use once_cell::sync::Lazy;
-use starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_module;
 
 use crate as starlark;
 use crate::codemap::Span;

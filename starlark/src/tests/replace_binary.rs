@@ -19,8 +19,8 @@
 
 use std::collections::HashMap;
 
-use starlark_syntax::syntax::AstModule;
-use starlark_syntax::syntax::Dialect;
+use blueprint_starlark_syntax::syntax::AstModule;
+use blueprint_starlark_syntax::syntax::Dialect;
 
 use crate::environment::Globals;
 use crate::environment::Module;

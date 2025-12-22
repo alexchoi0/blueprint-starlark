@@ -19,10 +19,10 @@ use std::fmt;
 use std::fmt::Display;
 use std::ops::Deref;
 
-use allocative::Allocative;
-use dupe::Clone_;
-use dupe::Dupe;
-use dupe::Dupe_;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Clone_;
+use blueprint_dupe::Dupe;
+use blueprint_dupe::Dupe_;
 
 use crate::cast::transmute;
 use crate::typing::Ty;
@@ -94,8 +94,8 @@ impl OwnedFrozenValue {
     /// `owner`, typically because the value was created on the heap.
     ///
     /// ```
-    /// use starlark::values::FrozenHeap;
-    /// use starlark::values::OwnedFrozenValue;
+    /// use blueprint_starlark::values::FrozenHeap;
+    /// use blueprint_starlark::values::OwnedFrozenValue;
     /// let heap = FrozenHeap::new();
     /// let value = heap.alloc("test");
     /// unsafe { OwnedFrozenValue::new(heap.into_ref(), value) };
@@ -234,8 +234,8 @@ impl<T: for<'a> StarlarkValue<'a>> OwnedFrozenValueTyped<T> {
     /// `owner`, typically because the value was created on the heap.
     ///
     /// ```
-    /// use starlark::values::FrozenHeap;
-    /// use starlark::values::OwnedFrozenValue;
+    /// use blueprint_starlark::values::FrozenHeap;
+    /// use blueprint_starlark::values::OwnedFrozenValue;
     /// let heap = FrozenHeap::new();
     /// let value = heap.alloc("test");
     /// unsafe { OwnedFrozenValue::new(heap.into_ref(), value) };

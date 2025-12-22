@@ -20,7 +20,7 @@
 use std::cmp::Ordering;
 use std::hash::Hash;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 
 use crate::Equivalent;
 use crate::Hashed;
@@ -303,7 +303,7 @@ mod tests {
     use std::hash::Hash;
     use std::sync::Arc;
 
-    use dupe::Dupe;
+    use blueprint_dupe::Dupe;
 
     use crate::ordered_set::OrderedSet;
 

@@ -23,9 +23,9 @@ use std::fmt::Debug;
 use std::fmt::Formatter;
 use std::rc::Rc;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_map::small_map::SmallMap;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::small_map::SmallMap;
 
 use crate::eval::ProfileData;
 use crate::eval::runtime::profile::data::ProfileDataImpl;
@@ -403,7 +403,7 @@ impl RetainedHeapProfile {
 
 #[cfg(test)]
 mod tests {
-    use dupe::Dupe;
+    use blueprint_dupe::Dupe;
 
     use crate::const_frozen_string;
     use crate::values::Freezer;

@@ -21,11 +21,11 @@ use std::cell::Cell;
 use std::fmt;
 
 use derive_more::Display;
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use rand::Rng;
 use rand::SeedableRng;
 use rand::rngs::SmallRng;
-use starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_module;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

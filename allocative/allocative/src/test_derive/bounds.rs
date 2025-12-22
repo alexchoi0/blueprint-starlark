@@ -25,10 +25,10 @@ struct CanBeUnsized<S: ?Sized> {
 }
 
 #[allow(clippy::borrowed_box)]
-fn via_sized<S>(s: &Box<S>, visitor: &mut allocative::Visitor) {
+fn via_sized<S>(s: &Box<S>, visitor: &mut blueprint_allocative::Visitor) {
     visitor
         .enter(
-            allocative::Key::new("s"),
+            blueprint_allocative::Key::new("s"),
             std::mem::size_of_val(Box::as_ref(s)),
         )
         .exit()

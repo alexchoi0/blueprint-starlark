@@ -19,7 +19,7 @@
 
 use std::hash::Hash;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use serde::Deserialize;
 use serde::Serialize;
 

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use starlark_derive::VisitSpanMut;
+use blueprint_starlark_derive::VisitSpanMut;
 
 use crate::eval::compiler::expr::ExprCompiled;
 use crate::eval::compiler::span::IrSpanned;

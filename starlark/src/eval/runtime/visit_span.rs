@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-use starlark_syntax::syntax::def::DefParamIndices;
-use starlark_syntax::syntax::def::DefRegularParamMode;
+use blueprint_starlark_syntax::syntax::def::DefParamIndices;
+use blueprint_starlark_syntax::syntax::def::DefRegularParamMode;
 
 use crate::collections::symbol::symbol::Symbol;
 use crate::environment::slots::ModuleSlotId;

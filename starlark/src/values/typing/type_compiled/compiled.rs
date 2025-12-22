@@ -22,13 +22,13 @@ use std::fmt::Formatter;
 use std::hash::Hash;
 use std::hash::Hasher;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_derive::starlark_module;
-use starlark_derive::starlark_value;
-use starlark_map::StarlarkHasher;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::slice_vec_ext::VecExt;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_map::StarlarkHasher;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::slice_vec_ext::VecExt;
 use thiserror::Error;
 
 use crate as starlark;

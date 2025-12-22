@@ -18,7 +18,7 @@
 use std::hash::Hash;
 use std::hash::Hasher;
 
-use starlark_map::StarlarkHasher;
+use blueprint_starlark_map::StarlarkHasher;
 
 /// Utility to compute hash of an unordered collection (e.g. unordered set).
 #[derive(Default)]

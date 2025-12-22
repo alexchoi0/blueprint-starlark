@@ -21,19 +21,19 @@
 
 use std::collections::HashMap;
 
-use dupe::OptionDupedExt;
-use starlark_syntax::syntax::ast::AstAssignIdentP;
-use starlark_syntax::syntax::ast::AstAssignTargetP;
-use starlark_syntax::syntax::ast::AstExprP;
-use starlark_syntax::syntax::ast::AstIdentP;
-use starlark_syntax::syntax::ast::AstNoPayload;
-use starlark_syntax::syntax::ast::AstParameterP;
-use starlark_syntax::syntax::ast::AstPayload;
-use starlark_syntax::syntax::ast::AstStmt;
-use starlark_syntax::syntax::ast::AstStmtP;
-use starlark_syntax::syntax::ast::AstTypeExprP;
-use starlark_syntax::syntax::payload_map::AstPayloadFunction;
-use starlark_syntax::syntax::payload_map::StmtPExt;
+use blueprint_dupe::OptionDupedExt;
+use blueprint_starlark_syntax::syntax::ast::AstAssignIdentP;
+use blueprint_starlark_syntax::syntax::ast::AstAssignTargetP;
+use blueprint_starlark_syntax::syntax::ast::AstExprP;
+use blueprint_starlark_syntax::syntax::ast::AstIdentP;
+use blueprint_starlark_syntax::syntax::ast::AstNoPayload;
+use blueprint_starlark_syntax::syntax::ast::AstParameterP;
+use blueprint_starlark_syntax::syntax::ast::AstPayload;
+use blueprint_starlark_syntax::syntax::ast::AstStmt;
+use blueprint_starlark_syntax::syntax::ast::AstStmtP;
+use blueprint_starlark_syntax::syntax::ast::AstTypeExprP;
+use blueprint_starlark_syntax::syntax::payload_map::AstPayloadFunction;
+use blueprint_starlark_syntax::syntax::payload_map::StmtPExt;
 
 use crate::codemap::CodeMap;
 use crate::eval::compiler::scope::BindingId;

@@ -18,8 +18,8 @@
 use std::fmt::Debug;
 use std::fmt::Display;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 use serde::Serialize;
 
 use crate::sealed::Sealed;

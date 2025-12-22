@@ -19,8 +19,8 @@
 
 use std::fmt::Write;
 
-use dupe::Dupe;
-use starlark_map::small_map::SmallMap;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::small_map::SmallMap;
 
 use crate::util::arc_str::ArcStr;
 

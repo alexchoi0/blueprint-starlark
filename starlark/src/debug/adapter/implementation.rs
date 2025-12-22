@@ -26,9 +26,9 @@ use std::sync::mpsc::Sender;
 use std::sync::mpsc::channel;
 
 use debugserver_types::*;
-use dupe::Dupe;
-use starlark_syntax::error::StarlarkResultExt;
-use starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_syntax::error::StarlarkResultExt;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
 use super::EvaluateExprInfo;
 use super::InspectVariableInfo;

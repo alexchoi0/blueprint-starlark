@@ -25,14 +25,14 @@
 
 use std::cmp;
 
-use starlark_derive::VisitSpanMut;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::syntax::ast::AssignOp;
-use starlark_syntax::syntax::ast::AssignP;
-use starlark_syntax::syntax::ast::AssignTargetP;
-use starlark_syntax::syntax::ast::DefP;
-use starlark_syntax::syntax::ast::ForP;
-use starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_derive::VisitSpanMut;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::syntax::ast::AssignOp;
+use blueprint_starlark_syntax::syntax::ast::AssignP;
+use blueprint_starlark_syntax::syntax::ast::AssignTargetP;
+use blueprint_starlark_syntax::syntax::ast::DefP;
+use blueprint_starlark_syntax::syntax::ast::ForP;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
 use thiserror::Error;
 
 use crate::codemap::Span;

@@ -20,17 +20,17 @@ use lsp_types::CompletionItemKind;
 use lsp_types::Documentation;
 use lsp_types::MarkupContent;
 use lsp_types::MarkupKind;
-use starlark::codemap::FileSpan;
-use starlark::collections::SmallMap;
-use starlark::docs::DocItem;
-use starlark::docs::DocMember;
-use starlark::docs::markdown::render_doc_item_no_link;
-use starlark::syntax::AstModule;
-use starlark_syntax::syntax::ast::AstAssignIdent;
-use starlark_syntax::syntax::ast::Expr;
-use starlark_syntax::syntax::ast::Stmt;
-use starlark_syntax::syntax::module::AstModuleFields;
-use starlark_syntax::syntax::top_level_stmts::top_level_stmts;
+use blueprint_starlark::codemap::FileSpan;
+use blueprint_starlark::collections::SmallMap;
+use blueprint_starlark::docs::DocItem;
+use blueprint_starlark::docs::DocMember;
+use blueprint_starlark::docs::markdown::render_doc_item_no_link;
+use blueprint_starlark::syntax::AstModule;
+use blueprint_starlark_syntax::syntax::ast::AstAssignIdent;
+use blueprint_starlark_syntax::syntax::ast::Expr;
+use blueprint_starlark_syntax::syntax::ast::Stmt;
+use blueprint_starlark_syntax::syntax::module::AstModuleFields;
+use blueprint_starlark_syntax::syntax::top_level_stmts::top_level_stmts;
 
 use crate::docs::get_doc_item_for_assign;
 use crate::docs::get_doc_item_for_def;
@@ -179,8 +179,8 @@ impl AstModuleExportedSymbols for AstModule {
 
 #[cfg(test)]
 mod tests {
-    use starlark::syntax::Dialect;
-    use starlark_syntax::slice_vec_ext::SliceExt;
+    use blueprint_starlark::syntax::Dialect;
+    use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
     use super::*;
 

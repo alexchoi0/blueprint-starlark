@@ -17,7 +17,7 @@
 
 mod fun;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use syn::Attribute;
 use syn::Expr;
 use syn::ExprLit;

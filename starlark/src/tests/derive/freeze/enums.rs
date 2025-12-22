@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use starlark_derive::Freeze;
+use blueprint_starlark_derive::Freeze;
 
 use crate as starlark;
 

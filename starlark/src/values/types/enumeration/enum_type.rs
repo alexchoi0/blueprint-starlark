@@ -21,18 +21,18 @@ use std::fmt::Debug;
 use std::fmt::Display;
 use std::sync::Arc;
 
-use allocative::Allocative;
-use display_container::fmt_container;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_display_container::fmt_container;
+use blueprint_dupe::Dupe;
 use either::Either;
 use once_cell::unsync::OnceCell;
-use starlark_derive::Coerce;
-use starlark_derive::NoSerialize;
-use starlark_derive::Trace;
-use starlark_derive::starlark_module;
-use starlark_derive::starlark_value;
-use starlark_map::Equivalent;
-use starlark_map::small_map::SmallMap;
+use blueprint_starlark_derive::Coerce;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::Trace;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_map::Equivalent;
+use blueprint_starlark_map::small_map::SmallMap;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;
@@ -335,7 +335,7 @@ where
 
             // The unwrap here is safe because the new() method requires the elements be
             // of type StringValue<'v>
-            let fields_map: starlark_map::sorted_map::SortedMap<String, Ty> = self
+            let fields_map: blueprint_starlark_map::sorted_map::SortedMap<String, Ty> = self
                 .elements()
                 .keys()
                 .map(|key| {

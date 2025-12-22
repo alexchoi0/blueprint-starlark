@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::values::FrozenValue;
 use crate::values::Value;

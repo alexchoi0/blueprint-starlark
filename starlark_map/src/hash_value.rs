@@ -18,8 +18,8 @@
 use std::fmt::Debug;
 use std::hash::Hash;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::hasher::StarlarkHasher;
 use crate::mix_u32::mix_u32;

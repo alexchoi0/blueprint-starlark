@@ -283,8 +283,8 @@ g(x=1, y=2)
 #[cfg_attr(rust_nightly, cfg(not(sanitize = "address")))]
 #[test]
 fn test_frame_size() {
-    use starlark::values::list_or_tuple::UnpackListOrTuple;
-    use starlark_derive::starlark_module;
+    use blueprint_starlark::values::list_or_tuple::UnpackListOrTuple;
+    use blueprint_starlark_derive::starlark_module;
 
     use crate as starlark;
     use crate::environment::GlobalsBuilder;

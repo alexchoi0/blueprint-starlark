@@ -22,7 +22,7 @@ use std::iter::Sum;
 use std::mem;
 use std::ops::AddAssign;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::eval::ProfileData;
 use crate::eval::ProfileMode;
@@ -49,7 +49,7 @@ impl ProfilerType for BcProfilerType {
         ProfileDataImpl::Bc(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         Ok(Box::new(BcProfileData::merge(
             profiles.iter().map(|x| &***x),
         )))
@@ -71,7 +71,7 @@ impl ProfilerType for BcPairsProfilerType {
         ProfileDataImpl::BcPairs(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         Ok(BcPairsProfileData::merge(profiles.iter().map(|x| &**x)))
     }
 }

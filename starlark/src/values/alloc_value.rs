@@ -39,9 +39,9 @@ use crate::values::type_repr::StarlarkTypeRepr;
 /// e.g.
 ///
 /// ```
-/// # use allocative::Allocative;
-/// # use starlark::any::ProvidesStaticType;
-/// # use starlark::values::{AllocValue, Heap, NoSerialize, starlark_value, StarlarkValue, Value};
+/// # use blueprint_allocative::Allocative;
+/// # use blueprint_starlark::any::ProvidesStaticType;
+/// # use blueprint_starlark::values::{AllocValue, Heap, NoSerialize, starlark_value, StarlarkValue, Value};
 ///
 /// #[derive(Debug, derive_more::Display, Allocative, NoSerialize, ProvidesStaticType)]
 /// struct MySimpleValue;
@@ -61,8 +61,8 @@ use crate::values::type_repr::StarlarkTypeRepr;
 /// `AllocValue` can be derived for enums, like this:
 ///
 /// ```
-/// use starlark::values::AllocValue;
-/// use starlark::values::type_repr::StarlarkTypeRepr;
+/// use blueprint_starlark::values::AllocValue;
+/// use blueprint_starlark::values::type_repr::StarlarkTypeRepr;
 ///
 /// #[derive(StarlarkTypeRepr, AllocValue)]
 /// enum AllocIntOrStr {
@@ -123,8 +123,8 @@ impl<A: AllocFrozenValue, B: AllocFrozenValue> AllocFrozenValue for Either<A, B>
 /// `AllocFrozenValue` can be derived for enums, like this:
 ///
 /// ```
-/// use starlark::values::AllocFrozenValue;
-/// use starlark::values::type_repr::StarlarkTypeRepr;
+/// use blueprint_starlark::values::AllocFrozenValue;
+/// use blueprint_starlark::values::type_repr::StarlarkTypeRepr;
 ///
 /// #[derive(StarlarkTypeRepr, AllocFrozenValue)]
 /// enum AllocIntOrStr {

@@ -20,11 +20,11 @@ use std::fmt::Display;
 use std::fmt::Formatter;
 use std::iter;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_map::small_set::SmallSet;
-use starlark_syntax::other_error;
-use starlark_syntax::syntax::def::DefParamIndices;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::small_set::SmallSet;
+use blueprint_starlark_syntax::other_error;
+use blueprint_starlark_syntax::syntax::def::DefParamIndices;
 
 use crate::eval::runtime::params::display::PARAM_FMT_OPTIONAL;
 use crate::eval::runtime::params::display::ParamFmt;
@@ -410,9 +410,9 @@ mod tests {
     use std::collections::HashMap;
     use std::fmt::Write;
 
-    use starlark_syntax::dialect::Dialect;
-    use starlark_syntax::golden_test_template::golden_test_template;
-    use starlark_syntax::syntax::AstModule;
+    use blueprint_starlark_syntax::dialect::Dialect;
+    use blueprint_starlark_syntax::golden_test_template::golden_test_template;
+    use blueprint_starlark_syntax::syntax::AstModule;
 
     use crate::environment::Globals;
     use crate::typing::AstModuleTypecheck;

@@ -10,7 +10,7 @@
 
 use std::borrow::Borrow;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::types::TEq;
 
@@ -198,7 +198,7 @@ where
 /// Short hand analogous to `Iter::duped`, where items of `&T` are converted to `T` via `dupe`.
 ///
 /// ```
-/// use dupe::Dupe;
+/// use blueprint_dupe::Dupe;
 /// use gazebo::prelude::*;
 ///
 /// #[derive(Clone, Dupe, Debug, PartialEq)]

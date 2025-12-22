@@ -18,8 +18,8 @@
 use std::fmt;
 use std::fmt::Display;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::typing::Ty;
 use crate::typing::TyFunction;

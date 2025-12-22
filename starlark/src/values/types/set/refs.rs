@@ -20,7 +20,7 @@ use std::cell::RefCell;
 use std::cell::RefMut;
 use std::convert::Infallible;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use either::Either;
 
 use super::value::FrozenSetData;

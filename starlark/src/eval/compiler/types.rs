@@ -15,11 +15,11 @@
  * limitations under the License.
  */
 
-use starlark_syntax::eval_exception::EvalException;
-use starlark_syntax::internal_error;
-use starlark_syntax::slice_vec_ext::VecExt;
-use starlark_syntax::syntax::type_expr::TypeExprUnpackP;
-use starlark_syntax::syntax::type_expr::TypePathP;
+use blueprint_starlark_syntax::eval_exception::EvalException;
+use blueprint_starlark_syntax::internal_error;
+use blueprint_starlark_syntax::slice_vec_ext::VecExt;
+use blueprint_starlark_syntax::syntax::type_expr::TypeExprUnpackP;
+use blueprint_starlark_syntax::syntax::type_expr::TypePathP;
 
 use crate::codemap::Span;
 use crate::codemap::Spanned;

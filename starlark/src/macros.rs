@@ -132,15 +132,15 @@ macro_rules! starlark_complex_values {
 /// Let's define a simple object, where `+x` makes the string uppercase:
 ///
 /// ```
-/// use allocative::Allocative;
+/// use blueprint_allocative::Allocative;
 /// use derive_more::Display;
-/// use starlark::starlark_simple_value;
-/// use starlark::values::Heap;
-/// use starlark::values::NoSerialize;
-/// use starlark::values::ProvidesStaticType;
-/// use starlark::values::StarlarkValue;
-/// use starlark::values::Value;
-/// use starlark_derive::starlark_value;
+/// use blueprint_starlark::starlark_simple_value;
+/// use blueprint_starlark::values::Heap;
+/// use blueprint_starlark::values::NoSerialize;
+/// use blueprint_starlark::values::ProvidesStaticType;
+/// use blueprint_starlark::values::StarlarkValue;
+/// use blueprint_starlark::values::Value;
+/// use blueprint_starlark_derive::starlark_value;
 ///
 /// #[derive(Debug, Display, ProvidesStaticType, NoSerialize, Allocative)]
 /// struct MyObject(String);

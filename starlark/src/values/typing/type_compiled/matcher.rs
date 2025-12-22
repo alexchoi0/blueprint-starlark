@@ -17,7 +17,7 @@
 
 use std::fmt::Debug;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 
 use crate::typing::custom::TyCustom;
 use crate::values::Value;

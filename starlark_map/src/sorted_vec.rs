@@ -20,7 +20,7 @@
 use std::slice;
 use std::vec;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 
 /// Type which enfoces that its elements are sorted. That's it.
 #[derive(

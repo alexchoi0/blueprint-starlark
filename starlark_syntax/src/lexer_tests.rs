@@ -17,7 +17,7 @@
 
 use std::fmt::Write;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::codemap::CodeMap;
 use crate::dialect::Dialect;

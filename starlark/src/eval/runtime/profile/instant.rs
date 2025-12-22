@@ -18,7 +18,7 @@
 use std::ops::Sub;
 use std::time::Duration;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 
 /// Real `Instant` for production code, thread-local counter for tests.
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Allocative)]

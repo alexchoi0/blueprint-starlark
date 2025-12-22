@@ -17,7 +17,7 @@
 
 use std::ptr;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::errors::Frame;
 use crate::eval::runtime::frame_span::FrameSpan;
@@ -140,7 +140,7 @@ impl<'f> InlinedFrameAlloc<'f> {
 
 #[cfg(test)]
 mod tests {
-    use starlark_syntax::slice_vec_ext::SliceExt;
+    use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
     use crate::codemap::CodeMap;
     use crate::eval::runtime::frame_span::FrameSpan;

@@ -18,12 +18,12 @@
 use std::cell::RefCell;
 use std::fmt::Write;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use anyhow::Context;
 use derive_more::Display;
-use starlark_derive::starlark_module;
-use starlark_derive::starlark_value;
-use starlark_syntax::golden_test_template::golden_test_template;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_syntax::golden_test_template::golden_test_template;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

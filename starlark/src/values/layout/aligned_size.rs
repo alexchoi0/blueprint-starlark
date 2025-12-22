@@ -22,8 +22,8 @@ use std::ops::Mul;
 use std::ops::Sub;
 use std::ptr::NonNull;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::values::layout::heap::repr::AValueHeader;
 

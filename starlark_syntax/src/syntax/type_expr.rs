@@ -262,7 +262,9 @@ impl<'a, P: AstPayload> TypeExprUnpackP<'a, P> {
                 }
             }
             ExprP::Dict(..) => err("dict"),
+            ExprP::Set(..) => err("set"),
             ExprP::ListComprehension(..) => err("list comprehension"),
+            ExprP::SetComprehension(..) => err("set comprehension"),
             ExprP::DictComprehension(..) => err("dict comprehension"),
             ExprP::FString(..) => err("f-string"),
         }

@@ -24,7 +24,7 @@ use std::ops::AddAssign;
 use std::ops::Sub;
 
 use derive_more::Display;
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::eval::bc::if_debug::IfDebug;
 use crate::eval::bc::instr::BcInstr;

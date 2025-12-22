@@ -19,7 +19,7 @@
 
 #![allow(dead_code)] // Only check it compiles.
 
-use starlark_derive::AllocFrozenValue;
+use blueprint_starlark_derive::AllocFrozenValue;
 
 use crate as starlark;
 use crate::values::AllocValue;

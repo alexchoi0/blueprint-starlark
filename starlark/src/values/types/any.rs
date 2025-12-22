@@ -31,10 +31,10 @@
 //! use std::fmt;
 //! use std::time::Instant;
 //!
-//! use starlark::assert::Assert;
-//! use starlark::environment::GlobalsBuilder;
-//! use starlark::values::Value;
-//! use starlark::values::any::StarlarkAny;
+//! use blueprint_starlark::assert::Assert;
+//! use blueprint_starlark::environment::GlobalsBuilder;
+//! use blueprint_starlark::values::Value;
+//! use blueprint_starlark::values::any::StarlarkAny;
 //!
 //! #[derive(Debug)]
 //! struct MyInstant(Instant);
@@ -69,9 +69,9 @@
 use std::fmt;
 use std::fmt::Debug;
 
-use allocative::Allocative;
-use starlark_derive::NoSerialize;
-use starlark_derive::starlark_value;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

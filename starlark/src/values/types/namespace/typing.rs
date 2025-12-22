@@ -19,9 +19,9 @@ use std::fmt;
 use std::fmt::Display;
 use std::fmt::Formatter;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_map::sorted_map::SortedMap;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::sorted_map::SortedMap;
 
 use crate::codemap::Span;
 use crate::typing::ParamSpec;
@@ -122,11 +122,11 @@ impl TyCustomImpl for TyNamespace {
 impl Display for TyNamespace {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         let TyNamespace { fields, extra } = self;
-        display_container::fmt_container(
+        blueprint_display_container::fmt_container(
             f,
             "namespace(",
             ")",
-            display_container::iter_display_chain(
+            blueprint_display_container::iter_display_chain(
                 fields.iter().map(|(k, v)| format!("{k} = {v}")),
                 extra.then_some(".."),
             ),

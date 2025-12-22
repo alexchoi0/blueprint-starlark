@@ -28,7 +28,7 @@ mod t {
     use std::time::Instant;
 
     use debugserver_types::*;
-    use dupe::Dupe;
+    use blueprint_dupe::Dupe;
 
     use crate::assert::test_functions;
     use crate::debug::DapAdapter;

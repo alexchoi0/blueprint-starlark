@@ -35,19 +35,19 @@ use std::fmt;
 use std::fmt::Debug;
 use std::fmt::Display;
 
-use allocative::Allocative;
-use dupe::Clone_;
-use dupe::Copy_;
-use dupe::Dupe;
-use dupe::Dupe_;
-use dupe::IterDupedExt;
-use dupe::OptionDupedExt;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Clone_;
+use blueprint_dupe::Copy_;
+use blueprint_dupe::Dupe;
+use blueprint_dupe::Dupe_;
+use blueprint_dupe::IterDupedExt;
+use blueprint_dupe::OptionDupedExt;
 use either::Either;
 use num_bigint::BigInt;
 use serde::Serialize;
 use serde::Serializer;
-use starlark_map::Equivalent;
-use starlark_syntax::value_error;
+use blueprint_starlark_map::Equivalent;
+use blueprint_starlark_syntax::value_error;
 
 use crate as starlark;
 use crate::any::AnyLifetime;

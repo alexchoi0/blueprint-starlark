@@ -20,7 +20,7 @@
 
 use std::collections::HashMap;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::environment::FrozenModule;
 

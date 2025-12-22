@@ -22,8 +22,8 @@ use std::fmt::Formatter;
 use std::hash::Hash;
 use std::hash::Hasher;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 /// `TypeId` wrapper/provider until `const_type_id` feature is stabilized.
 #[derive(Copy, Clone, Dupe, Allocative)]

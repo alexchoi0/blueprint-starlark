@@ -21,8 +21,8 @@ use std::ops::AddAssign;
 use std::ops::Div;
 use std::time::Duration;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 /// Slightly faster than `Duration`.
 #[derive(

@@ -17,7 +17,7 @@ use crate::Visitor;
 /// Typically implemented with proc macro. Like this:
 ///
 /// ```
-/// use allocative::Allocative;
+/// use blueprint_allocative::Allocative;
 ///
 /// #[derive(Allocative)]
 /// struct Foo {
@@ -36,7 +36,7 @@ use crate::Visitor;
 /// are cheap).
 ///
 /// ```
-/// use allocative::Allocative;
+/// use blueprint_allocative::Allocative;
 ///
 /// /// This does not implement `Allocative`.
 /// struct Unsupported;
@@ -61,7 +61,7 @@ use crate::Visitor;
 /// ```
 /// use std::marker::PhantomData;
 ///
-/// use allocative::Allocative;
+/// use blueprint_allocative::Allocative;
 ///
 /// struct Unsupported;
 ///
@@ -106,15 +106,15 @@ use crate::Visitor;
 /// is especially useful if the type of the field does not implement `Allocative`.
 ///
 /// The annotation takes the path to a method with a signature `for<'a, 'b>(&T, &'a
-/// mut allocative::Visitor<'b>)` where `T` is the type of the field. The function
+/// mut blueprint_allocative::Visitor<'b>)` where `T` is the type of the field. The function
 /// you provide is basically the same as if you implemented [`Allocative::visit`].
 ///
 /// As an example
 ///
 /// ```
-/// use allocative::Allocative;
-/// use allocative::Key;
-/// use allocative::Visitor;
+/// use blueprint_allocative::Allocative;
+/// use blueprint_allocative::Key;
+/// use blueprint_allocative::Visitor;
 /// // use third_party_lib::Unsupported;
 /// # struct Unsupported<T>(T);
 /// # impl<T> Unsupported<T> {

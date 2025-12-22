@@ -22,8 +22,8 @@ use std::fmt::Debug;
 use std::fmt::Display;
 use std::fmt::Formatter;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::codemap::Pos;
 use crate::codemap::Span;
@@ -199,7 +199,9 @@ pub enum ExprP<P: AstPayload> {
     If(Box<(AstExprP<P>, AstExprP<P>, AstExprP<P>)>), // Order: condition, v1, v2 <=> v1 if condition else v2
     List(Vec<AstExprP<P>>),
     Dict(Vec<(AstExprP<P>, AstExprP<P>)>),
+    Set(Vec<AstExprP<P>>),
     ListComprehension(Box<AstExprP<P>>, Box<ForClauseP<P>>, Vec<ClauseP<P>>),
+    SetComprehension(Box<AstExprP<P>>, Box<ForClauseP<P>>, Vec<ClauseP<P>>),
     DictComprehension(
         Box<(AstExprP<P>, AstExprP<P>)>,
         Box<ForClauseP<P>>,
@@ -641,6 +643,11 @@ impl Display for Expr {
                 comma_separated_fmt(f, v, |x, f| write!(f, "{}: {}", x.0.node, x.1.node), false)?;
                 f.write_str("}")
             }
+            Expr::Set(v) => {
+                f.write_str("{")?;
+                comma_separated_fmt(f, v, |x, f| write!(f, "{}", x.node), false)?;
+                f.write_str("}")
+            }
             Expr::ListComprehension(e, for_, c) => {
                 write!(f, "[{}", e.node)?;
                 write!(f, "{for_}")?;
@@ -648,6 +655,14 @@ impl Display for Expr {
                     write!(f, "{x}")?;
                 }
                 f.write_str("]")
+            }
+            Expr::SetComprehension(e, for_, c) => {
+                write!(f, "{{{}", e.node)?;
+                write!(f, "{for_}")?;
+                for x in c {
+                    write!(f, "{x}")?;
+                }
+                f.write_str("}")
             }
             Expr::DictComprehension(k_v, for_, c) => {
                 let (k, v) = &**k_v;

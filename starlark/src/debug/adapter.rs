@@ -23,7 +23,7 @@ use std::fmt::Debug;
 use std::fmt::Display;
 
 use debugserver_types::*;
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::codemap::FileSpan;
 use crate::eval::Evaluator;

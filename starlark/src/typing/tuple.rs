@@ -20,8 +20,8 @@ use std::fmt::Display;
 use std::fmt::Formatter;
 use std::sync::Arc;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::typing::Ty;
 use crate::typing::TypingOracleCtx;
@@ -138,7 +138,7 @@ impl TyTuple {
         match self {
             TyTuple::Elems(elems) => match &**elems {
                 [x] => write!(f, "({},)", x.display_with(config)),
-                xs => display_container::fmt_container(
+                xs => blueprint_display_container::fmt_container(
                     f,
                     "(",
                     ")",
@@ -161,7 +161,7 @@ impl Display for TyTuple {
         match self {
             TyTuple::Elems(elems) => match &**elems {
                 [x] => write!(f, "({x},)"),
-                xs => display_container::fmt_container(f, "(", ")", xs),
+                xs => blueprint_display_container::fmt_container(f, "(", ")", xs),
             },
             TyTuple::Of(item) => {
                 if item.is_any() {

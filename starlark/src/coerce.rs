@@ -25,9 +25,9 @@ use std::mem::ManuallyDrop;
 use std::ops::Deref;
 use std::ptr;
 
-pub use starlark_derive::Coerce;
-use starlark_map::small_map::SmallMap;
-use starlark_map::small_set::SmallSet;
+pub use blueprint_starlark_derive::Coerce;
+use blueprint_starlark_map::small_map::SmallMap;
+use blueprint_starlark_map::small_set::SmallSet;
 
 /// A marker trait such that the existence of `From: Coerce<To>` implies
 /// that `From` can be treat as `To` without any data manipulation.

@@ -17,7 +17,7 @@
 
 #![allow(dead_code)]
 
-use starlark::values::Freeze;
+use blueprint_starlark::values::Freeze;
 
 use crate as starlark;
 use crate::values::Freezer;

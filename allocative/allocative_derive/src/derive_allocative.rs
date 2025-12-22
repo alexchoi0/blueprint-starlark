@@ -69,7 +69,7 @@ fn impl_generics(
                 let mut tp = tp.clone();
                 if attrs.bound.is_none() && !attrs.skip {
                     tp.bounds.push(syn::parse2(quote! {
-                        allocative::Allocative
+                        blueprint_allocative::Allocative
                     })?);
                 }
                 tp.default = None;
@@ -104,11 +104,11 @@ fn derive_allocative_impl(
 
     Ok(quote! {
         #[automatically_derived]
-        impl #impl_generics allocative::Allocative for #name #type_generics #where_clause {
+        impl #impl_generics blueprint_allocative::Allocative for #name #type_generics #where_clause {
             #[allow(unused, warnings)]
             fn visit<'allocative_a, 'allocative_b: 'allocative_a>(
                 &self,
-                visitor: &'allocative_a mut allocative::Visitor<'allocative_b>,
+                visitor: &'allocative_a mut blueprint_allocative::Visitor<'allocative_b>,
             ) {
                 let mut visitor = visitor.enter_self::<Self>(self);
                 #body
@@ -153,7 +153,7 @@ fn allocative_key(s: &str) -> proc_macro2::TokenStream {
     // Compile hash at proc macro time, otherwise it will have to be computed by MIRI.
     let hash = hash(s);
     quote! {
-        allocative::Key::new_unchecked(#hash, #s)
+        blueprint_allocative::Key::new_unchecked(#hash, #s)
     }
 }
 

@@ -26,10 +26,10 @@ use std::mem;
 use std::time::Duration;
 use std::time::Instant;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 use itertools::Itertools;
-use starlark_syntax::syntax::ast::Visibility;
+use blueprint_starlark_syntax::syntax::ast::Visibility;
 
 use crate::cast::transmute;
 use crate::collections::Hashed;
@@ -565,7 +565,7 @@ where
 
 #[cfg(test)]
 mod tests {
-    use starlark_derive::starlark_module;
+    use blueprint_starlark_derive::starlark_module;
 
     use crate as starlark;
     use crate::environment::FrozenModule;

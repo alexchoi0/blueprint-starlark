@@ -22,10 +22,10 @@ use std::mem;
 use std::slice;
 use std::str;
 
-use allocative::Allocative;
-use starlark_derive::Trace;
-use starlark_map::Hashed;
-use starlark_map::StarlarkHashValue;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_derive::Trace;
+use blueprint_starlark_map::Hashed;
+use blueprint_starlark_map::StarlarkHashValue;
 
 use crate as starlark;
 use crate::coerce::Coerce;

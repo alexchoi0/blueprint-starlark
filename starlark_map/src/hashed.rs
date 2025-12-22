@@ -21,10 +21,10 @@ use std::hash::Hash;
 use std::hash::Hasher;
 use std::ops::Deref;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 use equivalent::Equivalent;
-use strong_hash::StrongHash;
+use blueprint_strong_hash::StrongHash;
 
 use crate::hash_value::StarlarkHashValue;
 

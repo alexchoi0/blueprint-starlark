@@ -17,7 +17,7 @@
 
 use std::cmp::Ordering;
 
-use starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_module;
 
 use crate as starlark;
 use crate::environment::GlobalsBuilder;

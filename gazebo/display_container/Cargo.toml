@@ -1,12 +1,12 @@
 [package]
-authors = ["Facebook"]
+authors = ["Facebook", "Alex Choi"]
 categories = ["rust-patterns"]
 description = "Utilities to implement Display"
-documentation = "https://docs.rs/display_container"
-edition = "2024"
+documentation = "https://docs.rs/blueprint-display-container"
+edition = "2021"
 license = { workspace = true }
-name = "display_container"
-repository = "https://github.com/facebookincubator/gazebo"
+name = "blueprint-display-container"
+repository = { workspace = true }
 version = "0.9.0"
 
 [dependencies]

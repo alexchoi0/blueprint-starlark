@@ -35,7 +35,7 @@ use std::ptr;
 use std::ptr::NonNull;
 use std::slice;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 
 #[repr(C)]
 struct ThinBoxSliceLayout<T> {
@@ -314,26 +314,26 @@ impl<T> FromIterator<T> for AllocatedThinBoxSlice<T> {
 }
 
 impl<T: Allocative> Allocative for AllocatedThinBoxSlice<T> {
-    fn visit<'a, 'b: 'a>(&self, visitor: &'a mut allocative::Visitor<'b>) {
+    fn visit<'a, 'b: 'a>(&self, visitor: &'a mut blueprint_allocative::Visitor<'b>) {
         let mut visitor = visitor.enter_self_sized::<Self>();
         {
-            let ptr_key = allocative::Key::new("ptr");
+            let ptr_key = blueprint_allocative::Key::new("ptr");
             if self.is_empty() {
                 // Statically allocated data, so just report the pointer itself
                 visitor.visit_simple(ptr_key, mem::size_of_val(&self.ptr));
             } else {
                 let mut visitor =
-                    visitor.enter_unique(allocative::Key::new("ptr"), mem::size_of_val(&self.ptr));
+                    visitor.enter_unique(blueprint_allocative::Key::new("ptr"), mem::size_of_val(&self.ptr));
                 {
                     let (is_short, layout) = Self::layout_for_len(self.len());
-                    let mut visitor = visitor.enter(allocative::Key::new("alloc"), layout.size());
+                    let mut visitor = visitor.enter(blueprint_allocative::Key::new("alloc"), layout.size());
 
                     if !is_short {
-                        visitor.visit_simple(allocative::Key::new("len"), mem::size_of::<usize>());
+                        visitor.visit_simple(blueprint_allocative::Key::new("len"), mem::size_of::<usize>());
                     }
                     {
                         let mut visitor = visitor
-                            .enter(allocative::Key::new("data"), mem::size_of_val::<[_]>(self));
+                            .enter(blueprint_allocative::Key::new("data"), mem::size_of_val::<[_]>(self));
                         visitor.visit_slice::<T>(self);
                         visitor.exit();
                     }

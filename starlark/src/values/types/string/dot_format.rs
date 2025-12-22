@@ -17,9 +17,9 @@
 
 use std::str::FromStr;
 
-use starlark_syntax::dot_format_parser::FormatConv;
-use starlark_syntax::dot_format_parser::FormatParser;
-use starlark_syntax::dot_format_parser::FormatToken;
+use blueprint_starlark_syntax::dot_format_parser::FormatConv;
+use blueprint_starlark_syntax::dot_format_parser::FormatParser;
+use blueprint_starlark_syntax::dot_format_parser::FormatToken;
 
 use crate::collections::string_pool::StringPool;
 use crate::values::Heap;
@@ -202,8 +202,8 @@ fn format_capture<'v, T: Iterator<Item = Value<'v>>>(
 
 #[cfg(test)]
 mod tests {
-    use starlark_map::small_map::SmallMap;
-    use starlark_syntax::dot_format_parser::FormatConv;
+    use blueprint_starlark_map::small_map::SmallMap;
+    use blueprint_starlark_syntax::dot_format_parser::FormatConv;
 
     use crate::assert;
     use crate::coerce::coerce;

@@ -22,7 +22,7 @@ use std::fmt::Debug;
 
 use anyhow::Context;
 use either::Either;
-use starlark_syntax::StarlarkResultExt;
+use blueprint_starlark_syntax::StarlarkResultExt;
 
 use crate::typing::Ty;
 use crate::values::Value;
@@ -95,9 +95,9 @@ impl<A: UnpackValueErrorInfallible, B: UnpackValueErrorInfallible> UnpackValueEr
 /// for example:
 ///
 /// ```
-/// # use allocative::Allocative;
-/// # use starlark::any::ProvidesStaticType;
-/// # use starlark::values::{NoSerialize, StarlarkValue, starlark_value};
+/// # use blueprint_allocative::Allocative;
+/// # use blueprint_starlark::any::ProvidesStaticType;
+/// # use blueprint_starlark::values::{NoSerialize, StarlarkValue, starlark_value};
 ///
 /// #[derive(
 ///     Debug,
@@ -116,9 +116,9 @@ impl<A: UnpackValueErrorInfallible, B: UnpackValueErrorInfallible> UnpackValueEr
 ///
 /// ```
 /// # use either::Either;
-/// # use starlark::typing::Ty;
-/// # use starlark::values::{UnpackValue, Value};
-/// # use starlark::values::type_repr::StarlarkTypeRepr;
+/// # use blueprint_starlark::typing::Ty;
+/// # use blueprint_starlark::values::{UnpackValue, Value};
+/// # use blueprint_starlark::values::type_repr::StarlarkTypeRepr;
 ///
 /// struct BoolOrInt(i32);
 ///

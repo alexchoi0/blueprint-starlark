@@ -21,7 +21,7 @@
 use std::marker::PhantomData;
 
 use either::Either;
-pub use starlark_derive::StarlarkTypeRepr;
+pub use blueprint_starlark_derive::StarlarkTypeRepr;
 
 use crate::typing::Ty;
 use crate::values::Heap;
@@ -37,7 +37,7 @@ use crate::values::string::str_type::StarlarkStr;
 /// There is `#[derive(StarlarkTypeRepr)]` for enums, for example:
 ///
 /// ```
-/// use starlark::values::type_repr::StarlarkTypeRepr;
+/// use blueprint_starlark::values::type_repr::StarlarkTypeRepr;
 ///
 /// #[derive(StarlarkTypeRepr)]
 /// enum IntOrString {

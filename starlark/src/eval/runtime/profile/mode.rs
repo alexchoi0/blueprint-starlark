@@ -18,8 +18,8 @@
 use std::fmt::Display;
 use std::str::FromStr;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 /// How to profile starlark code.
 #[derive(Debug, PartialEq, Eq, Hash, Clone, Dupe, Copy, Allocative)]

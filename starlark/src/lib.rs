@@ -23,12 +23,12 @@
 //!
 //! ```
 //! # fn run() -> starlark::Result<()> {
-//! use starlark::environment::Globals;
-//! use starlark::environment::Module;
-//! use starlark::eval::Evaluator;
-//! use starlark::syntax::AstModule;
-//! use starlark::syntax::Dialect;
-//! use starlark::values::Value;
+//! use blueprint_starlark::environment::Globals;
+//! use blueprint_starlark::environment::Module;
+//! use blueprint_starlark::eval::Evaluator;
+//! use blueprint_starlark::syntax::AstModule;
+//! use blueprint_starlark::syntax::Dialect;
+//! use blueprint_starlark::values::Value;
 //!
 //! let content = r#"
 //! def hello():
@@ -71,10 +71,10 @@
 //! #[macro_use]
 //! extern crate starlark;
 //! # fn run() -> starlark::Result<()> {
-//! use starlark::environment::{GlobalsBuilder, Module};
-//! use starlark::eval::Evaluator;
-//! use starlark::syntax::{AstModule, Dialect};
-//! use starlark::values::Value;
+//! use blueprint_starlark::environment::{GlobalsBuilder, Module};
+//! use blueprint_starlark::eval::Evaluator;
+//! use blueprint_starlark::syntax::{AstModule, Dialect};
+//! use blueprint_starlark::values::Value;
 //!
 //! // This defines the function that is visible to Starlark
 //! #[starlark_module]
@@ -113,15 +113,15 @@
 //! # fn run() -> starlark::Result<()> {
 //! use std::cell::RefCell;
 //!
-//! use starlark::any::ProvidesStaticType;
-//! use starlark::environment::GlobalsBuilder;
-//! use starlark::environment::Module;
-//! use starlark::eval::Evaluator;
-//! use starlark::syntax::AstModule;
-//! use starlark::syntax::Dialect;
-//! use starlark::values::Value;
-//! use starlark::values::ValueLike;
-//! use starlark::values::none::NoneType;
+//! use blueprint_starlark::any::ProvidesStaticType;
+//! use blueprint_starlark::environment::GlobalsBuilder;
+//! use blueprint_starlark::environment::Module;
+//! use blueprint_starlark::eval::Evaluator;
+//! use blueprint_starlark::syntax::AstModule;
+//! use blueprint_starlark::syntax::Dialect;
+//! use blueprint_starlark::values::Value;
+//! use blueprint_starlark::values::ValueLike;
+//! use blueprint_starlark::values::none::NoneType;
 //!
 //! let content = r#"
 //! emit(1)
@@ -177,12 +177,12 @@
 //!
 //! ```
 //! # fn run() -> starlark::Result<()> {
-//! use starlark::environment::Globals;
-//! use starlark::environment::Module;
-//! use starlark::eval::Evaluator;
-//! use starlark::syntax::AstModule;
-//! use starlark::syntax::Dialect;
-//! use starlark::syntax::DialectTypes;
+//! use blueprint_starlark::environment::Globals;
+//! use blueprint_starlark::environment::Module;
+//! use blueprint_starlark::eval::Evaluator;
+//! use blueprint_starlark::syntax::AstModule;
+//! use blueprint_starlark::syntax::Dialect;
+//! use blueprint_starlark::syntax::DialectTypes;
 //!
 //! let content = r#"
 //! def takes_int(x: int):
@@ -220,13 +220,13 @@
 //!
 //! ```
 //! # fn run() -> starlark::Result<()> {
-//! use starlark::environment::FrozenModule;
-//! use starlark::environment::Globals;
-//! use starlark::environment::Module;
-//! use starlark::eval::Evaluator;
-//! use starlark::eval::ReturnFileLoader;
-//! use starlark::syntax::AstModule;
-//! use starlark::syntax::Dialect;
+//! use blueprint_starlark::environment::FrozenModule;
+//! use blueprint_starlark::environment::Globals;
+//! use blueprint_starlark::environment::Module;
+//! use blueprint_starlark::eval::Evaluator;
+//! use blueprint_starlark::eval::ReturnFileLoader;
+//! use blueprint_starlark::syntax::AstModule;
+//! use blueprint_starlark::syntax::Dialect;
 //!
 //! // Get the file contents (for the demo), in reality use `AstModule::parse_file`.
 //! fn get_source(file: &str) -> &str {
@@ -280,12 +280,12 @@
 //!
 //! ```
 //! # fn run() -> starlark::Result<()> {
-//! use starlark::environment::Globals;
-//! use starlark::environment::Module;
-//! use starlark::eval::Evaluator;
-//! use starlark::syntax::AstModule;
-//! use starlark::syntax::Dialect;
-//! use starlark::values::Value;
+//! use blueprint_starlark::environment::Globals;
+//! use blueprint_starlark::environment::Module;
+//! use blueprint_starlark::eval::Evaluator;
+//! use blueprint_starlark::syntax::AstModule;
+//! use blueprint_starlark::syntax::Dialect;
+//! use blueprint_starlark::values::Value;
 //!
 //! let content = r#"
 //! def quadratic(a, b, c, x):
@@ -321,21 +321,21 @@
 //! use std::fmt::Write;
 //! use std::fmt::{self};
 //!
-//! use allocative::Allocative;
-//! use starlark::environment::Globals;
-//! use starlark::environment::Module;
-//! use starlark::eval::Evaluator;
-//! use starlark::starlark_simple_value;
-//! use starlark::syntax::AstModule;
-//! use starlark::syntax::Dialect;
-//! use starlark::values::Heap;
-//! use starlark::values::NoSerialize;
-//! use starlark::values::ProvidesStaticType;
-//! use starlark::values::StarlarkValue;
-//! use starlark::values::Value;
-//! use starlark::values::ValueError;
-//! use starlark::values::ValueLike;
-//! use starlark_derive::starlark_value;
+//! use blueprint_allocative::Allocative;
+//! use blueprint_starlark::environment::Globals;
+//! use blueprint_starlark::environment::Module;
+//! use blueprint_starlark::eval::Evaluator;
+//! use blueprint_starlark::starlark_simple_value;
+//! use blueprint_starlark::syntax::AstModule;
+//! use blueprint_starlark::syntax::Dialect;
+//! use blueprint_starlark::values::Heap;
+//! use blueprint_starlark::values::NoSerialize;
+//! use blueprint_starlark::values::ProvidesStaticType;
+//! use blueprint_starlark::values::StarlarkValue;
+//! use blueprint_starlark::values::Value;
+//! use blueprint_starlark::values::ValueError;
+//! use blueprint_starlark::values::ValueLike;
+//! use blueprint_starlark_derive::starlark_value;
 //!
 //! // Define complex numbers
 //! #[derive(Debug, PartialEq, Eq, ProvidesStaticType, NoSerialize, Allocative)]
@@ -428,12 +428,12 @@
 
 mod macros;
 
-pub use starlark_derive::starlark_module;
-pub use starlark_syntax::Error;
-pub use starlark_syntax::ErrorKind;
-pub use starlark_syntax::Result;
-pub use starlark_syntax::StarlarkResultExt;
-pub use starlark_syntax::codemap;
+pub use blueprint_starlark_derive::starlark_module;
+pub use blueprint_starlark_syntax::Error;
+pub use blueprint_starlark_syntax::ErrorKind;
+pub use blueprint_starlark_syntax::Result;
+pub use blueprint_starlark_syntax::StarlarkResultExt;
+pub use blueprint_starlark_syntax::codemap;
 pub use stdlib::PrintHandler;
 
 pub mod analysis;

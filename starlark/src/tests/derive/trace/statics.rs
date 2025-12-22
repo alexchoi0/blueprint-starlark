@@ -17,7 +17,7 @@
 
 use std::fmt::Display;
 
-use starlark_derive::Trace;
+use blueprint_starlark_derive::Trace;
 
 use crate as starlark;
 use crate::values::Value;

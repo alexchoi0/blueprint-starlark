@@ -19,7 +19,7 @@
 
 use std::collections::HashSet;
 
-use starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
 use crate::collections::Hashed;
 use crate::collections::SmallMap;

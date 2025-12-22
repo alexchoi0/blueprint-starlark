@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-use dupe::Dupe;
-use starlark::syntax::AstModule;
-use starlark_syntax::syntax::ast::StmtP;
-use starlark_syntax::syntax::top_level_stmts::top_level_stmts;
+use blueprint_dupe::Dupe;
+use blueprint_starlark::syntax::AstModule;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_syntax::syntax::top_level_stmts::top_level_stmts;
 
 /// A loaded symbol. Returned from [`AstModule::loaded_symbols`].
 #[derive(Debug, PartialEq, Eq, Clone, Dupe, Hash)]
@@ -56,8 +56,8 @@ impl AstModuleLoadedSymbols for AstModule {
 
 #[cfg(test)]
 mod tests {
-    use starlark::syntax::Dialect;
-    use starlark_syntax::slice_vec_ext::SliceExt;
+    use blueprint_starlark::syntax::Dialect;
+    use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
     use super::*;
 

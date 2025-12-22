@@ -22,7 +22,7 @@ use std::fmt::Display;
 use std::fmt::Formatter;
 use std::marker::PhantomData;
 
-use starlark_syntax::slice_vec_ext::VecExt;
+use blueprint_starlark_syntax::slice_vec_ext::VecExt;
 
 use crate::coerce::coerce;
 use crate::collections::symbol::symbol::Symbol;

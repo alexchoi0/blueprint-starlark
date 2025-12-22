@@ -17,10 +17,10 @@
 
 //! Implementation of `struct` function.
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_derive::starlark_module;
-use starlark_map::sorted_map::SortedMap;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_map::sorted_map::SortedMap;
 
 use crate as starlark;
 use crate::codemap::Span;

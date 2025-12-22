@@ -34,10 +34,10 @@ use std::fmt::Debug;
 use std::fmt::Display;
 use std::fmt::Write;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use erased_serde::Serialize;
-use starlark_derive::starlark_internal_vtable;
-use starlark_map::StarlarkHashValue;
+use blueprint_starlark_derive::starlark_internal_vtable;
+use blueprint_starlark_map::StarlarkHashValue;
 
 use crate::any::ProvidesStaticType;
 use crate::collections::Hashed;
@@ -81,23 +81,23 @@ use crate::values::function::FUNCTION_TYPE;
 /// generate `One` and `FrozenOne` aliases.
 ///
 /// ```
-/// use allocative::Allocative;
+/// use blueprint_allocative::Allocative;
 /// use derive_more::Display;
-/// use starlark::starlark_complex_value;
-/// use starlark::values::Coerce;
-/// use starlark::values::ComplexValue;
-/// use starlark::values::Freeze;
-/// use starlark::values::FreezeResult;
-/// use starlark::values::Freezer;
-/// use starlark::values::FrozenValue;
-/// use starlark::values::NoSerialize;
-/// use starlark::values::ProvidesStaticType;
-/// use starlark::values::StarlarkValue;
-/// use starlark::values::Trace;
-/// use starlark::values::Tracer;
-/// use starlark::values::Value;
-/// use starlark::values::ValueLike;
-/// use starlark_derive::starlark_value;
+/// use blueprint_starlark::starlark_complex_value;
+/// use blueprint_starlark::values::Coerce;
+/// use blueprint_starlark::values::ComplexValue;
+/// use blueprint_starlark::values::Freeze;
+/// use blueprint_starlark::values::FreezeResult;
+/// use blueprint_starlark::values::Freezer;
+/// use blueprint_starlark::values::FrozenValue;
+/// use blueprint_starlark::values::NoSerialize;
+/// use blueprint_starlark::values::ProvidesStaticType;
+/// use blueprint_starlark::values::StarlarkValue;
+/// use blueprint_starlark::values::Trace;
+/// use blueprint_starlark::values::Tracer;
+/// use blueprint_starlark::values::Value;
+/// use blueprint_starlark::values::ValueLike;
+/// use blueprint_starlark_derive::starlark_value;
 ///
 /// #[derive(
 ///     Debug,
@@ -212,13 +212,13 @@ where
 /// proc macro:
 ///
 /// ```
-/// use allocative::Allocative;
-/// # use starlark::starlark_simple_value;
+/// use blueprint_allocative::Allocative;
+/// # use blueprint_starlark::starlark_simple_value;
 /// use derive_more::Display;
-/// use starlark::values::NoSerialize;
-/// use starlark::values::ProvidesStaticType;
-/// use starlark::values::StarlarkValue;
-/// use starlark_derive::starlark_value;
+/// use blueprint_starlark::values::NoSerialize;
+/// use blueprint_starlark::values::ProvidesStaticType;
+/// use blueprint_starlark::values::StarlarkValue;
+/// use blueprint_starlark_derive::starlark_value;
 ///
 /// #[derive(Debug, Display, ProvidesStaticType, NoSerialize, Allocative)]
 /// #[display("Foo")]

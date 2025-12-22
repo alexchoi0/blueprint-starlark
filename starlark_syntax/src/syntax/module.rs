@@ -22,7 +22,7 @@ use std::mem;
 use std::path::Path;
 
 use derivative::Derivative;
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use lalrpop_util as lu;
 
 use crate::codemap::CodeMap;
@@ -200,11 +200,11 @@ impl AstModule {
     /// The returned error may contain diagnostic information. For example:
     ///
     /// ```
-    /// use starlark_syntax::codemap::FileSpan;
-    /// use starlark_syntax::syntax::AstModule;
-    /// use starlark_syntax::syntax::Dialect;
+    /// use blueprint_starlark_syntax::codemap::FileSpan;
+    /// use blueprint_starlark_syntax::syntax::AstModule;
+    /// use blueprint_starlark_syntax::syntax::Dialect;
     ///
-    /// let err: starlark_syntax::Error =
+    /// let err: blueprint_starlark_syntax::Error =
     ///     AstModule::parse("filename", "\n(unmatched".to_owned(), &Dialect::Standard).unwrap_err();
     /// let span: &FileSpan = err.span().unwrap();
     /// assert_eq!(span.to_string(), "filename:2:11");

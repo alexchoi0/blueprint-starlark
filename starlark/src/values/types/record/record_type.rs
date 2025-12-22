@@ -21,17 +21,17 @@ use std::fmt::Display;
 use std::hash::Hash;
 use std::sync::Arc;
 
-use allocative::Allocative;
-use display_container::fmt_keyed_container;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_display_container::fmt_keyed_container;
+use blueprint_dupe::Dupe;
 use either::Either;
 use once_cell::unsync::OnceCell;
-use starlark_derive::NoSerialize;
-use starlark_derive::starlark_module;
-use starlark_derive::starlark_value;
-use starlark_map::StarlarkHasher;
-use starlark_map::small_map::SmallMap;
-use starlark_map::sorted_map::SortedMap;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_map::StarlarkHasher;
+use blueprint_starlark_map::small_map::SmallMap;
+use blueprint_starlark_map::sorted_map::SortedMap;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

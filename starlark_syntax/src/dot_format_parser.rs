@@ -18,7 +18,7 @@
 use std::mem;
 use std::ops::Deref;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 /// Parser for `.format()` arguments.
 pub struct FormatParser<'a> {

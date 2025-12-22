@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
 use crate::typing::Ty;
 use crate::typing::TyBasic;

@@ -19,10 +19,10 @@ use std::fmt;
 use std::fmt::Debug;
 use std::vec;
 
-use dupe::Dupe;
-use starlark_syntax::ErrorKind;
-use starlark_syntax::codemap::FileSpan;
-use starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_syntax::ErrorKind;
+use blueprint_starlark_syntax::codemap::FileSpan;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
 use crate::errors::Frame;
 use crate::eval::CallStack;

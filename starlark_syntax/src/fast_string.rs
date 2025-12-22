@@ -24,7 +24,7 @@ use std::ops::Add;
 use std::ops::Sub;
 use std::str;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::convert_indices::convert_indices;
 

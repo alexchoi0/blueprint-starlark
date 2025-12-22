@@ -17,9 +17,9 @@
 
 #![cfg(test)]
 
-use starlark_syntax::golden_test_template::golden_test_template;
-use starlark_syntax::syntax::AstModule;
-use starlark_syntax::syntax::Dialect;
+use blueprint_starlark_syntax::golden_test_template::golden_test_template;
+use blueprint_starlark_syntax::syntax::AstModule;
+use blueprint_starlark_syntax::syntax::Dialect;
 
 use crate::assert::test_functions;
 use crate::environment::GlobalsBuilder;

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use proc_macro2::Ident;
 use proc_macro2::Span;
 use syn::Attribute;

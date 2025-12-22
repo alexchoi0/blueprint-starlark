@@ -39,8 +39,8 @@ pub(crate) use rust_loc;
 
 #[cfg(test)]
 mod tests {
-    use starlark_derive::starlark_module;
-    use starlark_syntax::error::StarlarkResultExt;
+    use blueprint_starlark_derive::starlark_module;
+    use blueprint_starlark_syntax::error::StarlarkResultExt;
 
     use crate as starlark;
     use crate::assert::Assert;

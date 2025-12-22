@@ -18,17 +18,17 @@
 use std::cell::RefCell;
 use std::fmt::Debug;
 
-use starlark_map::unordered_map::UnorderedMap;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::syntax::ast::AssignOp;
-use starlark_syntax::syntax::ast::AssignTargetP;
-use starlark_syntax::syntax::ast::AstLiteral;
-use starlark_syntax::syntax::ast::BinOp;
-use starlark_syntax::syntax::ast::CallArgsP;
-use starlark_syntax::syntax::ast::ClauseP;
-use starlark_syntax::syntax::ast::ExprP;
-use starlark_syntax::syntax::ast::ForClauseP;
-use starlark_syntax::syntax::call::CallArgsUnpack;
+use blueprint_starlark_map::unordered_map::UnorderedMap;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::syntax::ast::AssignOp;
+use blueprint_starlark_syntax::syntax::ast::AssignTargetP;
+use blueprint_starlark_syntax::syntax::ast::AstLiteral;
+use blueprint_starlark_syntax::syntax::ast::BinOp;
+use blueprint_starlark_syntax::syntax::ast::CallArgsP;
+use blueprint_starlark_syntax::syntax::ast::ClauseP;
+use blueprint_starlark_syntax::syntax::ast::ExprP;
+use blueprint_starlark_syntax::syntax::ast::ForClauseP;
+use blueprint_starlark_syntax::syntax::call::CallArgsUnpack;
 
 use crate::codemap::Span;
 use crate::codemap::Spanned;
@@ -471,9 +471,15 @@ impl TypingContext<'_> {
                     .unzip();
                 Ok(Ty::dict(Ty::unions(ks), Ty::unions(vs)))
             }
+            ExprP::Set(_) => Ok(Ty::any()),
             ExprP::ListComprehension(a, b, c) => {
                 self.check_comprehension(b, c)?;
                 Ok(Ty::list(self.expression_type(a)?))
+            }
+            ExprP::SetComprehension(a, b, c) => {
+                self.check_comprehension(b, c)?;
+                let _ = self.expression_type(a)?;
+                Ok(Ty::any())
             }
             ExprP::DictComprehension(k_v, b, c) => {
                 self.check_comprehension(b, c)?;

@@ -20,13 +20,13 @@ use std::collections::HashMap;
 use std::fmt;
 use std::fmt::Display;
 
-use dupe::Dupe;
-use starlark_map::unordered_map::UnorderedMap;
-use starlark_syntax::slice_vec_ext::VecExt;
-use starlark_syntax::syntax::ast::StmtP;
-use starlark_syntax::syntax::ast::Visibility;
-use starlark_syntax::syntax::module::AstModuleFields;
-use starlark_syntax::syntax::top_level_stmts::top_level_stmts_mut;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::unordered_map::UnorderedMap;
+use blueprint_starlark_syntax::slice_vec_ext::VecExt;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_syntax::syntax::ast::Visibility;
+use blueprint_starlark_syntax::syntax::module::AstModuleFields;
+use blueprint_starlark_syntax::syntax::top_level_stmts::top_level_stmts_mut;
 
 use crate::codemap::CodeMap;
 use crate::codemap::FileSpanRef;

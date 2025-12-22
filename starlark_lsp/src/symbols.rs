@@ -19,19 +19,19 @@
 
 use std::collections::HashMap;
 
-use starlark::codemap::CodeMap;
-use starlark::docs::DocItem;
-use starlark::docs::DocMember;
-use starlark::docs::DocParam;
-use starlark_syntax::codemap::ResolvedPos;
-use starlark_syntax::syntax::ast::AssignP;
-use starlark_syntax::syntax::ast::AstPayload;
-use starlark_syntax::syntax::ast::AstStmtP;
-use starlark_syntax::syntax::ast::ExprP;
-use starlark_syntax::syntax::ast::ForP;
-use starlark_syntax::syntax::ast::LoadArgP;
-use starlark_syntax::syntax::ast::ParameterP;
-use starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark::codemap::CodeMap;
+use blueprint_starlark::docs::DocItem;
+use blueprint_starlark::docs::DocMember;
+use blueprint_starlark::docs::DocParam;
+use blueprint_starlark_syntax::codemap::ResolvedPos;
+use blueprint_starlark_syntax::syntax::ast::AssignP;
+use blueprint_starlark_syntax::syntax::ast::AstPayload;
+use blueprint_starlark_syntax::syntax::ast::AstStmtP;
+use blueprint_starlark_syntax::syntax::ast::ExprP;
+use blueprint_starlark_syntax::syntax::ast::ForP;
+use blueprint_starlark_syntax::syntax::ast::LoadArgP;
+use blueprint_starlark_syntax::syntax::ast::ParameterP;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
 
 use crate::docs::get_doc_item_for_def;
 
@@ -166,17 +166,17 @@ pub(crate) fn find_symbols_at_location<P: AstPayload>(
 mod tests {
     use std::collections::HashMap;
 
-    use starlark::docs::DocFunction;
-    use starlark::docs::DocItem;
-    use starlark::docs::DocMember;
-    use starlark::docs::DocParam;
-    use starlark::docs::DocParams;
-    use starlark::docs::DocReturn;
-    use starlark::syntax::AstModule;
-    use starlark::syntax::Dialect;
-    use starlark::typing::Ty;
-    use starlark_syntax::codemap::ResolvedPos;
-    use starlark_syntax::syntax::module::AstModuleFields;
+    use blueprint_starlark::docs::DocFunction;
+    use blueprint_starlark::docs::DocItem;
+    use blueprint_starlark::docs::DocMember;
+    use blueprint_starlark::docs::DocParam;
+    use blueprint_starlark::docs::DocParams;
+    use blueprint_starlark::docs::DocReturn;
+    use blueprint_starlark::syntax::AstModule;
+    use blueprint_starlark::syntax::Dialect;
+    use blueprint_starlark::typing::Ty;
+    use blueprint_starlark_syntax::codemap::ResolvedPos;
+    use blueprint_starlark_syntax::syntax::module::AstModuleFields;
 
     use super::Symbol;
     use super::SymbolKind;

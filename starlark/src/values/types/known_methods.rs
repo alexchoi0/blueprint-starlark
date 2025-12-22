@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use hashbrown::HashMap;
 use once_cell::sync::Lazy;
 

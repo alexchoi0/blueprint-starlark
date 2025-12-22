@@ -20,8 +20,8 @@ use std::hash::Hash;
 use std::ops::Deref;
 use std::sync::Arc;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 #[derive(Debug, Allocative)]
 enum Inner<T: ?Sized + 'static> {

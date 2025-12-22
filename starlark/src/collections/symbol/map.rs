@@ -36,10 +36,10 @@ use std::fmt;
 use std::fmt::Debug;
 use std::mem;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use hashbrown::HashTable;
-use starlark_derive::Trace;
-use starlark_map::Hashed;
+use blueprint_starlark_derive::Trace;
+use blueprint_starlark_map::Hashed;
 
 use crate as starlark;
 use crate::collections::symbol::symbol::Symbol;

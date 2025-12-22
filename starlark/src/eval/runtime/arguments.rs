@@ -19,11 +19,11 @@ use std::fmt::Debug;
 use std::iter;
 use std::marker::PhantomData;
 
-use dupe::Clone_;
-use dupe::Dupe_;
+use blueprint_dupe::Clone_;
+use blueprint_dupe::Dupe_;
 use either::Either;
-use starlark_map::small_set::SmallSet;
-use starlark_syntax::value_error;
+use blueprint_starlark_map::small_set::SmallSet;
+use blueprint_starlark_syntax::value_error;
 use thiserror::Error;
 
 use crate::cast::transmute;

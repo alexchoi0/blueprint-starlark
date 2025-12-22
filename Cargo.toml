@@ -2,36 +2,36 @@
 members = [
     "allocative/allocative",
     "allocative/allocative_derive",
+    "gazebo/cmp_any",
     "gazebo/display_container",
     "gazebo/dupe",
+    "gazebo/dupe_derive",
     "gazebo/strong_hash",
     "gazebo/strong_hash_derive",
     "starlark",
-    "starlark_bin",
     "starlark_derive",
-    "starlark_js_example",
-    "starlark_lsp",
     "starlark_map",
     "starlark_syntax",
 ]
 resolver = "2"
 
 [workspace.package]
-license = "Apache-2.0"
-repository = "https://github.com/facebook/starlark-rust"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/alexchoi0/starlark-rust"
 
 [workspace.dependencies]
-allocative = { version = "0.3.4", path = "allocative/allocative" }
-allocative_derive = { version = "0.3.3", path = "allocative/allocative_derive" }
-cmp_any = { version = "0.8.1", path = "gazebo/cmp_any" }
-display_container = { version = "0.9.0", path = "gazebo/display_container" }
-dupe = { version = "0.9.1", path = "gazebo/dupe" }
-strong_hash = { path = "gazebo/strong_hash" }
-strong_hash_derive = { path = "gazebo/strong_hash_derive" }
+blueprint-allocative = { version = "0.3.4", path = "allocative/allocative" }
+blueprint-allocative-derive = { version = "0.3.3", path = "allocative/allocative_derive" }
+blueprint-cmp-any = { version = "0.8.1", path = "gazebo/cmp_any" }
+blueprint-display-container = { version = "0.9.0", path = "gazebo/display_container" }
+blueprint-dupe = { version = "0.9.1", path = "gazebo/dupe" }
+blueprint-dupe-derive = { version = "0.9.1", path = "gazebo/dupe_derive" }
+blueprint-strong-hash = { version = "0.1.0", path = "gazebo/strong_hash" }
+blueprint-strong-hash-derive = { version = "0.1.0", path = "gazebo/strong_hash_derive" }
 
-starlark_lsp = { version = "0.13", path = "starlark_lsp" }
-starlark_map = { version = "0.13", path = "starlark_map" }
-starlark_syntax = { version = "0.13", path = "starlark_syntax" }
+blueprint-starlark-derive = { version = "0.13.0", path = "starlark_derive" }
+blueprint-starlark-map = { version = "0.13.0", path = "starlark_map" }
+blueprint-starlark-syntax = { version = "0.13.0", path = "starlark_syntax" }
 
 anyhow = "1.0.65"
 ctor = "0.1.26"

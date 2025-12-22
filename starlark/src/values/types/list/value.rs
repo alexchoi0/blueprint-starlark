@@ -26,13 +26,13 @@ use std::fmt::Display;
 use std::fmt::Formatter;
 use std::slice;
 
-use allocative::Allocative;
-use display_container::fmt_container;
+use blueprint_allocative::Allocative;
+use blueprint_display_container::fmt_container;
 use serde::Serialize;
-use starlark_derive::Trace;
-use starlark_derive::starlark_value;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::slice_vec_ext::VecExt;
+use blueprint_starlark_derive::Trace;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::slice_vec_ext::VecExt;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

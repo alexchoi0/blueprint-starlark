@@ -21,11 +21,11 @@ use std::fmt::Formatter;
 use std::mem;
 use std::ops::Deref;
 
-use allocative::Allocative;
-use dupe::Clone_;
-use dupe::Copy_;
-use dupe::Dupe;
-use dupe::Dupe_;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Clone_;
+use blueprint_dupe::Copy_;
+use blueprint_dupe::Dupe;
+use blueprint_dupe::Dupe_;
 
 use crate::values::FrozenHeap;
 use crate::values::FrozenHeapRef;

@@ -19,8 +19,8 @@
 
 use std::fmt::Write;
 
-use starlark_syntax::golden_test_template::golden_test_template;
-use starlark_syntax::span_display::span_display;
+use blueprint_starlark_syntax::golden_test_template::golden_test_template;
+use blueprint_starlark_syntax::span_display::span_display;
 
 use crate::analysis::unused_loads::find::find_unused_loads;
 

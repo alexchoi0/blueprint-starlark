@@ -20,17 +20,17 @@
 use std::borrow::Cow;
 use std::cmp::Ordering;
 
-use dupe::Dupe;
-use starlark_derive::VisitSpanMut;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::syntax::ast::AstExprP;
-use starlark_syntax::syntax::ast::AstLiteral;
-use starlark_syntax::syntax::ast::AstPayload;
-use starlark_syntax::syntax::ast::BinOp;
-use starlark_syntax::syntax::ast::ExprP;
-use starlark_syntax::syntax::ast::FStringP;
-use starlark_syntax::syntax::ast::LambdaP;
-use starlark_syntax::syntax::ast::StmtP;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_derive::VisitSpanMut;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::syntax::ast::AstExprP;
+use blueprint_starlark_syntax::syntax::ast::AstLiteral;
+use blueprint_starlark_syntax::syntax::ast::AstPayload;
+use blueprint_starlark_syntax::syntax::ast::BinOp;
+use blueprint_starlark_syntax::syntax::ast::ExprP;
+use blueprint_starlark_syntax::syntax::ast::FStringP;
+use blueprint_starlark_syntax::syntax::ast::LambdaP;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
 use thiserror::Error;
 
 use crate::codemap::Spanned;
@@ -1260,6 +1260,12 @@ impl<'v, 'a, 'e> Compiler<'v, 'a, 'e, '_> {
                     .map(|(k, v)| Ok((self.expr(k)?, self.expr(v)?)))
                     .collect::<Result<_, CompilerInternalError>>()?;
                 ExprCompiled::Dict(xs)
+            }
+            ExprP::Set(_) => {
+                panic!("Set not supported in starlark evaluator, use blueprint_eval")
+            }
+            ExprP::SetComprehension(_, _, _) => {
+                panic!("SetComprehension not supported in starlark evaluator, use blueprint_eval")
             }
             ExprP::If(cond_then_expr_else_expr) => {
                 let (cond, then_expr, else_expr) = &**cond_then_expr_else_expr;

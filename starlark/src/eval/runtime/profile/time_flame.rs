@@ -19,9 +19,9 @@ use std::collections::HashMap;
 use std::collections::hash_map::Entry;
 use std::slice;
 
-use dupe::Dupe;
-use starlark_map::StarlarkHasherBuilder;
-use starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::StarlarkHasherBuilder;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
 use crate as starlark;
 use crate::eval::ProfileMode;
@@ -56,7 +56,7 @@ impl ProfilerType for TimeFlameProfilerType {
         ProfileDataImpl::TimeFlameProfile(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         Ok(FlameGraphData::merge(profiles.iter().copied()))
     }
 }
@@ -292,7 +292,7 @@ mod tests {
     use std::time::Duration;
 
     use anyhow::Context;
-    use starlark_derive::starlark_module;
+    use blueprint_starlark_derive::starlark_module;
 
     use crate as starlark;
     use crate::assert::Assert;

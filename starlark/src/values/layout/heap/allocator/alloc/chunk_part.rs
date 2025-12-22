@@ -17,7 +17,7 @@
 
 use std::ptr::NonNull;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::values::layout::aligned_size::AlignedSize;
 use crate::values::layout::heap::allocator::alloc::chunk::Chunk;

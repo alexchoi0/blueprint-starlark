@@ -18,8 +18,8 @@
 use std::fmt::Debug;
 use std::hash::Hash;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::codemap::Span;
 use crate::typing::ParamSpec;

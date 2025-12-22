@@ -19,7 +19,7 @@
 //!
 //! None of this code is meant to be used in production. Can be changed any time.
 
-use starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_module;
 
 use crate as starlark;
 use crate::environment::GlobalsBuilder;

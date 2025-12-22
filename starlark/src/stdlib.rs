@@ -18,7 +18,7 @@
 //! A module with the standard function and constants that are by default in all
 //! dialect of Starlark
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::environment::GlobalsBuilder;
 use crate::values::namespace::globals::register_namespace;
@@ -157,12 +157,12 @@ impl LibraryExtension {
 mod tests {
     use std::convert::Infallible;
 
-    use allocative::Allocative;
+    use blueprint_allocative::Allocative;
     use derive_more::Display;
-    use dupe::Dupe;
-    use starlark_derive::NoSerialize;
-    use starlark_derive::starlark_module;
-    use starlark_derive::starlark_value;
+    use blueprint_dupe::Dupe;
+    use blueprint_starlark_derive::NoSerialize;
+    use blueprint_starlark_derive::starlark_module;
+    use blueprint_starlark_derive::starlark_value;
 
     use crate as starlark;
     use crate::any::ProvidesStaticType;

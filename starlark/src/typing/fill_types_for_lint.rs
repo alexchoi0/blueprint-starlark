@@ -18,26 +18,26 @@
 use std::fmt::Display;
 use std::iter;
 
-use starlark_map::unordered_map;
-use starlark_map::unordered_map::UnorderedMap;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::syntax::ast::AssignP;
-use starlark_syntax::syntax::ast::AssignTargetP;
-use starlark_syntax::syntax::ast::AstLiteral;
-use starlark_syntax::syntax::ast::AstString;
-use starlark_syntax::syntax::ast::BinOp;
-use starlark_syntax::syntax::ast::CallArgsP;
-use starlark_syntax::syntax::ast::DefP;
-use starlark_syntax::syntax::ast::ExprP;
-use starlark_syntax::syntax::ast::ForP;
-use starlark_syntax::syntax::ast::LoadArgP;
-use starlark_syntax::syntax::ast::LoadP;
-use starlark_syntax::syntax::ast::StmtP;
-use starlark_syntax::syntax::def::DefParamKind;
-use starlark_syntax::syntax::def::DefParams;
-use starlark_syntax::syntax::def::DefRegularParamMode;
-use starlark_syntax::syntax::type_expr::TypeExprUnpackP;
-use starlark_syntax::syntax::type_expr::TypePathP;
+use blueprint_starlark_map::unordered_map;
+use blueprint_starlark_map::unordered_map::UnorderedMap;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::syntax::ast::AssignP;
+use blueprint_starlark_syntax::syntax::ast::AssignTargetP;
+use blueprint_starlark_syntax::syntax::ast::AstLiteral;
+use blueprint_starlark_syntax::syntax::ast::AstString;
+use blueprint_starlark_syntax::syntax::ast::BinOp;
+use blueprint_starlark_syntax::syntax::ast::CallArgsP;
+use blueprint_starlark_syntax::syntax::ast::DefP;
+use blueprint_starlark_syntax::syntax::ast::ExprP;
+use blueprint_starlark_syntax::syntax::ast::ForP;
+use blueprint_starlark_syntax::syntax::ast::LoadArgP;
+use blueprint_starlark_syntax::syntax::ast::LoadP;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_syntax::syntax::def::DefParamKind;
+use blueprint_starlark_syntax::syntax::def::DefParams;
+use blueprint_starlark_syntax::syntax::def::DefRegularParamMode;
+use blueprint_starlark_syntax::syntax::type_expr::TypeExprUnpackP;
+use blueprint_starlark_syntax::syntax::type_expr::TypePathP;
 
 use crate::codemap::Span;
 use crate::codemap::Spanned;
@@ -280,7 +280,9 @@ impl<'a, 'v> GlobalTypesBuilder<'a, 'v> {
             | ExprP::If(..)
             | ExprP::List(_)
             | ExprP::Dict(_)
+            | ExprP::Set(_)
             | ExprP::ListComprehension(_, _, _)
+            | ExprP::SetComprehension(_, _, _)
             | ExprP::DictComprehension(_, _, _)
             | ExprP::FString(_) => Ok(GlobalValue::any()),
         }

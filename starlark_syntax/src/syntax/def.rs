@@ -18,8 +18,8 @@
 use std::collections::HashSet;
 use std::ops::Range;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::codemap::CodeMap;
 use crate::codemap::Span;

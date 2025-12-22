@@ -17,10 +17,10 @@
 
 //! List/dict/set comprenension evaluation.
 
-use starlark_derive::VisitSpanMut;
-use starlark_syntax::slice_vec_ext::SliceExt;
-use starlark_syntax::syntax::ast::ClauseP;
-use starlark_syntax::syntax::ast::ForClauseP;
+use blueprint_starlark_derive::VisitSpanMut;
+use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
+use blueprint_starlark_syntax::syntax::ast::ClauseP;
+use blueprint_starlark_syntax::syntax::ast::ForClauseP;
 
 use crate::eval::compiler::Compiler;
 use crate::eval::compiler::error::CompilerInternalError;

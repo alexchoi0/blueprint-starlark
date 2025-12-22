@@ -19,8 +19,8 @@ use std::hash::Hash;
 use std::ops::Deref;
 use std::slice;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::typing::small_arc_vec::SmallArcVec1;
 

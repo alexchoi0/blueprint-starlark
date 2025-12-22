@@ -18,10 +18,10 @@
 use std::collections::HashMap;
 use std::fmt::Write;
 
-use dupe::Dupe;
-use starlark_derive::starlark_module;
-use starlark_map::small_map::SmallMap;
-use starlark_syntax::golden_test_template::golden_test_template;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_map::small_map::SmallMap;
+use blueprint_starlark_syntax::golden_test_template::golden_test_template;
 
 use crate as starlark;
 use crate::assert::Assert;

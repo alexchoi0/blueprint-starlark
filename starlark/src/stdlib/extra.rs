@@ -18,7 +18,7 @@
 use std::fmt;
 
 use itertools::Itertools;
-use starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_module;
 
 use crate as starlark;
 use crate::environment::GlobalsBuilder;
@@ -202,7 +202,7 @@ mod tests {
     use std::cell::RefCell;
     use std::rc::Rc;
 
-    use dupe::Dupe;
+    use blueprint_dupe::Dupe;
 
     use crate::assert;
     use crate::assert::Assert;

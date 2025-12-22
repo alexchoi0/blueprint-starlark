@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
-use allocative::Allocative;
-use starlark_derive::starlark_module;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_derive::starlark_module;
 
 use crate as starlark;
 use crate::codemap::Span;

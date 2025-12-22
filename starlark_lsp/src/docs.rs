@@ -15,23 +15,23 @@
  * limitations under the License.
  */
 
-use starlark::docs::DocFunction;
-use starlark::docs::DocParam;
-use starlark::docs::DocParams;
-use starlark::docs::DocProperty;
-use starlark::docs::DocString;
-use starlark::docs::DocStringKind;
-use starlark::typing::Ty;
-use starlark_syntax::codemap::CodeMap;
-use starlark_syntax::syntax::ast::AstAssignTargetP;
-use starlark_syntax::syntax::ast::AstLiteral;
-use starlark_syntax::syntax::ast::AstPayload;
-use starlark_syntax::syntax::ast::AstStmtP;
-use starlark_syntax::syntax::ast::DefP;
-use starlark_syntax::syntax::ast::ExprP;
-use starlark_syntax::syntax::ast::StmtP;
-use starlark_syntax::syntax::def::DefParamKind;
-use starlark_syntax::syntax::def::DefParams;
+use blueprint_starlark::docs::DocFunction;
+use blueprint_starlark::docs::DocParam;
+use blueprint_starlark::docs::DocParams;
+use blueprint_starlark::docs::DocProperty;
+use blueprint_starlark::docs::DocString;
+use blueprint_starlark::docs::DocStringKind;
+use blueprint_starlark::typing::Ty;
+use blueprint_starlark_syntax::codemap::CodeMap;
+use blueprint_starlark_syntax::syntax::ast::AstAssignTargetP;
+use blueprint_starlark_syntax::syntax::ast::AstLiteral;
+use blueprint_starlark_syntax::syntax::ast::AstPayload;
+use blueprint_starlark_syntax::syntax::ast::AstStmtP;
+use blueprint_starlark_syntax::syntax::ast::DefP;
+use blueprint_starlark_syntax::syntax::ast::ExprP;
+use blueprint_starlark_syntax::syntax::ast::StmtP;
+use blueprint_starlark_syntax::syntax::def::DefParamKind;
+use blueprint_starlark_syntax::syntax::def::DefParams;
 
 /// Given the AST node for a `def` statement, return a `DocFunction` if the
 /// `def` statement has a docstring as its first statement.

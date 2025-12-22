@@ -20,16 +20,16 @@ use std::collections::HashSet;
 
 use maplit::hashmap;
 use once_cell::sync::Lazy;
-use starlark_syntax::syntax::ast::AssignTarget;
-use starlark_syntax::syntax::ast::AstAssignIdent;
-use starlark_syntax::syntax::ast::AstExpr;
-use starlark_syntax::syntax::ast::AstStmt;
-use starlark_syntax::syntax::ast::BinOp;
-use starlark_syntax::syntax::ast::DefP;
-use starlark_syntax::syntax::ast::Expr;
-use starlark_syntax::syntax::ast::LoadArgP;
-use starlark_syntax::syntax::ast::Stmt;
-use starlark_syntax::syntax::module::AstModuleFields;
+use blueprint_starlark_syntax::syntax::ast::AssignTarget;
+use blueprint_starlark_syntax::syntax::ast::AstAssignIdent;
+use blueprint_starlark_syntax::syntax::ast::AstExpr;
+use blueprint_starlark_syntax::syntax::ast::AstStmt;
+use blueprint_starlark_syntax::syntax::ast::BinOp;
+use blueprint_starlark_syntax::syntax::ast::DefP;
+use blueprint_starlark_syntax::syntax::ast::Expr;
+use blueprint_starlark_syntax::syntax::ast::LoadArgP;
+use blueprint_starlark_syntax::syntax::ast::Stmt;
+use blueprint_starlark_syntax::syntax::module::AstModuleFields;
 use thiserror::Error;
 
 use crate::analysis::EvalSeverity;
@@ -210,7 +210,7 @@ pub(crate) fn lint(module: &AstModule) -> Vec<LintT<Incompatibility>> {
 
 #[cfg(test)]
 mod tests {
-    use starlark_syntax::slice_vec_ext::SliceExt;
+    use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
     use super::*;
     use crate::syntax::Dialect;

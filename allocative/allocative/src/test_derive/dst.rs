@@ -8,7 +8,7 @@
  * above-listed licenses.
  */
 
-use allocative_derive::Allocative;
+use blueprint_allocative_derive::Allocative;
 
 use crate as allocative;
 

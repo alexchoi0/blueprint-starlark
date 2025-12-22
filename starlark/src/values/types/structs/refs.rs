@@ -17,7 +17,7 @@
 
 use std::convert::Infallible;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::typing::Ty;
 use crate::values::FrozenStringValue;

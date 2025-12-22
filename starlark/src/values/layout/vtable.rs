@@ -24,8 +24,8 @@ use std::marker::PhantomData;
 use std::mem;
 use std::ptr;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 use crate::any::AnyLifetime;
 use crate::any::ProvidesStaticType;
@@ -114,7 +114,7 @@ pub(crate) struct AValueVTable {
     pub(crate) starlark_type_id: StarlarkTypeId,
     pub(crate) type_name: &'static str,
     /// Cache `type_name` here to avoid computing hash.
-    pub(crate) type_as_allocative_key: allocative::Key,
+    pub(crate) type_as_allocative_key: blueprint_allocative::Key,
 
     // `StarlarkValue`
     pub(crate) starlark_value: StarlarkValueVTable,
@@ -145,12 +145,12 @@ impl<'v, T: StarlarkValue<'v>> GetTypeId<'v, T> {
 struct GetAllocativeKey<'v, T: StarlarkValue<'v>>(PhantomData<&'v T>);
 
 impl<'v, T: StarlarkValue<'v>> GetAllocativeKey<'v, T> {
-    const ALLOCATIVE_KEY: allocative::Key = allocative::Key::new(T::TYPE);
+    const ALLOCATIVE_KEY: blueprint_allocative::Key = blueprint_allocative::Key::new(T::TYPE);
 }
 
 impl AValueVTable {
     pub(crate) fn new_black_hole() -> &'static AValueVTable {
-        const BLACKHOLE_ALLOCATIVE_KEY: allocative::Key = allocative::Key::new("BlackHole");
+        const BLACKHOLE_ALLOCATIVE_KEY: blueprint_allocative::Key = blueprint_allocative::Key::new("BlackHole");
         const BLACKHOLE_TYPE_ID: ConstTypeId = ConstTypeId::of::<BlackHole>();
         const BLACKHOLE_STARLARK_TYPE_ID: StarlarkTypeId =
             StarlarkTypeId::from_type_id(BLACKHOLE_TYPE_ID);
@@ -297,7 +297,7 @@ impl<'v> AValueDyn<'v> {
 
     pub(crate) fn total_memory(self) -> usize {
         (self.memory_size().bytes() as usize)
-            + allocative::size_of_unique_allocated_data(self.as_allocative())
+            + blueprint_allocative::size_of_unique_allocated_data(self.as_allocative())
     }
 
     #[inline]

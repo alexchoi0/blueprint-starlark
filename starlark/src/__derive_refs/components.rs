@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::__derive_refs::param_spec::NativeCallableParam;
 use crate::__derive_refs::param_spec::NativeCallableParamDefaultValue;

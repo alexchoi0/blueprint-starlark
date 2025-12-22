@@ -39,7 +39,7 @@ pub use crate::ext::vec::VecExt;
 mod tests {
     use std::sync::Arc;
 
-    use dupe::Clone_;
+    use blueprint_dupe::Clone_;
 
     struct NoTraits();
 

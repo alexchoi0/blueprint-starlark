@@ -18,7 +18,7 @@
 use std::hash::BuildHasher;
 use std::hash::Hasher;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use fxhash::FxHasher64;
 
 use crate::hash_value::StarlarkHashValue;

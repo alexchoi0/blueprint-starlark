@@ -16,7 +16,7 @@ use std::marker::PhantomData;
 use std::sync::Arc;
 
 use ref_cast::RefCast;
-pub use strong_hash_derive::StrongHash;
+pub use blueprint_strong_hash_derive::StrongHash;
 
 use crate as strong_hash;
 

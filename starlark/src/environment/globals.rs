@@ -17,8 +17,8 @@
 
 use std::sync::Arc;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 use itertools::Itertools;
 use once_cell::sync::Lazy;
 use once_cell::sync::OnceCell;
@@ -395,7 +395,7 @@ pub(crate) fn common_documentation<'a, T: IntoIterator<Item = (&'a str, FrozenVa
 
 #[cfg(test)]
 mod tests {
-    use starlark_derive::starlark_module;
+    use blueprint_starlark_derive::starlark_module;
 
     use super::*;
     use crate as starlark;

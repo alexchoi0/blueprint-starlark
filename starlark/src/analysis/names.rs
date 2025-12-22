@@ -28,22 +28,22 @@ use std::collections::HashSet;
 use std::collections::hash_map::Entry;
 use std::mem;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use maplit::hashset;
-use starlark_syntax::syntax::ast::AssignP;
-use starlark_syntax::syntax::ast::AstAssignIdent;
-use starlark_syntax::syntax::ast::AstAssignTarget;
-use starlark_syntax::syntax::ast::AstExpr;
-use starlark_syntax::syntax::ast::AstIdent;
-use starlark_syntax::syntax::ast::AstStmt;
-use starlark_syntax::syntax::ast::AstTypeExpr;
-use starlark_syntax::syntax::ast::Clause;
-use starlark_syntax::syntax::ast::Expr;
-use starlark_syntax::syntax::ast::ForClause;
-use starlark_syntax::syntax::ast::ForP;
-use starlark_syntax::syntax::ast::LoadArgP;
-use starlark_syntax::syntax::ast::Stmt;
-use starlark_syntax::syntax::module::AstModuleFields;
+use blueprint_starlark_syntax::syntax::ast::AssignP;
+use blueprint_starlark_syntax::syntax::ast::AstAssignIdent;
+use blueprint_starlark_syntax::syntax::ast::AstAssignTarget;
+use blueprint_starlark_syntax::syntax::ast::AstExpr;
+use blueprint_starlark_syntax::syntax::ast::AstIdent;
+use blueprint_starlark_syntax::syntax::ast::AstStmt;
+use blueprint_starlark_syntax::syntax::ast::AstTypeExpr;
+use blueprint_starlark_syntax::syntax::ast::Clause;
+use blueprint_starlark_syntax::syntax::ast::Expr;
+use blueprint_starlark_syntax::syntax::ast::ForClause;
+use blueprint_starlark_syntax::syntax::ast::ForP;
+use blueprint_starlark_syntax::syntax::ast::LoadArgP;
+use blueprint_starlark_syntax::syntax::ast::Stmt;
+use blueprint_starlark_syntax::syntax::module::AstModuleFields;
 use thiserror::Error;
 
 use crate::analysis::EvalSeverity;
@@ -565,7 +565,7 @@ pub(crate) fn lint(
 
 #[cfg(test)]
 mod tests {
-    use starlark_syntax::slice_vec_ext::SliceExt;
+    use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
     use super::*;
     use crate::syntax::Dialect;

@@ -20,7 +20,7 @@ use std::ptr;
 use std::ptr::NonNull;
 use std::slice;
 
-use dupe::Clone_;
+use blueprint_dupe::Clone_;
 
 use crate::vec2::Vec2;
 

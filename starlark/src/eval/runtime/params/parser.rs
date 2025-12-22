@@ -17,8 +17,8 @@
 
 use std::slice;
 
-use starlark_syntax::internal_error;
-use starlark_syntax::other_error;
+use blueprint_starlark_syntax::internal_error;
+use blueprint_starlark_syntax::other_error;
 
 use crate::values::UnpackValue;
 use crate::values::Value;

@@ -33,15 +33,15 @@
 pub use layout::alloc_static_simple::AllocStaticSimple;
 pub use owned_frozen_ref::OwnedFrozenRef;
 pub use owned_frozen_ref::OwnedRefFrozenRef;
-pub use starlark_derive::AllocFrozenValue;
-pub use starlark_derive::AllocValue;
-pub use starlark_derive::Freeze;
-pub use starlark_derive::NoSerialize;
-pub use starlark_derive::StarlarkAttrs;
-pub use starlark_derive::Trace;
-pub use starlark_derive::UnpackValue;
-pub use starlark_derive::starlark_attrs;
-pub use starlark_derive::starlark_value;
+pub use blueprint_starlark_derive::AllocFrozenValue;
+pub use blueprint_starlark_derive::AllocValue;
+pub use blueprint_starlark_derive::Freeze;
+pub use blueprint_starlark_derive::NoSerialize;
+pub use blueprint_starlark_derive::StarlarkAttrs;
+pub use blueprint_starlark_derive::Trace;
+pub use blueprint_starlark_derive::UnpackValue;
+pub use blueprint_starlark_derive::starlark_attrs;
+pub use blueprint_starlark_derive::starlark_value;
 
 pub use crate::any::AnyLifetime;
 pub use crate::any::ProvidesStaticType;

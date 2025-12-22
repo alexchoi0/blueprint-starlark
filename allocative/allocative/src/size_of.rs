@@ -23,7 +23,7 @@ use crate::visitor::VisitorImpl;
 /// # Example
 ///
 /// ```
-/// use allocative::Allocative;
+/// use blueprint_allocative::Allocative;
 ///
 /// #[derive(Allocative)]
 /// struct Foo {
@@ -32,7 +32,7 @@ use crate::visitor::VisitorImpl;
 ///
 /// assert_eq!(
 ///     3,
-///     allocative::size_of_unique_allocated_data(&Foo {
+///     blueprint_allocative::size_of_unique_allocated_data(&Foo {
 ///         data: vec![10, 20, 30]
 ///     })
 /// );
@@ -90,7 +90,7 @@ pub fn size_of_unique_allocated_data(root: &dyn Allocative) -> usize {
 /// # Example
 ///
 /// ```
-/// use allocative::Allocative;
+/// use blueprint_allocative::Allocative;
 ///
 /// #[derive(Allocative)]
 /// struct Foo {
@@ -99,7 +99,7 @@ pub fn size_of_unique_allocated_data(root: &dyn Allocative) -> usize {
 ///
 /// assert_eq!(
 ///     3 + std::mem::size_of::<Vec<u8>>(),
-///     allocative::size_of_unique(&Foo {
+///     blueprint_allocative::size_of_unique(&Foo {
 ///         data: vec![10, 20, 30]
 ///     })
 /// );
@@ -115,7 +115,7 @@ where
 mod tests {
     use std::mem;
 
-    use allocative_derive::Allocative;
+    use blueprint_allocative_derive::Allocative;
 
     use crate as allocative;
     use crate::size_of_unique;

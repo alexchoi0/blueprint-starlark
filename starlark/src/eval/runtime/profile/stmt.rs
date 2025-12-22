@@ -21,10 +21,10 @@ use std::collections::HashSet;
 use std::collections::hash_map::Entry;
 use std::fmt::Write;
 
-use dupe::Dupe;
-use starlark_map::StarlarkHasherBuilder;
-use starlark_syntax::codemap::CodeMaps;
-use starlark_syntax::internal_error;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::StarlarkHasherBuilder;
+use blueprint_starlark_syntax::codemap::CodeMaps;
+use blueprint_starlark_syntax::internal_error;
 
 use crate::codemap::CodeMap;
 use crate::codemap::CodeMapId;
@@ -58,7 +58,7 @@ impl ProfilerType for StmtProfilerType {
         ProfileDataImpl::Statement(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         Ok(StmtProfileData::merge(profiles))
     }
 }
@@ -78,7 +78,7 @@ impl ProfilerType for CoverageProfileType {
         ProfileDataImpl::Coverage(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         Ok(StmtProfileData::merge(profiles))
     }
 }
@@ -333,12 +333,12 @@ impl StmtProfile {
 mod tests {
     use std::collections::HashMap;
 
-    use starlark_syntax::codemap::CodeMap;
-    use starlark_syntax::codemap::CodeMaps;
-    use starlark_syntax::codemap::FileSpan;
-    use starlark_syntax::codemap::FileSpanRef;
-    use starlark_syntax::codemap::Pos;
-    use starlark_syntax::codemap::Span;
+    use blueprint_starlark_syntax::codemap::CodeMap;
+    use blueprint_starlark_syntax::codemap::CodeMaps;
+    use blueprint_starlark_syntax::codemap::FileSpan;
+    use blueprint_starlark_syntax::codemap::FileSpanRef;
+    use blueprint_starlark_syntax::codemap::Pos;
+    use blueprint_starlark_syntax::codemap::Span;
 
     use crate::assert::test_functions;
     use crate::environment::GlobalsBuilder;

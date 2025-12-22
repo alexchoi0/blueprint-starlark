@@ -25,11 +25,11 @@ use std::hash::Hash;
 use std::hash::Hasher;
 use std::sync::Arc;
 
-use allocative::Allocative;
-use cmp_any::OrdAny;
-use cmp_any::PartialEqAny;
-use dupe::Dupe;
-use starlark_map::StarlarkHasher;
+use blueprint_allocative::Allocative;
+use blueprint_cmp_any::OrdAny;
+use blueprint_cmp_any::PartialEqAny;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::StarlarkHasher;
 
 use crate::codemap::Span;
 use crate::typing::Ty;

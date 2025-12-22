@@ -18,9 +18,9 @@
 use std::sync::atomic;
 use std::sync::atomic::AtomicU64;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_derive::Freeze;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_derive::Freeze;
 
 use crate as starlark;
 

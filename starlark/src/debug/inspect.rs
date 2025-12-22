@@ -76,8 +76,8 @@ fn inspect_module_variables<'v>(eval: &Evaluator<'v, '_, '_>) -> SmallMap<String
 
 #[cfg(test)]
 mod tests {
-    use starlark_derive::starlark_module;
-    use starlark_syntax::slice_vec_ext::SliceExt;
+    use blueprint_starlark_derive::starlark_module;
+    use blueprint_starlark_syntax::slice_vec_ext::SliceExt;
 
     use crate as starlark;
     use crate::assert;

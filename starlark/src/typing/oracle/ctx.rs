@@ -18,9 +18,9 @@
 use std::fmt::Display;
 use std::iter;
 
-use dupe::Dupe;
-use starlark_map::small_map::SmallMap;
-use starlark_syntax::syntax::ast::BinOp;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::small_map::SmallMap;
+use blueprint_starlark_syntax::syntax::ast::BinOp;
 
 use crate::codemap::CodeMap;
 use crate::codemap::Span;

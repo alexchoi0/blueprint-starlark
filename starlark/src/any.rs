@@ -26,7 +26,7 @@ use std::collections::HashMap;
 use std::rc::Rc;
 use std::sync::Arc;
 
-pub use starlark_derive::ProvidesStaticType;
+pub use blueprint_starlark_derive::ProvidesStaticType;
 
 /// Provides access to the same type as `Self` but with all lifetimes dropped to `'static`
 /// (including lifetimes of parameters).
@@ -68,7 +68,7 @@ impl<'a, T: ProvidesStaticType<'a> + 'a + ?Sized> AnyLifetime<'a> for T {
 /// usually via the derive macro:
 ///
 /// ```
-/// use starlark::any::ProvidesStaticType;
+/// use blueprint_starlark::any::ProvidesStaticType;
 /// #[derive(ProvidesStaticType)]
 /// struct Foo1();
 /// #[derive(ProvidesStaticType)]
@@ -79,7 +79,7 @@ impl<'a, T: ProvidesStaticType<'a> + 'a + ?Sized> AnyLifetime<'a> for T {
 /// `ProvidesStaticType` directly.
 ///
 /// ```
-/// use starlark::any::ProvidesStaticType;
+/// use blueprint_starlark::any::ProvidesStaticType;
 /// # fn main() {
 /// # use std::fmt::Display;
 /// struct Baz<T: Display>(T);

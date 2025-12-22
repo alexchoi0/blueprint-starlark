@@ -20,9 +20,9 @@
 use std::collections::HashMap;
 use std::time::Duration;
 
-use dupe::Dupe;
-use starlark_map::Hashed;
-use starlark_map::StarlarkHasherBuilder;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::Hashed;
+use blueprint_starlark_map::StarlarkHasherBuilder;
 
 use crate::collections::SmallMap;
 use crate::eval::ProfileMode;
@@ -51,7 +51,7 @@ impl ProfilerType for TypecheckProfilerType {
         ProfileDataImpl::Typecheck(data)
     }
 
-    fn merge_profiles_impl(profiles: &[&Self::Data]) -> starlark_syntax::Result<Self::Data> {
+    fn merge_profiles_impl(profiles: &[&Self::Data]) -> blueprint_starlark_syntax::Result<Self::Data> {
         let mut by_function = SmallMap::new();
         for profile in profiles {
             for (name, time) in &profile.by_function {
@@ -125,7 +125,7 @@ impl TypecheckProfile {
 
 #[cfg(test)]
 mod tests {
-    use starlark_map::small_map::SmallMap;
+    use blueprint_starlark_map::small_map::SmallMap;
 
     use crate::environment::Globals;
     use crate::environment::Module;

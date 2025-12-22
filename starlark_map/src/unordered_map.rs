@@ -23,7 +23,7 @@ use std::hash::Hasher;
 use std::mem;
 use std::ops::Index;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use hashbrown::HashTable;
 use hashbrown::hash_table;
 

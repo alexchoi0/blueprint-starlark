@@ -18,7 +18,7 @@
 use std::fmt::Write;
 use std::mem;
 
-use starlark_syntax::golden_test_template::golden_test_template;
+use blueprint_starlark_syntax::golden_test_template::golden_test_template;
 
 use crate::assert::Assert;
 use crate::eval::compiler::def::FrozenDef;

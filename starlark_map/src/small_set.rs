@@ -25,7 +25,7 @@ use std::hash::Hash;
 use std::hash::Hasher;
 use std::marker::PhantomData;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use equivalent::Equivalent;
 use serde::Deserialize;
 use serde::Serialize;
@@ -531,7 +531,7 @@ where
 /// ## Example
 ///
 /// ```
-/// use starlark_map::smallset;
+/// use blueprint_starlark_map::smallset;
 ///
 /// let set = smallset! {"a", "b"};
 /// assert_eq!(set.contains("a"), true);
@@ -612,8 +612,8 @@ mod tests {
     use std::collections::HashSet;
     use std::rc::Rc;
 
-    use dupe::Dupe;
-    use dupe::IterDupedExt;
+    use blueprint_dupe::Dupe;
+    use blueprint_dupe::IterDupedExt;
 
     use super::*;
 

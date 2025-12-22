@@ -21,10 +21,10 @@ use std::fmt::Display;
 use std::hash::Hash;
 use std::hash::Hasher;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 use serde::Serialize;
-use starlark_map::Equivalent;
+use blueprint_starlark_map::Equivalent;
 
 use crate::coerce::Coerce;
 use crate::coerce::CoerceKey;
@@ -49,9 +49,9 @@ use crate::values::string::str_type::StarlarkStr;
 /// Note there's a macro `const_frozen_string!` to statically allocate `FrozenStringValue`:
 ///
 /// ```
-/// use starlark::const_frozen_string;
-/// use starlark::values::FrozenStringValue;
-/// use starlark::values::FrozenValue;
+/// use blueprint_starlark::const_frozen_string;
+/// use blueprint_starlark::values::FrozenStringValue;
+/// use blueprint_starlark::values::FrozenValue;
 ///
 /// let fv: FrozenStringValue = const_frozen_string!("magic");
 /// assert_eq!("magic", fv.as_str());

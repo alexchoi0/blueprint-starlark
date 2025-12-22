@@ -20,10 +20,10 @@
 use std::cmp::Ordering;
 use std::hash::Hash;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use serde::Deserialize;
 use serde::Serialize;
-use strong_hash::StrongHash;
+use blueprint_strong_hash::StrongHash;
 
 use crate::Equivalent;
 use crate::small_map;

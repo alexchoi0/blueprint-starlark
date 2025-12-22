@@ -21,7 +21,7 @@ use std::cell::RefMut;
 use std::convert::Infallible;
 use std::ops::Deref;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use either::Either;
 
 use crate::coerce::coerce;

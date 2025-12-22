@@ -19,10 +19,10 @@
 
 use std::cmp;
 
-use starlark_derive::starlark_module;
-use starlark_syntax::fast_string;
-use starlark_syntax::fast_string::StrIndices;
-use starlark_syntax::fast_string::convert_str_indices;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_syntax::fast_string;
+use blueprint_starlark_syntax::fast_string::StrIndices;
+use blueprint_starlark_syntax::fast_string::convert_str_indices;
 
 use crate as starlark;
 use crate::environment::MethodsBuilder;

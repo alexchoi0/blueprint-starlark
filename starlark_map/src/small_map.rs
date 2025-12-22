@@ -27,7 +27,7 @@ use std::hash::Hasher;
 use std::marker::PhantomData;
 use std::mem;
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use equivalent::Equivalent;
 use hashbrown::HashTable;
 use serde::Deserialize;
@@ -1017,7 +1017,7 @@ where
 /// ## Example
 ///
 /// ```
-/// use starlark_map::smallmap;
+/// use blueprint_starlark_map::smallmap;
 ///
 /// let map = smallmap! {
 ///     "a" => 1,

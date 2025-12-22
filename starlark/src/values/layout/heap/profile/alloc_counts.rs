@@ -19,8 +19,8 @@ use std::iter::Sum;
 use std::ops::Add;
 use std::ops::AddAssign;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 
 /// Allocations counters.
 #[derive(Default, Copy, Clone, Dupe, Debug, Allocative)]

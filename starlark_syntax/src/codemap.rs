@@ -38,8 +38,8 @@ use std::ops::Sub;
 use std::ptr;
 use std::sync::Arc;
 
-use allocative::Allocative;
-use dupe::Dupe;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
 use once_cell::sync::Lazy;
 
 use crate::fast_string;

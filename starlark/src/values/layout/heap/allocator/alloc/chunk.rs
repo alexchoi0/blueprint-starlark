@@ -26,7 +26,7 @@ use std::ptr::NonNull;
 use std::sync::atomic;
 use std::sync::atomic::AtomicU32;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 
 use crate::util::rtabort::rtabort;
 use crate::values::layout::aligned_size::AlignedSize;

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 
 use crate::typing::Ty;
 use crate::values::types::type_instance_id::TypeInstanceId;

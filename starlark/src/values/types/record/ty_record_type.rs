@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 
 use crate::eval::ParametersSpec;
 use crate::typing::Ty;

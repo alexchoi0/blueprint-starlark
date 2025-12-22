@@ -17,9 +17,9 @@
 
 //! Methods for the `list` type.
 
-use starlark_derive::starlark_module;
-use starlark_syntax::convert_indices::convert_index;
-use starlark_syntax::convert_indices::convert_indices;
+use blueprint_starlark_derive::starlark_module;
+use blueprint_starlark_syntax::convert_indices::convert_index;
+use blueprint_starlark_syntax::convert_indices::convert_indices;
 
 use crate as starlark;
 use crate::environment::MethodsBuilder;

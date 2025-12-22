@@ -21,15 +21,15 @@ use std::fmt::Display;
 use std::hash::Hash;
 use std::hash::Hasher;
 
-use allocative::Allocative;
-use display_container::fmt_keyed_container;
+use blueprint_allocative::Allocative;
+use blueprint_display_container::fmt_keyed_container;
 use serde::Serialize;
-use starlark_derive::Freeze;
-use starlark_derive::Trace;
-use starlark_derive::starlark_value;
-use starlark_map::Hashed;
-use starlark_map::StarlarkHasher;
-use starlark_map::small_map::SmallMap;
+use blueprint_starlark_derive::Freeze;
+use blueprint_starlark_derive::Trace;
+use blueprint_starlark_derive::starlark_value;
+use blueprint_starlark_map::Hashed;
+use blueprint_starlark_map::StarlarkHasher;
+use blueprint_starlark_map::small_map::SmallMap;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

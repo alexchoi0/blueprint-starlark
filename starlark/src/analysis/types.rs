@@ -19,7 +19,7 @@ use std::fmt;
 use std::fmt::Display;
 use std::path::Path;
 
-use dupe::Dupe;
+use blueprint_dupe::Dupe;
 use serde::Serialize;
 
 use crate::codemap::CodeMap;

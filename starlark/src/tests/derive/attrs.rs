@@ -15,11 +15,11 @@
  * limitations under the License.
  */
 
-use allocative::Allocative;
+use blueprint_allocative::Allocative;
 use derive_more::Display;
-use starlark_derive::NoSerialize;
-use starlark_derive::starlark_attrs;
-use starlark_derive::starlark_value;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::starlark_attrs;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;

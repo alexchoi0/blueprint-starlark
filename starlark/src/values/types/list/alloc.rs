@@ -31,9 +31,9 @@ use crate::values::type_repr::StarlarkTypeRepr;
 /// # Example
 ///
 /// ```
-/// use starlark::values::list::AllocList;
+/// use blueprint_starlark::values::list::AllocList;
 ///
-/// # use starlark::values::{FrozenHeap, Heap};
+/// # use blueprint_starlark::values::{FrozenHeap, Heap};
 /// # fn alloc(heap: &Heap, frozen_heap: &FrozenHeap) {
 /// let l = heap.alloc(AllocList([1, 2, 3]));
 /// let ls = frozen_heap.alloc(AllocList([1, 2, 3]));

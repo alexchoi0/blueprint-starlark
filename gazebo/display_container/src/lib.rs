@@ -15,7 +15,7 @@
 //! ```
 //! use std::fmt;
 //!
-//! use display_container::*;
+//! use blueprint_display_container::*;
 //!
 //! struct MyItems(Vec<(String, i32)>);
 //!

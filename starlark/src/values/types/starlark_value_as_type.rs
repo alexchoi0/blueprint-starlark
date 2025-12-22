@@ -23,9 +23,9 @@ use std::fmt::Display;
 use std::fmt::Formatter;
 use std::marker::PhantomData;
 
-use allocative::Allocative;
-use starlark_derive::NoSerialize;
-use starlark_derive::starlark_value;
+use blueprint_allocative::Allocative;
+use blueprint_starlark_derive::NoSerialize;
+use blueprint_starlark_derive::starlark_value;
 
 use crate as starlark;
 use crate::any::ProvidesStaticType;
@@ -76,13 +76,13 @@ impl Display for StarlarkValueAsTypeStarlarkValue {
 /// # Example
 ///
 /// ```
-/// use allocative::Allocative;
-/// use starlark::any::ProvidesStaticType;
-/// use starlark::environment::GlobalsBuilder;
-/// use starlark::values::NoSerialize;
-/// use starlark::values::StarlarkValue;
-/// use starlark::values::starlark_value;
-/// use starlark::values::starlark_value_as_type::StarlarkValueAsType;
+/// use blueprint_allocative::Allocative;
+/// use blueprint_starlark::any::ProvidesStaticType;
+/// use blueprint_starlark::environment::GlobalsBuilder;
+/// use blueprint_starlark::values::NoSerialize;
+/// use blueprint_starlark::values::StarlarkValue;
+/// use blueprint_starlark::values::starlark_value;
+/// use blueprint_starlark::values::starlark_value_as_type::StarlarkValueAsType;
 /// #[derive(
 ///     Debug,
 ///     derive_more::Display,
@@ -182,11 +182,11 @@ impl<T: StarlarkTypeRepr> AllocFrozenValue for StarlarkValueAsType<T> {
 
 #[cfg(test)]
 mod tests {
-    use allocative::Allocative;
-    use starlark_derive::NoSerialize;
-    use starlark_derive::ProvidesStaticType;
-    use starlark_derive::starlark_module;
-    use starlark_derive::starlark_value;
+    use blueprint_allocative::Allocative;
+    use blueprint_starlark_derive::NoSerialize;
+    use blueprint_starlark_derive::ProvidesStaticType;
+    use blueprint_starlark_derive::starlark_module;
+    use blueprint_starlark_derive::starlark_value;
 
     use crate as starlark;
     use crate::assert::Assert;

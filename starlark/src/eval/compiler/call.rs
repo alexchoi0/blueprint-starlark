@@ -17,8 +17,8 @@
 
 //! Compile function calls.
 
-use starlark_derive::VisitSpanMut;
-use starlark_syntax::slice_vec_ext::VecExt;
+use blueprint_starlark_derive::VisitSpanMut;
+use blueprint_starlark_syntax::slice_vec_ext::VecExt;
 
 use crate::collections::symbol::symbol::Symbol;
 use crate::eval::compiler::args::ArgsCompiledValue;

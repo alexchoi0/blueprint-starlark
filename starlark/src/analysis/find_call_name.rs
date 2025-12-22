@@ -17,10 +17,10 @@
 
 //! Linter.
 
-use starlark_syntax::syntax::ast::Argument;
-use starlark_syntax::syntax::ast::AstExpr;
-use starlark_syntax::syntax::ast::AstLiteral;
-use starlark_syntax::syntax::ast::Expr;
+use blueprint_starlark_syntax::syntax::ast::Argument;
+use blueprint_starlark_syntax::syntax::ast::AstExpr;
+use blueprint_starlark_syntax::syntax::ast::AstLiteral;
+use blueprint_starlark_syntax::syntax::ast::Expr;
 
 use crate::codemap::Span;
 use crate::codemap::Spanned;
@@ -85,7 +85,7 @@ impl AstModuleFindCallName for AstModule {
 
 #[cfg(test)]
 mod tests {
-    use starlark_syntax::syntax::module::AstModuleFields;
+    use blueprint_starlark_syntax::syntax::module::AstModuleFields;
 
     use crate::analysis::find_call_name::AstModuleFindCallName;
     use crate::codemap::ResolvedPos;

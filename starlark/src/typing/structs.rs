@@ -20,9 +20,9 @@ use std::fmt::Display;
 use std::fmt::Formatter;
 use std::sync::Arc;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_map::sorted_map::SortedMap;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_map::sorted_map::SortedMap;
 
 use crate::typing::Ty;
 use crate::typing::TyBasic;
@@ -125,11 +125,11 @@ impl TyCustomImpl for TyStruct {
 impl Display for TyStruct {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         let TyStruct { fields, extra } = self;
-        display_container::fmt_container(
+        blueprint_display_container::fmt_container(
             f,
             "struct(",
             ")",
-            display_container::iter_display_chain(
+            blueprint_display_container::iter_display_chain(
                 fields.iter().map(|(k, v)| format!("{k} = {v}")),
                 extra.then_some(".."),
             ),

@@ -19,16 +19,16 @@ use std::cmp;
 use std::collections::HashMap;
 use std::fmt;
 
-use allocative::Allocative;
-use dupe::Dupe;
-use starlark_derive::Coerce;
-use starlark_derive::Freeze;
-use starlark_derive::Trace;
-use starlark_map::Hashed;
-use starlark_map::small_map::SmallMap;
-use starlark_syntax::function_error;
-use starlark_syntax::other_error;
-use starlark_syntax::syntax::def::DefParamIndices;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Dupe;
+use blueprint_starlark_derive::Coerce;
+use blueprint_starlark_derive::Freeze;
+use blueprint_starlark_derive::Trace;
+use blueprint_starlark_map::Hashed;
+use blueprint_starlark_map::small_map::SmallMap;
+use blueprint_starlark_syntax::function_error;
+use blueprint_starlark_syntax::other_error;
+use blueprint_starlark_syntax::syntax::def::DefParamIndices;
 
 use crate as starlark;
 use crate::__macro_refs::coerce;

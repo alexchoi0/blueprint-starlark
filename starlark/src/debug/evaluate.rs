@@ -106,8 +106,8 @@ impl<'v> Evaluator<'v, '_, '_> {
 #[cfg(test)]
 mod tests {
     use itertools::Itertools;
-    use starlark_derive::starlark_module;
-    use starlark_syntax::error::StarlarkResultExt;
+    use blueprint_starlark_derive::starlark_module;
+    use blueprint_starlark_syntax::error::StarlarkResultExt;
 
     use super::*;
     use crate as starlark;

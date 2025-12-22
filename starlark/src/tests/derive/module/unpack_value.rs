@@ -17,7 +17,7 @@
 
 use either::Either;
 use itertools::Itertools;
-use starlark_derive::starlark_module;
+use blueprint_starlark_derive::starlark_module;
 
 use crate as starlark;
 use crate::assert::Assert;

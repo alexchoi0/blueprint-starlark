@@ -25,12 +25,12 @@ use std::fmt::Formatter;
 use std::marker;
 use std::ops::Deref;
 
-use allocative::Allocative;
-use dupe::Clone_;
-use dupe::Copy_;
-use dupe::Dupe_;
+use blueprint_allocative::Allocative;
+use blueprint_dupe::Clone_;
+use blueprint_dupe::Copy_;
+use blueprint_dupe::Dupe_;
 use serde::Serialize;
-use starlark_map::Hashed;
+use blueprint_starlark_map::Hashed;
 
 use crate as starlark;
 use crate::any::AnyLifetime;
@@ -474,7 +474,7 @@ impl AllocFrozenStringValue for FrozenStringValue {
 
 #[cfg(test)]
 mod tests {
-    use starlark_derive::starlark_module;
+    use blueprint_starlark_derive::starlark_module;
 
     use crate as starlark;
     use crate::assert::Assert;

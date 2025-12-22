@@ -17,7 +17,7 @@
 
 use std::slice;
 
-use dupe::Clone_;
+use blueprint_dupe::Clone_;
 
 use crate::Hashed;
 use crate::StarlarkHashValue;

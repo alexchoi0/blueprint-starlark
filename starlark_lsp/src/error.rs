@@ -17,8 +17,8 @@
 
 use lsp_types::NumberOrString;
 use lsp_types::Range;
-use starlark::analysis::EvalMessage;
-use starlark::analysis::EvalSeverity;
+use blueprint_starlark::analysis::EvalMessage;
+use blueprint_starlark::analysis::EvalSeverity;
 
 pub fn eval_message_to_lsp_diagnostic(eval_message: EvalMessage) -> lsp_types::Diagnostic {
     let range = match eval_message.span {

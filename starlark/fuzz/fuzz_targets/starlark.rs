@@ -18,11 +18,11 @@
 #![no_main]
 
 use libfuzzer_sys::fuzz_target;
-use starlark::environment::Globals;
-use starlark::environment::Module;
-use starlark::eval::Evaluator;
-use starlark::syntax::AstModule;
-use starlark::syntax::Dialect;
+use blueprint_starlark::environment::Globals;
+use blueprint_starlark::environment::Module;
+use blueprint_starlark::eval::Evaluator;
+use blueprint_starlark::syntax::AstModule;
+use blueprint_starlark::syntax::Dialect;
 
 fn run_arbitrary_starlark_err(content: &str) -> starlark::Result<String> {
     let ast: AstModule =
