@@ -66,8 +66,6 @@ enum GrammarUtilError {
     TypeAnnotationOnAssignOp,
     #[error("type annotations not allowed on multiple assignments")]
     TypeAnnotationOnTupleAssign,
-    #[error("`load` statement requires at least two arguments")]
-    LoadRequiresAtLeastTwoArguments,
 }
 
 /// Ensure we produce normalised Statements, rather than singleton Statements
@@ -146,15 +144,35 @@ pub fn check_assignment(
     })
 }
 
-pub(crate) fn check_load_0(module: AstString, parser_state: &mut ParserState) -> Stmt {
-    parser_state.errors.push(EvalException::new_anyhow(
-        GrammarUtilError::LoadRequiresAtLeastTwoArguments.into(),
-        module.span,
-        parser_state.codemap,
-    ));
+pub(crate) fn check_load_0(module: AstString, _parser_state: &mut ParserState) -> Stmt {
+    // Allow load statements with no arguments for module object imports
+    // e.g., load("@bp/http") imports the module as an object
     Stmt::Load(LoadP {
         module,
         args: Vec::new(),
+        payload: (),
+    })
+}
+
+pub(crate) fn check_load_alias(
+    alias: (AstAssignIdent, AstString),
+    _parser_state: &mut ParserState,
+) -> Stmt {
+    // Handle aliased module import: load(alias="@bp/module")
+    // This creates a load statement with a special marker that the evaluator
+    // will recognize to define the module under the alias name
+    let (local, module) = alias;
+    let span = local.span;
+    Stmt::Load(LoadP {
+        module,
+        args: vec![LoadArgP {
+            local,
+            their: Spanned {
+                span,
+                node: "__module__".to_string(),
+            },
+            comma: None,
+        }],
         payload: (),
     })
 }

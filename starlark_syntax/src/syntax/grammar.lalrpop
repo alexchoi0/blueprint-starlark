@@ -255,7 +255,16 @@ LoadStmt_: Stmt = {
     "load" "(" <module:string> ")"
         => grammar_util::check_load_0(<>, state),
     "load" "(" <module:string> Comma <args:(<LoadStmtSyms> <Comma>)*> <last:(<LoadStmtSyms>)?> ")"
-        => grammar_util::check_load(<>, state)
+        => grammar_util::check_load(<>, state),
+    "load" "(" <alias:LoadModuleAlias> ")"
+        => grammar_util::check_load_alias(<>, state)
+};
+
+LoadModuleAlias: (AstAssignIdent, AstString) = <id:identifier> "=" <module:string> => {
+    (
+        Spanned { span: id.span, node: AssignIdentP { ident: id.node, payload: () } },
+        module,
+    )
 };
 
 LoadStmtBindingName: AstString = <identifier> "=";
