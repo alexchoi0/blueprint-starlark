@@ -478,7 +478,10 @@ impl<'a> Lexer<'a> {
                                         continue;
                                     }
                                 }
-                                Token::Reserved => Some(self.err_now(LexemeError::ReservedKeyword)),
+                                Token::Reserved | Token::Match | Token::Case => {
+                                    // Allow reserved keywords as identifiers (e.g., obj.del(), obj.match())
+                                    self.wrap(Token::Identifier(self.lexer.slice().to_owned()))
+                                }
                                 Token::RawDecInt => {
                                     let s = self.lexer.slice();
                                     if s.len() > 1 && &s[0..1] == "0" {
